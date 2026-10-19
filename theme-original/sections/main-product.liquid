@@ -1,0 +1,96 @@
+<div class="main-product-section" style="padding: 4rem 0;">
+  <div class="page-width">
+    <div class="grid grid-cols-2" style="gap: 4rem; align-items: start;">
+      
+      <!-- Product Media Gallery -->
+      <div class="product-gallery">
+        <div style="border-radius: var(--radius-lg); overflow: hidden; background: var(--color-surface); border: 1px solid var(--color-border); margin-bottom: 1rem;">
+          {%- if product.featured_media -%}
+            <img id="ProductMainImage" src="{{ product.featured_media | image_url: width: 1000 }}" alt="{{ product.title | escape }}" loading="eager" style="width:100%; aspect-ratio: 1/1; object-fit: cover;">
+          {%- else -%}
+            <div style="aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; color: #94a3b8;">No Image</div>
+          {%- endif -%}
+        </div>
+
+        {%- if product.media.size > 1 -%}
+          <div style="display: flex; gap: 0.75rem; overflow-x: auto; padding-bottom: 0.5rem;">
+            {%- for media in product.media -%}
+              <button type="button" onclick="document.getElementById('ProductMainImage').src='{{ media | image_url: width: 1000 }}'" style="flex-shrink: 0; width: 80px; height: 80px; border-radius: var(--radius-sm); overflow: hidden; border: 1.5px solid var(--color-border); cursor: pointer;">
+                <img src="{{ media | image_url: width: 160 }}" alt="{{ media.alt | default: product.title }}" style="width:100%; height:100%; object-fit: cover;">
+              </button>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <!-- Product Purchase Form & Details -->
+      <div class="product-details">
+        {%- if product.vendor != blank -%}
+          <p style="text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0.5rem;">
+            {{ product.vendor }}
+          </p>
+        {%- endif -%}
+
+        <h1 style="margin-bottom: 1rem;">{{ product.title }}</h1>
+
+        <div style="margin-bottom: 1.5rem; font-size: 1.5rem; font-weight: 800;">
+          {% render 'price', product: product %}
+        </div>
+
+        {% form 'product', product, id: 'MainProductForm', class: 'product-form' %}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" id="ProductVariantId">
+
+          {%- unless product.has_only_default_variant -%}
+            <div class="product-variants" style="display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 2rem;">
+              {%- for option in product.options_with_values -%}
+                <div>
+                  <label style="display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem;">
+                    {{ option.name }}
+                  </label>
+                  <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    {%- for value in option.values -%}
+                      <button type="button" class="variant-chip {% if option.selected_value == value %}active{% endif %}" style="padding: 0.5rem 1.2rem; border-radius: var(--radius-sm); border: 1.5px solid var(--color-border); font-size: 0.9rem; font-weight: 500; cursor: pointer; background: var(--color-bg);">
+                        {{ value }}
+                      </button>
+                    {%- endfor -%}
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endunless -%}
+
+          <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; border: 1.5px solid var(--color-border); border-radius: var(--radius-sm); padding: 0.35rem;">
+              <button type="button" onclick="const q = document.getElementById('QuantityInput'); if(q.value > 1) q.value--;" style="padding: 0.5rem 0.85rem; font-size: 1.1rem; font-weight: bold;">-</button>
+              <input type="number" id="QuantityInput" name="quantity" value="1" min="1" style="width: 45px; text-align: center; border: none; font-size: 1rem; font-weight: 600; outline: none;">
+              <button type="button" onclick="const q = document.getElementById('QuantityInput'); q.value++;" style="padding: 0.5rem 0.85rem; font-size: 1.1rem; font-weight: bold;">+</button>
+            </div>
+
+            <button type="submit" name="add" class="btn btn-primary" style="flex-grow: 1; padding: 1rem 2rem; font-size: 1.05rem;" {% unless product.available %}disabled{% endunless %}>
+              {%- if product.available -%}
+                {{ 'products.product.add_to_cart' | t | default: 'Add to Cart' }}
+              {%- else -%}
+                {{ 'products.product.sold_out' | t | default: 'Sold Out' }}
+              {%- endif -%}
+            </button>
+          </div>
+        {% endform %}
+
+        <div class="product-description" style="border-top: 1px solid var(--color-border); padding-top: 2rem; line-height: 1.8; color: var(--color-text);">
+          <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Description</h3>
+          {{ product.description }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Product",
+  "tag": "section",
+  "class": "section-main-product",
+  "settings": []
+}
+{% endschema %}

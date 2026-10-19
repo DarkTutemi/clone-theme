@@ -1,0 +1,250 @@
+<section class="before-after-image-section four-week-before-after" data-src="sections/template--27860728578148__before_after_image_gaKtcD.liquid" style="padding: 48px 0; background: #ffffff;">
+  <div class="container" style="max-width: 1320px; margin: 0 auto; padding: 0 20px;">
+    
+    <div id="section-template--27860728578148__before_after_image_gaKtcD" class="before-after-card-wrapper" style="
+      background: linear-gradient(116.53deg, rgba(8, 67, 94, 1) 12.4%, rgba(114, 195, 232, 1) 93.6%);
+      border-radius: 24px;
+      padding: 56px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 40px;
+      align-items: center;
+      color: #ffffff;
+      box-shadow: 0px 18px 50px 0px rgba(26, 26, 26, 0.1);
+    ">
+      
+      <!-- Left Content -->
+      <div class="before-after-text">
+        <h2 style="font-size: 36px; font-weight: 800; line-height: 1.2; margin: 0 0 16px 0; color: #ffffff;">
+          {{ section.settings.heading | default: '4 Weeks with Bronoir Barefoot Shoes' }}
+        </h2>
+        <p style="font-size: 19px; font-weight: 700; margin: 0 0 16px 0; color: rgba(255, 255, 255, 0.95);">
+          {{ section.settings.subheading | default: 'Real results, faster than you think.' }}
+        </p>
+        <div style="font-size: 15px; line-height: 1.65; color: rgba(255, 255, 255, 0.88); margin: 0;">
+          {{ section.settings.content | default: 'Meet Karen. After years of struggling with swelling, skin irritation, and aching feet, she finally tried Bronoir Grounding Barefoot Shoes. This before-and-after shows what just 4 weeks of wearing our Bronoir’s twice a week can do. Her feet look healthier, more balanced, and visibly less swollen and she says the relief was felt in the very first days.' }}
+        </div>
+      </div>
+
+      <!-- Right Interactive Comparison Slider -->
+      <div class="before-after-slider-box" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+        <div class="before-after-image-wrapper" style="--before-after-initial-drag-position: 50%; --clip-path-offset: 0px; border-radius: 12px; width: 100%; max-width: 580px; position: relative; user-select: none; overflow: hidden; filter: drop-shadow(0 5px 15px rgba(26,26,26,0.1));">
+          <div class="before-after-image-relative" style="position: relative; color: #ffffff; height: 320px; width: 100%; border-radius: 12px; overflow: hidden;">
+            <!-- Base Image: Before -->
+            <img src="{{ section.settings.before_image | default: 'https://trybronoir.com/cdn/shop/files/Frame_1578_1.png?v=1761594705&width=1400' }}"
+                 alt="Before Bronoir Barefoot Shoes"
+                 class="before-after-image before-after-image--cover"
+                 style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; border-radius: 12px;"
+                 draggable="false">
+            <div class="before-after-image-text" style="position: absolute; font-weight: 700; font-size: 16px; color: #ffffff; left: 2rem; top: 1rem; z-index: 2; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+              {{ section.settings.before_text | default: 'Before' }}
+            </div>
+
+            <!-- Overlay Image: After with clip-path -->
+            <div class="before-after-overlay-wrap" style="clip-path: inset(0 0 0 calc(var(--before-after-initial-drag-position, 50%) + var(--clip-path-offset, 0px))); position: absolute; top: 0; bottom: 0; left: 0; right: 0; color: #ffffff;">
+              <img src="{{ section.settings.after_image | default: 'https://trybronoir.com/cdn/shop/files/Frame_1577_1.png?v=1761594699&width=1400' }}"
+                   alt="After Bronoir Barefoot Shoes"
+                   class="before-after-image before-after-image--cover"
+                   style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; border-radius: 12px;"
+                   draggable="false">
+              <div class="before-after-image-text" style="position: absolute; font-weight: 700; font-size: 16px; color: #ffffff; right: 2rem; top: 1rem; z-index: 2; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                {{ section.settings.after_text | default: 'After' }}
+              </div>
+            </div>
+
+            <!-- Divider & Handle Cursor -->
+            <div style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; pointer-events: none;">
+              <div class="before-after__cursor" style="--background: #ffffff; pointer-events: auto; height: 100%; width: max-content; touch-action: none; transform: translate(calc(-50% + var(--clip-path-offset, 0px)), -50%); cursor: grab; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15)) drop-shadow(0 1px 1px rgba(0,0,0,0.1)); will-change: transform; place-items: center; display: grid; position: relative; top: 50%; left: var(--before-after-initial-drag-position, 50%);">
+                <svg role="presentation" width="28" height="35" viewBox="0 0 32 40" style="width: 40px; height: 40px;">
+                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16V24C32 32.8366 24.8366 40 16 40C7.16344 40 0 32.8366 0 24V16Z" fill="#ffffff"></path>
+                  <path fill="#000000" d="M11 14H13V26H11zM15 14H17V26H15zM19 14H21V26H19z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="image-below-text" style="font-size: 14px; color: rgba(255, 255, 255, 0.9); margin: 12px 0 0 0; text-align: center;">
+          {{ section.settings.caption | default: 'Drag the slider to see her visible transformation.' }}
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .before-after__cursor:before {
+    content: '';
+    height: 100%;
+    width: 2px;
+    background: #ffffff;
+    z-index: -1;
+    position: absolute;
+  }
+  .before-after__cursor:active {
+    cursor: grabbing !important;
+  }
+  @media (max-width: 900px) {
+    .before-after-card-wrapper {
+      grid-template-columns: 1fr !important;
+      padding: 36px 24px !important;
+      gap: 32px !important;
+    }
+    .before-after-text h2 {
+      font-size: 26px !important;
+    }
+    .before-after-image-relative {
+      height: 200px !important;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    function setupBeforeAfter() {
+      const cursors = document.querySelectorAll('.before-after__cursor');
+      cursors.forEach(cursor => {
+        const imageWrapper = cursor.closest('.before-after-image-wrapper');
+        if (!imageWrapper) return;
+
+        let xStart, xDiff, originalOffset;
+
+        function dragStart(event) {
+          event.preventDefault();
+          xStart = event.clientX !== undefined ? event.clientX : (event.touches && event.touches[0].clientX);
+          const rawOffset = imageWrapper.style.getPropertyValue('--clip-path-offset') || '0px';
+          originalOffset = parseFloat(rawOffset) || 0;
+
+          if (event.pointerId && cursor.setPointerCapture) {
+            cursor.setPointerCapture(event.pointerId);
+          }
+
+          document.addEventListener('pointermove', dragMove);
+          document.addEventListener('pointerup', dragEnd);
+          document.addEventListener('touchmove', dragMove, { passive: false });
+          document.addEventListener('touchend', dragEnd);
+        }
+
+        function dragMove(event) {
+          const currentX = event.clientX !== undefined ? event.clientX : (event.touches && event.touches[0].clientX);
+          if (currentX === undefined) return;
+          xDiff = currentX - xStart;
+
+          let result = xDiff + originalOffset;
+          let containerWidth = imageWrapper.offsetWidth;
+          let cursorOffsetPercent = parseFloat(
+            getComputedStyle(imageWrapper).getPropertyValue('--before-after-initial-drag-position')
+          ) || 50;
+          let pixelsOffset = (cursorOffsetPercent / 100) * containerWidth;
+
+          const negativeMax = -1 * pixelsOffset;
+          const positiveMax = containerWidth - pixelsOffset;
+
+          if (result < negativeMax) result = negativeMax;
+          else if (result > positiveMax) result = positiveMax;
+
+          imageWrapper.style.setProperty('--clip-path-offset', result + 'px');
+        }
+
+        function dragEnd(event) {
+          if (event && event.pointerId && cursor.releasePointerCapture) {
+            try { cursor.releasePointerCapture(event.pointerId); } catch(e) {}
+          }
+          document.removeEventListener('pointermove', dragMove);
+          document.removeEventListener('pointerup', dragEnd);
+          document.removeEventListener('touchmove', dragEnd);
+          document.removeEventListener('touchend', dragEnd);
+        }
+
+        cursor.addEventListener('pointerdown', dragStart);
+        cursor.addEventListener('touchstart', dragStart, { passive: false });
+
+        const relativeBox = imageWrapper.querySelector('.before-after-image-relative');
+        if (relativeBox) {
+          relativeBox.addEventListener('click', function(e) {
+            if (e.target.closest('.before-after__cursor')) return;
+            const rect = imageWrapper.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const containerWidth = rect.width;
+            let cursorOffsetPercent = parseFloat(
+              getComputedStyle(imageWrapper).getPropertyValue('--before-after-initial-drag-position')
+            ) || 50;
+            let pixelsOffset = (cursorOffsetPercent / 100) * containerWidth;
+            let newOffset = clickX - pixelsOffset;
+            const negativeMax = -1 * pixelsOffset;
+            const positiveMax = containerWidth - pixelsOffset;
+            if (newOffset < negativeMax) newOffset = negativeMax;
+            else if (newOffset > positiveMax) newOffset = positiveMax;
+            imageWrapper.style.setProperty('--clip-path-offset', newOffset + 'px');
+          });
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupBeforeAfter);
+    } else {
+      setupBeforeAfter();
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Before & After Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "4 Weeks with Bronoir Barefoot Shoes"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Real results, faster than you think."
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content",
+      "default": "Meet Karen. After years of struggling with swelling, skin irritation, and aching feet, she finally tried Bronoir Grounding Barefoot Shoes. This before-and-after shows what just 4 weeks of wearing our Bronoir’s twice a week can do. Her feet look healthier, more balanced, and visibly less swollen and she says the relief was felt in the very first days."
+    },
+    {
+      "type": "image_picker",
+      "id": "before_image",
+      "label": "Before Image"
+    },
+    {
+      "type": "text",
+      "id": "before_text",
+      "label": "Before Label",
+      "default": "Before"
+    },
+    {
+      "type": "image_picker",
+      "id": "after_image",
+      "label": "After Image"
+    },
+    {
+      "type": "text",
+      "id": "after_text",
+      "label": "After Label",
+      "default": "After"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption",
+      "default": "Drag the slider to see her visible transformation."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Before & After Slider"
+    }
+  ]
+}
+{% endschema %}

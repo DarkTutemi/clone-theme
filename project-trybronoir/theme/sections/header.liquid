@@ -1,0 +1,84 @@
+<header class="site-header-bronoir" data-src="sections/header.liquid" style="background: #ffffff; border-bottom: 1px solid #dfdfdf; position: sticky; top: 0; z-index: 100;">
+  <div class="container" style="max-width: 1440px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 12px 24px;">
+    
+    <!-- Left / Mobile Hamburger -->
+    <div class="header-left" style="display: flex; align-items: center; gap: 16px;">
+      <button class="mobile-menu-btn" style="display: none; background: none; border: none; cursor: pointer; padding: 4px;" aria-label="Open menu">
+        <svg class="icon icon--header-hamburger" height="16" viewBox="0 0 18 14" width="18" fill="none" stroke="#282828" stroke-width="1.8">
+          <path d="M0 1h18M0 13h18H0zm0-6h18H0z"></path>
+        </svg>
+      </button>
+
+      <!-- Real High-Res Logo Image -->
+      <a href="/" class="header-logo-wrap" style="display: flex; align-items: center; text-decoration: none;">
+        <img src="https://trybronoir.com/cdn/shop/files/Bronoir_1200_x_300_px_4_310x.png?v=1761592105"
+             alt="Bronoir"
+             style="height: 38px; width: auto; max-width: 155px; object-fit: contain; display: block;"
+             loading="eager"
+             fetchpriority="high">
+      </a>
+    </div>
+
+    <!-- Desktop Navigation Menu (Exact 1:1 items) -->
+    <nav class="header-desktop-nav" style="display: flex; align-items: center;">
+      <ul style="display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; align-items: center;">
+        <li><a href="/" style="font-size: 14px; font-weight: 600; color: #282828; text-decoration: none;">Home</a></li>
+        <li><a href="/collections/barefoot-shoes-bogo-volume" style="font-size: 14px; font-weight: 600; color: #282828; text-decoration: none;">Senior Citizens Day Sale</a></li>
+        <li><a href="/#bestsellers" style="font-size: 14px; font-weight: 600; color: #282828; text-decoration: none;">Our Bestsellers</a></li>
+        <li><a href="/products/bronoir-skin-pro-with-copper-grounding-allround-barefoot-shoes" style="font-size: 14px; font-weight: 600; color: #282828; text-decoration: none;">Copper Shoes</a></li>
+        <li><a href="/collections/barefoot-shoes-for-summer" style="font-size: 14px; font-weight: 600; color: #282828; text-decoration: none;">Barefoot Shoes</a></li>
+        <li><a href="/collections/winter-collection" style="font-size: 14px; font-weight: 600; color: #282828; text-decoration: none;">Winter Shoes</a></li>
+        <li><a href="/collections/socks-and-insoles" style="font-size: 14px; font-weight: 600; color: #282828; text-decoration: none;">Accessories</a></li>
+        <li><a href="https://trybronoir.com/apps/17TRACK" target="_blank" rel="noopener noreferrer" style="font-size: 14px; font-weight: 600; color: #282828; text-decoration: none;">Track Your Order</a></li>
+        <li><a href="https://trybronoir.com/pages/contact" target="_blank" rel="noopener noreferrer" style="font-size: 14px; font-weight: 600; color: #282828; text-decoration: none;">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right Action Icons (Real SVGs) -->
+    <div class="header-right-actions" style="display: flex; align-items: center; gap: 20px;">
+      <!-- Search Icon -->
+      <a href="/search" aria-label="Search" style="color: #282828; display: flex; align-items: center;">
+        <svg class="icon icon--header-search" height="18" viewBox="0 0 18 18" width="18" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17"></path>
+        </svg>
+      </a>
+
+      <!-- Account Icon -->
+      <a href="/account" aria-label="Account" class="hidden-phone" style="color: #282828; display: flex; align-items: center;">
+        <svg class="icon icon--header-customer" height="18" viewBox="0 0 18 17" width="18" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="9" cy="5" r="4"></circle>
+          <path d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0"></path>
+        </svg>
+      </a>
+
+      <!-- Cart Bag Icon with Count Badge -->
+      <a href="/cart" id="header-cart-icon-btn" aria-label="Cart" style="position: relative; color: #282828; display: flex; align-items: center; text-decoration: none;">
+        <svg class="icon icon--header-cart" height="20" viewBox="0 0 20 18" width="20" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M3 1h14l1 16H2L3 1z"></path>
+          <path d="M7 4v0a3 3 0 003 3v0a3 3 0 003-3v0"></path>
+        </svg>
+        <span class="cart-count-bubble" style="position: absolute; top: -7px; right: -8px; background: #282828; color: #ffffff; font-size: 10px; font-weight: 800; width: 17px; height: 17px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          0
+        </span>
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<style>
+  .site-header-bronoir nav a:hover {
+    color: #08435e !important;
+  }
+  @media (max-width: 1100px) {
+    .header-desktop-nav { display: none !important; }
+    .mobile-menu-btn { display: block !important; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": []
+}
+{% endschema %}

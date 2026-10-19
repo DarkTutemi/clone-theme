@@ -1,0 +1,86 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Azure Boutique Rebuild",
+    "theme_version": "1.0.0",
+    "theme_author": "Clean-Room Engineering",
+    "theme_documentation_url": "https://shopify.dev",
+    "theme_support_url": "https://shopify.dev"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_bg",
+        "label": "Background Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Text Color",
+        "default": "#121212"
+      },
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Primary Accent (Brand Green)",
+        "default": "#44624a"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Urgency / Sale Accent (Red)",
+        "default": "#dd1d1d"
+      },
+      {
+        "type": "color",
+        "id": "color_soft_bg",
+        "label": "Soft Contrast Surface (Sage/Cream)",
+        "default": "#e9ece9"
+      }
+    ]
+  },
+  {
+    "name": "Layout",
+    "settings": [
+      {
+        "type": "range",
+        "id": "page_width",
+        "min": 1000,
+        "max": 1600,
+        "step": 20,
+        "default": 1400,
+        "unit": "px",
+        "label": "Maximum Page Width"
+      },
+      {
+        "type": "checkbox",
+        "id": "dev_bridge",
+        "label": "Enable Design Bridge Traceability",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": "Facebook"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "Instagram"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok_link",
+        "label": "TikTok"
+      }
+    ]
+  }
+]

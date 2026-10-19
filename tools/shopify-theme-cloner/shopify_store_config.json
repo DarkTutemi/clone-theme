@@ -1,0 +1,8 @@
+{
+  "store": "your-store.myshopify.com",
+  "client_id": "YOUR_CLIENT_ID",
+  "client_secret": "YOUR_CLIENT_SECRET",
+  "access_token": "YOUR_ACCESS_TOKEN",
+  "token_expiry": 0,
+  "api_version": "2024-07"
+}

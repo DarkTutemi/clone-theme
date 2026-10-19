@@ -1,0 +1,68 @@
+<section class="shopify-section image-text-card-effect-section" id="shopify-section-template--27860728578148__custom_image_with_text_card_BkAV8X"><style>
+  #shopify-section-template--27860728578148__custom_image_with_text_card_BkAV8X {--heading-color: 26, 26, 26;
+    --text-color: 26, 26, 26;
+    --primary-button-background: 68, 194, 253;
+    --primary-button-text-color: 255, 255, 255;
+
+    --section-accent-background: 238 248 250 / 1.0;
+    --section-autoplay-duration: s;
+    --section-animation-play-state: paused;
+  }
+</style>
+<div class="custom-image-with-text-card image-text-card-effect">
+<div class="container vertical-breather">
+<div class="image-text-card-swiper">
+<div class="swiper main-slide-container swiper-initialized swiper-horizontal swiper-backface-hidden">
+<div aria-live="polite" class="swiper-wrapper" id="swiper-wrapper-67a88110479c68f46" style="transform: translate3d(0px, 0px, 0px);"><div aria-label="1 / 1" class="swiper-slide swiper-image-card swiper-slide-active swiper-slide-next" data-swiper-slide-index="0" role="group" style="width: 669px;">
+<img height="1500" loading="lazy" src="//trybronoir.com/cdn/shop/files/DeinAbschnittstext_3.png?v=1761602392&amp;width=1500" srcset="//trybronoir.com/cdn/shop/files/DeinAbschnittstext_3.png?v=1761602392&amp;width=165 165w, //trybronoir.com/cdn/shop/files/DeinAbschnittstext_3.png?v=1761602392&amp;width=360 360w, //trybronoir.com/cdn/shop/files/DeinAbschnittstext_3.png?v=1761602392&amp;width=535 535w, //trybronoir.com/cdn/shop/files/DeinAbschnittstext_3.png?v=1761602392&amp;width=750 750w, //trybronoir.com/cdn/shop/files/DeinAbschnittstext_3.png?v=1761602392&amp;width=1070 1070w, //trybronoir.com/cdn/shop/files/DeinAbschnittstext_3.png?v=1761602392&amp;width=1500 1500w" width="1500"/>
+</div>
+</div>
+<span aria-atomic="true" aria-live="assertive" class="swiper-notification"></span></div>
+<div class="swiper thumbs-slide-container swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden">
+<div aria-live="polite" class="swiper-wrapper" id="swiper-wrapper-30f7d0aa108c2dadc">
+<div aria-label="1 / 1" class="swiper-slide swiper-text-card swiper-slide-visible swiper-slide-fully-visible swiper-slide-active swiper-slide-next" data-swiper-slide-index="0" role="group" style="width: 602px; opacity: 1; transform: translate3d(0px, 0px, 0px);"><h3 class="heading h3">
+<split-lines>Recommended by Foot Health Experts</split-lines>
+</h3><div class="image-with-text__text-wrapper"><p>Bronoir Grounding Shoes are trusted by professionals who specialize in foot  health and mobility. One such expert is Dr. James Rowland, a retired orthopedic  specialist with over 40 years of clinical experience helping patients regain comfort  and stability. Dr. Rowland emphasizes the importance of natural alignment, wide  toe splay, and sensory feedback, all key features built into every pair of Bronoir  shoes. Designed with medical insight and crafted for daily life, Bronoir helps you  walk the way nature intended, pain-free, balanced, and grounded.</p></div>
+<!-- Arrows -->
+<div class="swiper-nav-buttons">
+<div aria-controls="swiper-wrapper-67a88110479c68f46" aria-label="Previous slide" class="swiper-button swiper-button-prev swiper-button-lock" role="button" tabindex="0"></div>
+<div aria-controls="swiper-wrapper-67a88110479c68f46" aria-label="Next slide" class="swiper-button swiper-button-next swiper-button-lock" role="button" tabindex="0"></div>
+</div>
+</div>
+</div>
+<span aria-atomic="true" aria-live="assertive" class="swiper-notification"></span></div>
+</div>
+</div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    
+    var slider = new Swiper ('.main-slide-container', {
+    slidesPerView: 1,
+  navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    // effect: "fade",
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    
+});
+
+var thumbs = new Swiper ('.thumbs-slide-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    centeredSlides: false,
+    loop: true,
+    slideToClickedSlide: true,
+    effect: "fade",
+});
+
+
+slider.controller.control = thumbs;
+thumbs.controller.control = slider;
+  });
+</script>
+<style data-shopify="">
+</style></section>

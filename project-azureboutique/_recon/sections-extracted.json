@@ -1,0 +1,50 @@
+{
+  "sections": [
+    {
+      "id": "shopify-section-sections--27107512680757__fe1c8c67-b84c-4466-a515-70df3134c1c0",
+      "class": "shopify-section shopify-section-group-header-group announcement-bar-section"
+    },
+    {
+      "id": "shopify-section-sections--27107512680757__header",
+      "class": "shopify-section shopify-section-group-header-group section-header"
+    },
+    {
+      "id": "shopify-section-cart-drawer",
+      "class": "shopify-section"
+    },
+    {
+      "id": "shopify-section-promo-popup",
+      "class": "shopify-section"
+    },
+    {
+      "id": "shopify-section-scroll-to-top-btn",
+      "class": "shopify-section"
+    },
+    {
+      "id": "shopify-section-global-music-player",
+      "class": "shopify-section"
+    },
+    {
+      "id": "shopify-section-sections--27107512713525__footer",
+      "class": "shopify-section shopify-section-group-footer-group"
+    }
+  ],
+  "comments": [
+    [
+      "BEGIN",
+      "header-group"
+    ],
+    [
+      "END",
+      "header-group"
+    ],
+    [
+      "BEGIN",
+      "footer-group"
+    ],
+    [
+      "END",
+      "footer-group"
+    ]
+  ]
+}

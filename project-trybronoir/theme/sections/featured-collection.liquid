@@ -1,0 +1,141 @@
+<section id="bestsellers" class="section custom-featured-collection" data-src="sections/featured-collection.liquid" style="padding: 64px 0; background: #ffffff;">
+  <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 24px;">
+    
+    <div style="text-align: center; margin-bottom: 44px;">
+      <h2 style="font-size: 14px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 8px 0;">
+        {{ section.settings.subtitle | default: 'Find your perfect shoe' }}
+      </h2>
+      <h3 style="font-size: 38px; font-weight: 900; color: #08435e; margin: 0; letter-spacing: -0.02em;">
+        {{ section.settings.title | default: 'Our Bestsellers' }}
+      </h3>
+    </div>
+
+    <div class="featured-product-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+      
+      <!-- Product 1: Bronoir™ Skin Pro with Copper -->
+      {% render 'product-card',
+        title: 'Bronoir™ Skin Pro with Copper - Grounding Allround Barefoot Shoes',
+        price: '2.102.000₫',
+        compare_price: '3.154.000₫',
+        badge_text: 'Save 1.052.000₫',
+        product_url: '/products/bronoir-skin-pro-with-copper-grounding-allround-barefoot-shoes',
+        image_url: 'https://trybronoir.com/cdn/shop/files/DeinAbschnittstext_11_1080x.png?v=1761602494',
+        secondary_image_url: 'https://trybronoir.com/cdn/shop/files/Ueberblick-13_64ac82c4-9290-4ac3-834e-a546159247d1_1001x.jpg?v=1761602501'
+      %}
+
+      <!-- Product 2: Bronoir CosyCloud Boot -->
+      {% render 'product-card',
+        title: 'Bronoir CosyCloud Boot - Warm & Comfy Winter Barefoot Boot',
+        price: '1.970.000₫',
+        compare_price: '3.286.000₫',
+        badge_text: 'Save 1.316.000₫',
+        product_url: '/products/bronoir-cosycloud-boot-warm-comfy-winter-barefoot-boot',
+        image_url: 'https://trybronoir.com/cdn/shop/files/main_imageSa8643830040d46f19c743a84c795910cn_800x.jpg?v=1764746902',
+        secondary_image_url: 'https://trybronoir.com/cdn/shop/files/main_imageS5035d4763edc490ab71c090f9358273dD_800x.jpg?v=1764746902'
+      %}
+
+      <!-- Product 3: Bronoir™ Hikers -->
+      {% render 'product-card',
+        title: 'Bronoir™ Hikers - Orthopedic Outdoor Barefoot Shoes (BOGO)',
+        price: '2.102.000₫',
+        compare_price: '3.417.000₫',
+        badge_text: 'Save 1.315.000₫',
+        product_url: '/products/bronoir-hikers-orthopedic-outdoor-barefoot-shoes-bogo',
+        image_url: 'https://trybronoir.com/cdn/shop/files/2_9dd806bd-89a0-46a8-85e2-073b17201138_1080x.jpg?v=1761602551',
+        secondary_image_url: 'https://trybronoir.com/cdn/shop/files/3_eeb3adf3-2377-4daa-844b-db7a1a2c4662_1080x.jpg?v=1761602551'
+      %}
+
+      <!-- Product 4: Bronoir™ Trail Masters -->
+      {% render 'product-card',
+        title: 'Bronoir™ Trail Masters - All-Terrain Grip Barefoot Boots',
+        price: '2.497.000₫',
+        compare_price: '4.338.000₫',
+        badge_text: 'Save 1.841.000₫',
+        product_url: '/products/bronoir-trail-masters-all-terrain-grip-barefoot-boots',
+        image_url: 'https://trybronoir.com/cdn/shop/files/Hauptbild-6_2f9f16c1-f43d-42ba-8838-067d08dd7102.jpg?v=1761602493',
+        secondary_image_url: 'https://trybronoir.com/cdn/shop/files/2_9dd806bd-89a0-46a8-85e2-073b17201138_1080x.jpg?v=1761602551'
+      %}
+
+      <!-- Product 5: Bronoir™ Arctic 2.0 Winter -->
+      {% render 'product-card',
+        title: 'Bronoir™ Arctic 2.0 - Winter Barefoot Shoes',
+        price: '1.970.000₫',
+        compare_price: '3.680.000₫',
+        badge_text: 'Save 1.710.000₫',
+        product_url: '/products/bronoir-arctic-2-0-winter-barefoot-shoes-1-1-free',
+        image_url: 'https://cdn.shopify.com/s/files/1/0743/5360/6756/files/WinterBarfussschuhe_1.png?v=1761602415',
+        secondary_image_url: 'https://cdn.shopify.com/s/files/1/0743/5360/6756/files/64.png?v=1761602414'
+      %}
+
+      <!-- Product 6: Bronoir™ Toasty Winter Barefoot -->
+      {% render 'product-card',
+        title: 'Bronoir™ Toasty - Cozy Winter Barefoot Shoes with Thermal Lining',
+        price: '2.234.000₫',
+        compare_price: '3.549.000₫',
+        badge_text: 'Save 1.315.000₫',
+        product_url: '/products/bronoir-toasty-cozy-winter-barefoot-shoes-with-thermal-lining',
+        image_url: 'https://trybronoir.com/cdn/shop/files/1_32400534-3e4f-4d43-96cd-deccb938f70e.jpg?v=1761920062',
+        secondary_image_url: 'https://trybronoir.com/cdn/shop/files/3_a8860335-eb99-433a-9355-2dda6fef77b5.jpg?v=1761965026&width=600'
+      %}
+
+      <!-- Product 7: Bronoir™ Copper Winter Boots -->
+      {% render 'product-card',
+        title: 'Bronoir™ Summit - Winter Warm Insulated Barefoot Shoes',
+        price: '2.497.000₫',
+        compare_price: '3.943.000₫',
+        badge_text: 'Save 1.446.000₫',
+        product_url: '/products/bronoir-summit-winter-warm-insulated-barefoot-shoes',
+        image_url: 'https://trybronoir.com/cdn/shop/files/Frame_1000004753.png?v=1761594210&width=600',
+        secondary_image_url: 'https://trybronoir.com/cdn/shop/files/3_a8860335-eb99-433a-9355-2dda6fef77b5.jpg?v=1761965026&width=600'
+      %}
+
+      <!-- Product 8: Bronoir™ All-Weather Barefoot -->
+      {% render 'product-card',
+        title: 'Bronoir™ CloudWalk - Ultra Light Breathable Barefoot Sneakers',
+        price: '1.971.000₫',
+        compare_price: '3.154.000₫',
+        badge_text: 'Save 1.183.000₫',
+        product_url: '/products/bronoir-cloudwalk-ultra-light-breathable-barefoot-sneakers',
+        image_url: 'https://trybronoir.com/cdn/shop/files/freiluftkind_linkblock_sneaker_v2_jpg_958fde39-1c1f-4ce0-bf8a-6bf04474f161.png?v=1761594767&width=600',
+        secondary_image_url: 'https://trybronoir.com/cdn/shop/files/DeinAbschnittstext_11_1080x.png?v=1761602494'
+      %}
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  @media (max-width: 1100px) {
+    .featured-product-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 18px !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .featured-product-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 12px !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subheading",
+      "default": "Find your perfect shoe"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Our Bestsellers"
+    }
+  ]
+}
+{% endschema %}

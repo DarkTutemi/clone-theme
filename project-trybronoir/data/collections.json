@@ -1,0 +1,334 @@
+{
+  "collections": [
+    {
+      "id": 309607071844,
+      "title": "all",
+      "handle": "all",
+      "description": "",
+      "published_at": "2025-10-27T15:04:56-07:00",
+      "updated_at": "2026-10-18T19:25:06-07:00",
+      "image": null,
+      "products_count": 1294
+    },
+    {
+      "id": 309607661668,
+      "title": "Bare Foot Shoes Bogo 1 + 1 Free Standard Page Variation",
+      "handle": "bare-foot-shoes-bogo-1-1-free",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 14
+    },
+    {
+      "id": 309608251492,
+      "title": "Barefoot Shoes Bogo 1 + 1 Free",
+      "handle": "barefoot-shoes-bogo-1-1-free-thanksgiving",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 26
+    },
+    {
+      "id": 309608317028,
+      "title": "Barefoot Shoes Bogo 1 + 1 Free",
+      "handle": "barefoot-shoes-bogo-christmas",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 26
+    },
+    {
+      "id": 309608349796,
+      "title": "Barefoot Shoes Bogo 1 + 1 Free",
+      "handle": "barefoot-shoes-bogo-1-1-free-halloween",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 26
+    },
+    {
+      "id": 309933572196,
+      "title": "Barefoot Shoes Bogo 1 + 1 Free",
+      "handle": "barefoot-shoes-bogo-1-1-free",
+      "description": "",
+      "published_at": "2025-10-30T06:58:30-07:00",
+      "updated_at": "2026-10-17T04:20:55-07:00",
+      "image": null,
+      "products_count": 20
+    },
+    {
+      "id": 309607399524,
+      "title": "Barefoot Shoes Bogo 1 + 1 Free (NYE)",
+      "handle": "barefoot-shoes-bogo-free",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 27
+    },
+    {
+      "id": 309607497828,
+      "title": "Barefoot Shoes Bogo Volume",
+      "handle": "barefoot-shoes-bogo-volume",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 19
+    },
+    {
+      "id": 318014095460,
+      "title": "Bestsellers",
+      "handle": "bestsellers",
+      "description": "",
+      "published_at": "2026-05-01T14:11:37-07:00",
+      "updated_at": "2026-10-18T19:25:06-07:00",
+      "image": null,
+      "products_count": 1290
+    },
+    {
+      "id": 309607989348,
+      "title": "Boots",
+      "handle": "boots",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-17T04:20:54-07:00",
+      "image": null,
+      "products_count": 16
+    },
+    {
+      "id": 309607727204,
+      "title": "Bronoir Custom BOGO",
+      "handle": "custom-bogo",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 14
+    },
+    {
+      "id": 309607563364,
+      "title": "Buy 2 Get 1 Free Limited Spring Offer",
+      "handle": "buy-2-get-1-free-limited-spring-offer",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 17
+    },
+    {
+      "id": 309607333988,
+      "title": "Copper shoes",
+      "handle": "copper-shoes",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-08-26T09:26:09-07:00",
+      "image": null,
+      "products_count": 1
+    },
+    {
+      "id": 309607465060,
+      "title": "Copper Shoes",
+      "handle": "copper-shoes-1",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-09-04T04:14:51-07:00",
+      "image": null,
+      "products_count": 2
+    },
+    {
+      "id": 309608054884,
+      "title": "Hiking Collection",
+      "handle": "hiking-collection",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 8
+    },
+    {
+      "id": 309608284260,
+      "title": "Homepage",
+      "handle": "homepage",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-08-26T09:26:10-07:00",
+      "image": null,
+      "products_count": 0
+    },
+    {
+      "id": 309608185956,
+      "title": "one plus one and get three",
+      "handle": "one-plus-one-and-get-three",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 52
+    },
+    {
+      "id": 309607104612,
+      "title": "Our Bestsellers",
+      "handle": "bestseller-old",
+      "description": "",
+      "published_at": "2025-10-27T15:04:56-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 23
+    },
+    {
+      "id": 309607170148,
+      "title": "Shop by Category",
+      "handle": "shop-by-category",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-08-26T09:26:08-07:00",
+      "image": null,
+      "products_count": 0
+    },
+    {
+      "id": 322075721828,
+      "title": "Skin Pro B1G2",
+      "handle": "skin-pro-b1g2",
+      "description": null,
+      "published_at": "2026-07-25T05:50:12-07:00",
+      "updated_at": "2026-10-18T18:40:04-07:00",
+      "image": null,
+      "products_count": 2
+    },
+    {
+      "id": 309607137380,
+      "title": "Socks and Insoles",
+      "handle": "socks-and-insoles",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-17T04:20:54-07:00",
+      "image": null,
+      "products_count": 3
+    },
+    {
+      "id": 309607301220,
+      "title": "Spring collection",
+      "handle": "spring-collection",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-17T04:20:55-07:00",
+      "image": null,
+      "products_count": 11
+    },
+    {
+      "id": 309607039076,
+      "title": "Startseite",
+      "handle": "frontpage",
+      "description": "",
+      "published_at": "2025-10-27T15:04:56-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 81
+    },
+    {
+      "id": 309607235684,
+      "title": "Summer collection",
+      "handle": "barefoot-shoes-for-summer",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T18:40:04-07:00",
+      "image": null,
+      "products_count": 36
+    },
+    {
+      "id": 309608022116,
+      "title": "Super Sale Affordable Collection",
+      "handle": "super-sale-affordable-collection",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-08-26T09:26:09-07:00",
+      "image": null,
+      "products_count": 0
+    },
+    {
+      "id": 309608087652,
+      "title": "The Skin Pro Collection",
+      "handle": "the-skin-pro-collection",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T18:40:04-07:00",
+      "image": null,
+      "products_count": 11
+    },
+    {
+      "id": 309607956580,
+      "title": "Tiktok Collection",
+      "handle": "tiktok-collection",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 15
+    },
+    {
+      "id": 309608120420,
+      "title": "Winter Boots",
+      "handle": "winter-boots",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 19
+    },
+    {
+      "id": 309608218724,
+      "title": "Winter Boots Collection",
+      "handle": "winter-boots-collection",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-17T04:20:54-07:00",
+      "image": null,
+      "products_count": 12
+    },
+    {
+      "id": 309607268452,
+      "title": "Winter collection",
+      "handle": "winter-collection",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 149
+    },
+    {
+      "id": 309608153188,
+      "title": "Winter Collection (Tiktok)",
+      "handle": "winter-collection-tiktok",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-10-16T04:17:15-07:00",
+      "image": null,
+      "products_count": 15
+    },
+    {
+      "id": 309933342820,
+      "title": "Winter Collection 2026",
+      "handle": "winter-collection-1",
+      "description": "",
+      "published_at": "2025-10-30T06:56:21-07:00",
+      "updated_at": "2026-10-18T04:14:40-07:00",
+      "image": null,
+      "products_count": 52
+    },
+    {
+      "id": 309607202916,
+      "title": "Winter grounding shoes",
+      "handle": "winter-grounding-shoes",
+      "description": "",
+      "published_at": "2025-10-27T15:04:57-07:00",
+      "updated_at": "2026-08-26T09:26:08-07:00",
+      "image": null,
+      "products_count": 3
+    }
+  ]
+}

@@ -1,0 +1,959 @@
+{
+  "products": [
+    {
+      "id": 10387523043637,
+      "title": "Batana Hair Growth Oil",
+      "handle": "batana-natural-hair-growth-oil",
+      "body_html": "<ul>\n<li>\n<strong>100% Pure Batana Oil</strong>: Azure Batana Oil contains only one ingredient—pure, authentic Batana.</li>\n<li>\n<strong>Honduran Miracle Oil</strong>: Nourishes, restores, and revitalizes for stronger, healthier hair.</li>\n<li>\n<strong>Deep Hydration</strong>: Perfect for moisturizing dry, damaged hair and enhancing natural shine.</li>\n<li>\n<strong>Chemical-Free</strong>: No additives, fillers, or synthetic ingredients—just pure Batana oil for natural hair wellness.</li>\n</ul>",
+      "published_at": "2026-05-12T08:49:51-10:00",
+      "created_at": "2026-01-28T11:44:18-10:00",
+      "updated_at": "2026-10-18T14:26:12-10:00",
+      "vendor": "Azure",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 52272937500981,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "batana oil",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "44.00",
+          "grams": 154,
+          "compare_at_price": "80.00",
+          "position": 3,
+          "product_id": 10387523043637,
+          "created_at": "2026-01-28T11:44:19-10:00",
+          "updated_at": "2026-10-18T14:26:12-10:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 61928525103413,
+          "created_at": "2025-09-12T00:11:46-10:00",
+          "position": 1,
+          "updated_at": "2025-09-12T00:11:50-10:00",
+          "product_id": 10387523043637,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/WhatsAppImage2025-09-11at11.52.31.jpg?v=1757671910",
+          "width": 1053,
+          "height": 1053
+        },
+        {
+          "id": 63248818045237,
+          "created_at": "2025-11-27T17:59:13-10:00",
+          "position": 2,
+          "updated_at": "2025-11-27T17:59:27-10:00",
+          "product_id": 10387523043637,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/5_1.png?v=1764302367",
+          "width": 2000,
+          "height": 2000
+        },
+        {
+          "id": 63248572645685,
+          "created_at": "2025-11-27T17:27:49-10:00",
+          "position": 3,
+          "updated_at": "2025-11-27T17:59:27-10:00",
+          "product_id": 10387523043637,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/3_52decb6b-04b4-4e06-8baa-cf44367cff85.png?v=1764302367",
+          "width": 2000,
+          "height": 2000
+        },
+        {
+          "id": 63248572580149,
+          "created_at": "2025-11-27T17:27:49-10:00",
+          "position": 4,
+          "updated_at": "2025-11-27T17:59:27-10:00",
+          "product_id": 10387523043637,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/7_b50cc825-6507-4ac5-8a12-97b44cb25e50.png?v=1764302367",
+          "width": 2000,
+          "height": 2000
+        },
+        {
+          "id": 63248818078005,
+          "created_at": "2025-11-27T17:59:13-10:00",
+          "position": 5,
+          "updated_at": "2025-11-27T17:59:27-10:00",
+          "product_id": 10387523043637,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/4_dc509ec0-9601-4c33-a0d2-8bd71bc4f82a.png?v=1764302367",
+          "width": 2000,
+          "height": 2000
+        },
+        {
+          "id": 63271910474037,
+          "created_at": "2025-11-28T11:39:04-10:00",
+          "position": 6,
+          "updated_at": "2025-11-28T11:39:08-10:00",
+          "product_id": 10387523043637,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/8_7fe6cb9c-987d-45fd-ad5a-5d72331c39ab.png?v=1764365948",
+          "width": 2000,
+          "height": 2000
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10388246069557,
+      "title": "Scalp Stimulator",
+      "handle": "scalp-serum-hair",
+      "body_html": "<p data-start=\"287\" data-end=\"625\">Experience targeted hair restoration with our Batana Scalp Serum — a concentrated treatment designed to stimulate growth, repair damage, and soothe irritated scalps. Powered by <strong data-start=\"464\" data-end=\"483\">pure Batana oil</strong>, this lightweight formula penetrates deep into the scalp to restore bald spots, strengthen thinning areas, and support long-term hair health.</p>\n<p data-start=\"627\" data-end=\"657\">✨ <strong data-start=\"629\" data-end=\"655\">What makes it special:</strong></p>\n<ul data-start=\"658\" data-end=\"923\">\n<li data-start=\"658\" data-end=\"707\">\n<p data-start=\"660\" data-end=\"707\">Helps regrow edges and fill in thinning spots</p>\n</li>\n<li data-start=\"708\" data-end=\"770\">\n<p data-start=\"710\" data-end=\"770\">Rich in essential fatty acids, vitamin E, and antioxidants</p>\n</li>\n<li data-start=\"771\" data-end=\"819\">\n<p data-start=\"773\" data-end=\"819\">Lightweight, non-greasy formula absorbs fast</p>\n</li>\n<li data-start=\"820\" data-end=\"873\">\n<p data-start=\"822\" data-end=\"873\">Roller-tip applicator for mess-free, targeted use</p>\n</li>\n<li data-start=\"874\" data-end=\"923\">\n<p data-start=\"876\" data-end=\"923\">Ideal for locs, braids, and protective styles</p>\n</li>\n</ul>\n<p data-start=\"925\" data-end=\"1088\">Whether you’re just starting your growth journey or trying to bounce back from breakage, our Batana Scalp Serum gives your roots the support they need — naturally.</p>",
+      "published_at": "2026-01-29T14:22:28-10:00",
+      "created_at": "2026-01-29T14:22:28-10:00",
+      "updated_at": "2026-10-18T14:26:12-10:00",
+      "vendor": "Azure",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 52276425097525,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "SCALP SERUM",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "40.00",
+          "grams": 36,
+          "compare_at_price": "80.00",
+          "position": 1,
+          "product_id": 10388246069557,
+          "created_at": "2026-01-29T14:22:28-10:00",
+          "updated_at": "2026-10-18T14:26:12-10:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 60915278381365,
+          "created_at": "2025-07-09T19:38:35-10:00",
+          "position": 1,
+          "updated_at": "2025-07-09T19:38:37-10:00",
+          "product_id": 10388246069557,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/1752125897416-177d6e90-2472-48ab-8349-4642d3d0a40b_1.jpg?v=1752125917",
+          "width": 1021,
+          "height": 1024
+        },
+        {
+          "id": 60934252986677,
+          "created_at": "2025-07-10T12:53:00-10:00",
+          "position": 2,
+          "updated_at": "2025-08-06T20:37:21-10:00",
+          "product_id": 10388246069557,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/1752187971306-06e77d6b-d3d5-4917-95fc-8d2ed0aa084d_1.jpg?v=1754548641",
+          "width": 1021,
+          "height": 1024
+        },
+        {
+          "id": 60915412894005,
+          "created_at": "2025-07-09T19:59:45-10:00",
+          "position": 3,
+          "updated_at": "2025-07-10T12:53:02-10:00",
+          "product_id": 10388246069557,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/1752127161606-2d10a49e-ae19-4df9-a13c-fabdf58d5881_1.jpg?v=1752187982",
+          "width": 1021,
+          "height": 1024
+        },
+        {
+          "id": 60915696501045,
+          "created_at": "2025-07-09T20:06:37-10:00",
+          "position": 4,
+          "updated_at": "2025-07-10T12:53:02-10:00",
+          "product_id": 10388246069557,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/1752127585287-9d30ca45-2cd2-43d0-8e8a-2e5e7af15bc0_1.jpg?v=1752187982",
+          "width": 1021,
+          "height": 1024
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10362630144309,
+      "title": "$20 Azure Gift Card",
+      "handle": "az",
+      "body_html": "<p>$20 Azure Gift Card</p>",
+      "published_at": "2025-12-26T21:34:49-10:00",
+      "created_at": "2025-12-26T21:34:48-10:00",
+      "updated_at": "2026-10-18T14:26:12-10:00",
+      "vendor": "Azure",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 52100203446581,
+          "title": "$20.00",
+          "option1": "$20.00",
+          "option2": null,
+          "option3": null,
+          "sku": "52100203446581",
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "20.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10362630144309,
+          "created_at": "2025-12-26T21:34:48-10:00",
+          "updated_at": "2026-10-18T14:26:12-10:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 61844908310837,
+          "created_at": "2025-09-05T09:45:54-10:00",
+          "position": 1,
+          "updated_at": "2025-09-05T09:45:56-10:00",
+          "product_id": 10362630144309,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/MinimalistNeutralFreeGuideLeadMagnetTabletMockupInstagramPost_1_14caf53a-49b3-4838-a1ea-c2fd868beeaa.png?v=1757101556",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "options": [
+        {
+          "name": "Denominations",
+          "position": 1,
+          "values": [
+            "$20.00"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10208157860149,
+      "title": "Free $20 Gift Card",
+      "handle": "free-20-gift-card",
+      "body_html": "",
+      "published_at": "2025-09-05T09:45:39-10:00",
+      "created_at": "2025-09-05T09:45:37-10:00",
+      "updated_at": "2026-10-18T14:26:12-10:00",
+      "vendor": "Azure",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51281142710581,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "51281142710581",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "0.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10208157860149,
+          "created_at": "2025-09-05T09:45:38-10:00",
+          "updated_at": "2026-10-18T14:26:12-10:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 61844908310837,
+          "created_at": "2025-09-05T09:45:54-10:00",
+          "position": 1,
+          "updated_at": "2025-09-05T09:45:56-10:00",
+          "product_id": 10208157860149,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/MinimalistNeutralFreeGuideLeadMagnetTabletMockupInstagramPost_1_14caf53a-49b3-4838-a1ea-c2fd868beeaa.png?v=1757101556",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10208155140405,
+      "title": "FREE Hair Growth Guide",
+      "handle": "hair-growth-guide",
+      "body_html": "<p>Hair Growth Guide</p>",
+      "published_at": "2025-09-05T09:36:14-10:00",
+      "created_at": "2025-09-05T09:36:12-10:00",
+      "updated_at": "2026-10-18T14:26:12-10:00",
+      "vendor": "Azure",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51281131209013,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "51281131209013",
+          "requires_shipping": false,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "0.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10208155140405,
+          "created_at": "2025-09-05T09:36:12-10:00",
+          "updated_at": "2026-10-18T14:26:12-10:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 61844893434165,
+          "created_at": "2025-09-05T09:40:12-10:00",
+          "position": 1,
+          "updated_at": "2025-09-05T09:40:14-10:00",
+          "product_id": 10208155140405,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/MinimalistNeutralFreeGuideLeadMagnetTabletMockupInstagramPost.png?v=1757101214",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10029218955573,
+      "title": "Scalp Serum Batana",
+      "handle": "batana-scalp-serum",
+      "body_html": "<p data-start=\"287\" data-end=\"625\">Experience targeted hair restoration with our Batana Scalp Serum — a concentrated treatment designed to stimulate growth, repair damage, and soothe irritated scalps. Powered by <strong data-start=\"464\" data-end=\"483\">pure Batana oil</strong>, this lightweight formula penetrates deep into the scalp to restore bald spots, strengthen thinning areas, and support long-term hair health.</p>\n<p data-start=\"627\" data-end=\"657\">✨ <strong data-start=\"629\" data-end=\"655\">What makes it special:</strong></p>\n<ul data-start=\"658\" data-end=\"923\">\n<li data-start=\"658\" data-end=\"707\">\n<p data-start=\"660\" data-end=\"707\">Helps regrow edges and fill in thinning spots</p>\n</li>\n<li data-start=\"708\" data-end=\"770\">\n<p data-start=\"710\" data-end=\"770\">Rich in essential fatty acids, vitamin E, and antioxidants</p>\n</li>\n<li data-start=\"771\" data-end=\"819\">\n<p data-start=\"773\" data-end=\"819\">Lightweight, non-greasy formula absorbs fast</p>\n</li>\n<li data-start=\"820\" data-end=\"873\">\n<p data-start=\"822\" data-end=\"873\">Roller-tip applicator for mess-free, targeted use</p>\n</li>\n<li data-start=\"874\" data-end=\"923\">\n<p data-start=\"876\" data-end=\"923\">Ideal for locs, braids, and protective styles</p>\n</li>\n</ul>\n<p data-start=\"925\" data-end=\"1088\">Whether you’re just starting your growth journey or trying to bounce back from breakage, our Batana Scalp Serum gives your roots the support they need — naturally.</p>",
+      "published_at": "2025-07-09T06:43:30-10:00",
+      "created_at": "2025-03-15T02:11:11-10:00",
+      "updated_at": "2026-10-18T14:26:12-10:00",
+      "vendor": "Azure",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 50725411455285,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "SCALP SERUM",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "39.00",
+          "grams": 36,
+          "compare_at_price": "80.00",
+          "position": 1,
+          "product_id": 10029218955573,
+          "created_at": "2025-03-15T02:11:12-10:00",
+          "updated_at": "2026-10-18T14:26:12-10:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 60915278381365,
+          "created_at": "2025-07-09T19:38:35-10:00",
+          "position": 1,
+          "updated_at": "2025-07-09T19:38:37-10:00",
+          "product_id": 10029218955573,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/1752125897416-177d6e90-2472-48ab-8349-4642d3d0a40b_1.jpg?v=1752125917",
+          "width": 1021,
+          "height": 1024
+        },
+        {
+          "id": 60934252986677,
+          "created_at": "2025-07-10T12:53:00-10:00",
+          "position": 2,
+          "updated_at": "2025-08-06T20:37:21-10:00",
+          "product_id": 10029218955573,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/1752187971306-06e77d6b-d3d5-4917-95fc-8d2ed0aa084d_1.jpg?v=1754548641",
+          "width": 1021,
+          "height": 1024
+        },
+        {
+          "id": 60915412894005,
+          "created_at": "2025-07-09T19:59:45-10:00",
+          "position": 3,
+          "updated_at": "2025-07-10T12:53:02-10:00",
+          "product_id": 10029218955573,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/1752127161606-2d10a49e-ae19-4df9-a13c-fabdf58d5881_1.jpg?v=1752187982",
+          "width": 1021,
+          "height": 1024
+        },
+        {
+          "id": 60915696501045,
+          "created_at": "2025-07-09T20:06:37-10:00",
+          "position": 4,
+          "updated_at": "2025-07-10T12:53:02-10:00",
+          "product_id": 10029218955573,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/1752127585287-9d30ca45-2cd2-43d0-8e8a-2e5e7af15bc0_1.jpg?v=1752187982",
+          "width": 1021,
+          "height": 1024
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9845660123445,
+      "title": "Batana Shampoo + Conditioner Set",
+      "handle": "batana-natural-hair-growth-shampoo-conditioner-set",
+      "body_html": "<ul>\n<li>\n<strong>Complete Hair Care</strong>: The Azure Batana Shampoo &amp; Conditioner Set provides a balanced regimen for cleansing, nourishing, and revitalizing hair.</li>\n<li>\n<strong>Powered by Pure Batana Oil</strong>: Enriched with Batana oil to strengthen, hydrate, and enhance natural shine.</li>\n<li>\n<strong>Hydrating and Restorative</strong>: Shampoo gently cleanses while the conditioner deeply moisturizes, perfect for dry or damaged hair.</li>\n<li>\n<strong>Safe for All Hair Types</strong>: Ideal for all hair types, especially beneficial for textured, curly, and color-treated hair.</li>\n<li>\n<strong>Chemical-Free Formula</strong>: Free from sulfates, parabens, and synthetic additives for a natural, gentle hair care experience.</li>\n</ul>",
+      "published_at": "2024-10-16T01:08:58-10:00",
+      "created_at": "2024-10-03T00:16:47-10:00",
+      "updated_at": "2026-10-18T14:26:12-10:00",
+      "vendor": "Azure",
+      "product_type": "",
+      "tags": [
+        "shampoo set"
+      ],
+      "variants": [
+        {
+          "id": 50105462358325,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "SHAMPOO + CONDITIONER",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "39.95",
+          "grams": 259,
+          "compare_at_price": "90.00",
+          "position": 2,
+          "product_id": 9845660123445,
+          "created_at": "2024-10-03T00:16:47-10:00",
+          "updated_at": "2026-10-18T14:26:12-10:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 58267357970741,
+          "created_at": "2024-10-16T01:08:18-10:00",
+          "position": 1,
+          "updated_at": "2024-10-16T01:08:20-10:00",
+          "product_id": 9845660123445,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/PARCO_31.png?v=1729076900",
+          "width": 500,
+          "height": 500
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9827667050805,
+      "title": "The Ultimate Hair Growth Set for Textured Hair",
+      "handle": "ultimate-natural-batana-growth-set",
+      "body_html": "<ul>\n<li>\n<strong>Complete Hair Growth System</strong>: The Azure Ultimate Batana Growth Bundle includes Batana Oil, Refined Batana Oil, Shampoo, and Conditioner—everything you need for healthy, fuller hair.</li>\n<li>\n<strong>Pure Batana Power</strong>: Featuring 100% pure Batana Oil and Refined Batana Oil for deep nourishment and targeted hair and scalp treatment.</li>\n<li>\n<strong>Gentle Cleanse &amp; Hydration</strong>: Batana Shampoo and Conditioner work together to cleanse, hydrate, and strengthen, leaving hair soft and shiny.</li>\n<li>\n<strong>Promotes Stronger, Thicker Hair</strong>: Nourishes roots, restores moisture, and reduces breakage to support natural hair growth.</li>\n<li>\n<strong>All-Natural Formula</strong>: Free from sulfates, parabens, and harsh chemicals for a clean, effective hair care experience.</li>\n</ul>",
+      "published_at": "2024-09-18T03:03:18-10:00",
+      "created_at": "2024-09-18T03:03:18-10:00",
+      "updated_at": "2026-10-18T14:26:12-10:00",
+      "vendor": "Azure",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 50050521071925,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "50050521071925",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "99.00",
+          "grams": 45,
+          "compare_at_price": "125.00",
+          "position": 2,
+          "product_id": 9827667050805,
+          "created_at": "2024-09-18T03:03:21-10:00",
+          "updated_at": "2026-10-18T14:26:12-10:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 59652897997109,
+          "created_at": "2025-03-12T20:55:14-10:00",
+          "position": 1,
+          "updated_at": "2025-03-12T20:55:20-10:00",
+          "product_id": 9827667050805,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/PARCO_83.png?v=1741848920",
+          "width": 500,
+          "height": 500
+        },
+        {
+          "id": 46560906707253,
+          "created_at": "2024-05-29T14:11:17-10:00",
+          "position": 2,
+          "updated_at": "2025-08-02T16:24:09-10:00",
+          "product_id": 9827667050805,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/8.webp?v=1754187849",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "id": 46560903266613,
+          "created_at": "2024-05-29T14:10:53-10:00",
+          "position": 3,
+          "updated_at": "2025-08-02T16:24:09-10:00",
+          "product_id": 9827667050805,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/12.webp?v=1754187849",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "id": 46560903233845,
+          "created_at": "2024-05-29T14:10:53-10:00",
+          "position": 4,
+          "updated_at": "2025-08-02T16:24:09-10:00",
+          "product_id": 9827667050805,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/11.webp?v=1754187849",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "id": 46560902283573,
+          "created_at": "2024-05-29T14:10:48-10:00",
+          "position": 5,
+          "updated_at": "2025-03-12T20:55:20-10:00",
+          "product_id": 9827667050805,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/10.webp?v=1741848920",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9827666493749,
+      "title": "Batana Refined Oil",
+      "handle": "batana-refined-oil",
+      "body_html": "<ul>\n<li>\n<strong>Ultra-Pure &amp; Refined</strong>: Azure Refined Batana Oil offers the purest form of Batana, processed for a lighter feel and faster absorption.</li>\n<li>\n<strong>Nutrient-Rich Formula</strong>: Packed with vitamins and essential fatty acids to deeply nourish hair and scalp.</li>\n<li>\n<strong>Non-Greasy Finish</strong>: Lightweight and non-greasy, perfect for daily use without buildup.</li>\n<li>\n<strong>Ideal for Hair &amp; Skin</strong>: Soothes and hydrates both hair and skin, promoting softness, shine, and resilience.</li>\n<li>\n<strong>100% Natural</strong>: Free from additives and chemicals, providing pure Batana benefits in a refined, premium oil.</li>\n</ul>",
+      "published_at": "2024-09-18T03:02:08-10:00",
+      "created_at": "2024-09-18T03:02:08-10:00",
+      "updated_at": "2026-10-18T14:26:12-10:00",
+      "vendor": "Azure",
+      "product_type": "",
+      "tags": [
+        "refined oil"
+      ],
+      "variants": [
+        {
+          "id": 50050519138613,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "REFINED OIL",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "45.00",
+          "grams": 64,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 9827666493749,
+          "created_at": "2024-09-18T03:02:08-10:00",
+          "updated_at": "2026-10-18T14:26:12-10:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 58189708788021,
+          "created_at": "2024-10-07T01:03:44-10:00",
+          "position": 1,
+          "updated_at": "2024-10-07T01:03:46-10:00",
+          "product_id": 9827666493749,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/WhatsApp_Image_2024-10-06_at_22.54.27.jpg?v=1728299026",
+          "width": 1280,
+          "height": 1280
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9827666100533,
+      "title": "Batana Growth Conditioner",
+      "handle": "batana-natural-hair-growth-conditioner",
+      "body_html": "<div class=\"flex max-w-full flex-col flex-grow\">\n<div data-message-model-slug=\"gpt-4o\" class=\"min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5\" dir=\"auto\" data-message-id=\"3bcc7a23-afde-47fc-b536-3050e4bfc517\" data-message-author-role=\"assistant\">\n<div class=\"flex w-full flex-col gap-1 empty:hidden first:pt-[3px]\">\n<div class=\"markdown prose w-full break-words dark:prose-invert light\">\n<ul>\n<li>\n<strong>Deeply Hydrating Formula</strong>: Azure Batana Conditioner infuses hair with lasting moisture, restoring softness and shine.</li>\n<li>\n<strong>Batana Oil Powered</strong>: Enriched with the nourishing properties of pure Batana oil to strengthen and revitalize hair.</li>\n<li>\n<strong>Smoothing &amp; Detangling</strong>: Leaves hair silky, manageable, and easy to style.</li>\n<li>\n<strong>Perfect for All Hair Types</strong>: Ideal for dry, damaged, and curly hair, promoting natural resilience and health.</li>\n<li>\n<strong>Chemical-Free</strong>: Free from sulfates, parabens, and synthetic additives for a gentle, natural conditioning experience.<span data-state=\"closed\" class=\"\"><button class=\"cursor-pointer h-[30px] rounded-md px-1 text-token-text-secondary hover:bg-token-main-surface-secondary\" data-state=\"closed\" aria-expanded=\"false\" aria-haspopup=\"menu\" id=\"radix-:r6mi:\" type=\"button\"></button></span>\n</li>\n</ul>\n</div>\n</div>\n</div>\n</div>",
+      "published_at": "2024-09-18T03:01:02-10:00",
+      "created_at": "2024-09-18T03:01:03-10:00",
+      "updated_at": "2026-10-18T14:26:12-10:00",
+      "vendor": "Azure",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 50050517598517,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "50050517598517",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "45.00",
+          "grams": 122,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 9827666100533,
+          "created_at": "2024-09-18T03:01:03-10:00",
+          "updated_at": "2026-10-18T14:26:12-10:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 58189707608373,
+          "created_at": "2024-10-07T01:02:53-10:00",
+          "position": 1,
+          "updated_at": "2024-10-07T01:02:55-10:00",
+          "product_id": 9827666100533,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/WhatsAppImage2024-10-06at22.54.26_1.jpg?v=1728298975",
+          "width": 1280,
+          "height": 1280
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9827664625973,
+      "title": "Batana Growth Shampoo",
+      "handle": "batana-natural-hair-growth-shampoo",
+      "body_html": "<ul>\n<li>\n<strong>Gentle Cleansing</strong>: Azure Batana Shampoo cleanses hair thoroughly without stripping natural oils, leaving it refreshed and nourished.</li>\n<li>\n<strong>Infused with Pure Batana Oil</strong>: Powered by the enriching properties of Batana oil to promote hair strength and shine.</li>\n<li>\n<strong>Restores Moisture Balance</strong>: Hydrates and softens dry or damaged hair, enhancing natural texture and resilience.</li>\n<li>\n<strong>Safe for All Hair Types</strong>: Formulated to suit all hair types, especially beneficial for textured and curly hair.</li>\n<li>\n<strong>Free from Harsh Chemicals</strong>: No sulfates, parabens, or synthetic additives—just pure, natural care for healthy, vibrant hair.</li>\n</ul>",
+      "published_at": "2024-09-18T02:57:41-10:00",
+      "created_at": "2024-09-18T02:57:41-10:00",
+      "updated_at": "2026-10-18T14:26:12-10:00",
+      "vendor": "Azure",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 50050511962421,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "50050511962421",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "45.00",
+          "grams": 122,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 9827664625973,
+          "created_at": "2024-09-18T02:57:42-10:00",
+          "updated_at": "2026-10-18T14:26:12-10:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 58189706953013,
+          "created_at": "2024-10-07T01:02:29-10:00",
+          "position": 1,
+          "updated_at": "2024-10-07T01:02:31-10:00",
+          "product_id": 9827664625973,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/WhatsApp_Image_2024-10-06_at_22.54.25_1.jpg?v=1728298951",
+          "width": 1280,
+          "height": 1280
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9583075492149,
+      "title": "Batana Natural Hair Growth Oil",
+      "handle": "botana-natural-hair-growth-oil",
+      "body_html": "<ul>\n<li>\n<strong>100% Pure Batana Oil</strong>: Azure Batana Oil contains only one ingredient—pure, authentic Batana.</li>\n<li>\n<strong>Honduran Miracle Oil</strong>: Nourishes, restores, and revitalizes for stronger, healthier hair.</li>\n<li>\n<strong>Deep Hydration</strong>: Perfect for moisturizing dry, damaged hair and enhancing natural shine.</li>\n<li>\n<strong>Chemical-Free</strong>: No additives, fillers, or synthetic ingredients—just pure Batana oil for natural hair wellness.</li>\n</ul>",
+      "published_at": "2024-09-05T07:30:17-10:00",
+      "created_at": "2024-05-27T19:50:57-10:00",
+      "updated_at": "2026-10-18T14:26:12-10:00",
+      "vendor": "Azure",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 50148702388533,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "batana oil",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "39.00",
+          "grams": 154,
+          "compare_at_price": "80.00",
+          "position": 3,
+          "product_id": 9583075492149,
+          "created_at": "2024-10-15T23:54:52-10:00",
+          "updated_at": "2026-10-18T14:26:12-10:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 61928525103413,
+          "created_at": "2025-09-12T00:11:46-10:00",
+          "position": 1,
+          "updated_at": "2025-09-12T00:11:50-10:00",
+          "product_id": 9583075492149,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/WhatsAppImage2025-09-11at11.52.31.jpg?v=1757671910",
+          "width": 1053,
+          "height": 1053
+        },
+        {
+          "id": 66289011622197,
+          "created_at": "2026-06-10T13:16:13-10:00",
+          "position": 2,
+          "updated_at": "2026-06-10T13:16:14-10:00",
+          "product_id": 9583075492149,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/5_1__2_.png_202606101315.jpg?v=1781133374",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "id": 63248572645685,
+          "created_at": "2025-11-27T17:27:49-10:00",
+          "position": 3,
+          "updated_at": "2025-11-27T17:59:27-10:00",
+          "product_id": 9583075492149,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/3_52decb6b-04b4-4e06-8baa-cf44367cff85.png?v=1764302367",
+          "width": 2000,
+          "height": 2000
+        },
+        {
+          "id": 63248572580149,
+          "created_at": "2025-11-27T17:27:49-10:00",
+          "position": 4,
+          "updated_at": "2025-11-27T17:59:27-10:00",
+          "product_id": 9583075492149,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/7_b50cc825-6507-4ac5-8a12-97b44cb25e50.png?v=1764302367",
+          "width": 2000,
+          "height": 2000
+        },
+        {
+          "id": 63248818078005,
+          "created_at": "2025-11-27T17:59:13-10:00",
+          "position": 5,
+          "updated_at": "2025-11-27T17:59:27-10:00",
+          "product_id": 9583075492149,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/4_dc509ec0-9601-4c33-a0d2-8bd71bc4f82a.png?v=1764302367",
+          "width": 2000,
+          "height": 2000
+        },
+        {
+          "id": 63271910474037,
+          "created_at": "2025-11-28T11:39:04-10:00",
+          "position": 6,
+          "updated_at": "2025-11-28T11:39:08-10:00",
+          "product_id": 9583075492149,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/8_7fe6cb9c-987d-45fd-ad5a-5d72331c39ab.png?v=1764365948",
+          "width": 2000,
+          "height": 2000
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9217655832885,
+      "title": "Shipping Protection",
+      "handle": "shipping-protection",
+      "body_html": "Protect your order from damage, loss, or theft during shipping.",
+      "published_at": "2024-03-11T21:46:39-10:00",
+      "created_at": "2024-03-11T21:46:40-10:00",
+      "updated_at": "2026-10-18T14:26:12-10:00",
+      "vendor": "Azure",
+      "product_type": "UpCart - Shipping Protection",
+      "tags": [],
+      "variants": [
+        {
+          "id": 48379972649269,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "48379972649269",
+          "requires_shipping": false,
+          "taxable": true,
+          "featured_image": {
+            "id": 45464445354293,
+            "product_id": 9217655832885,
+            "position": 1,
+            "created_at": "2024-03-11T21:46:47-10:00",
+            "updated_at": "2024-03-11T21:46:47-10:00",
+            "alt": null,
+            "width": 196,
+            "height": 172,
+            "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/products/shipping-protection-v2_1dfbf7b9-1505-4ddf-aa06-1b742d0bdbb4.png?v=1710229607",
+            "variant_ids": [
+              48379972649269
+            ]
+          },
+          "available": true,
+          "price": "5.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 9217655832885,
+          "created_at": "2024-03-11T21:46:47-10:00",
+          "updated_at": "2026-10-18T14:26:12-10:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 45464445354293,
+          "created_at": "2024-03-11T21:46:47-10:00",
+          "position": 1,
+          "updated_at": "2024-03-11T21:46:47-10:00",
+          "product_id": 9217655832885,
+          "variant_ids": [
+            48379972649269
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0843/7438/9045/products/shipping-protection-v2_1dfbf7b9-1505-4ddf-aa06-1b742d0bdbb4.png?v=1710229607",
+          "width": 196,
+          "height": 172
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    }
+  ],
+  "count": 13
+}

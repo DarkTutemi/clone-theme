@@ -1,0 +1,26 @@
+{
+  "name": "Header Group",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "show_announcement": true,
+        "text": "✨ UP TO 65% OFF WITH FREE GIFTS | LIMITED TIME",
+        "discount_code": "AZURE65",
+        "bg_color": "#dd1d1d",
+        "text_color": "#ffffff"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "menu": "main-menu"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

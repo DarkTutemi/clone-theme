@@ -1,0 +1,35 @@
+{
+  "collections": [
+    {
+      "id": 629485044021,
+      "title": "Batana",
+      "handle": "batana",
+      "description": "",
+      "published_at": "2024-09-18T03:00:30-10:00",
+      "updated_at": "2026-10-18T13:15:02-10:00",
+      "image": null,
+      "products_count": 8
+    },
+    {
+      "id": 636925247797,
+      "title": "Bundle Collection",
+      "handle": "bundle-collection",
+      "description": "",
+      "published_at": "2025-02-09T23:01:00-10:00",
+      "updated_at": "2026-10-18T13:15:02-10:00",
+      "image": null,
+      "products_count": 5
+    },
+    {
+      "id": 486235078965,
+      "title": "Home page",
+      "handle": "frontpage",
+      "description": null,
+      "published_at": "2023-10-24T18:54:27-10:00",
+      "updated_at": "2026-10-18T13:15:02-10:00",
+      "image": null,
+      "products_count": 2
+    }
+  ],
+  "count": 3
+}

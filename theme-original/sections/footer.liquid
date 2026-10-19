@@ -1,0 +1,116 @@
+<footer class="footer">
+  <div class="page-width">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem;">{{ shop.name }}</h3>
+        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; max-width: 350px;">
+          {{ section.settings.about_text }}
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4 style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.25rem;">
+          {{ section.settings.menu1_heading }}
+        </h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+          {%- for link in linklists[section.settings.menu1].links -%}
+            <li><a href="{{ link.url }}" style="color: var(--color-text-muted); font-size: 0.9rem;">{{ link.title }}</a></li>
+          {%- else -%}
+            <li><a href="/collections/all" style="color: var(--color-text-muted); font-size: 0.9rem;">Shop Catalog</a></li>
+            <li><a href="/pages/about" style="color: var(--color-text-muted); font-size: 0.9rem;">About Brand</a></li>
+            <li><a href="/pages/contact" style="color: var(--color-text-muted); font-size: 0.9rem;">Support</a></li>
+          {%- endfor -%}
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.25rem;">
+          {{ section.settings.menu2_heading }}
+        </h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+          {%- for link in linklists[section.settings.menu2].links -%}
+            <li><a href="{{ link.url }}" style="color: var(--color-text-muted); font-size: 0.9rem;">{{ link.title }}</a></li>
+          {%- else -%}
+            <li><a href="/policies/privacy-policy" style="color: var(--color-text-muted); font-size: 0.9rem;">Privacy Policy</a></li>
+            <li><a href="/policies/terms-of-service" style="color: var(--color-text-muted); font-size: 0.9rem;">Terms of Service</a></li>
+            <li><a href="/policies/shipping-policy" style="color: var(--color-text-muted); font-size: 0.9rem;">Shipping & Returns</a></li>
+          {%- endfor -%}
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.25rem;">
+          {{ section.settings.newsletter_heading }}
+        </h4>
+        <p style="color: var(--color-text-muted); font-size: 0.85rem; margin-bottom: 1rem;">
+          {{ section.settings.newsletter_sub }}
+        </p>
+        {% form 'customer', class: 'footer-newsletter-form' %}
+          <div style="display:flex; gap:0.5rem;">
+            <input type="email" name="contact[email]" placeholder="Your email address" required style="padding:0.75rem 1rem; border:1px solid var(--color-border); border-radius:var(--radius-sm); font-size:0.9rem; flex-grow:1; outline:none;">
+            <button type="submit" class="btn btn-primary" style="padding:0.75rem 1.25rem;">
+              Subscribe
+            </button>
+          </div>
+        {% endform %}
+      </div>
+    </div>
+
+    <div class="footer__copyright">
+      <div>
+        &copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. Powered by Antigravity OS 2.0 Base Engine.
+      </div>
+      <div>
+        All Rights Reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "about_text",
+      "label": "About store text",
+      "default": "Premium store experience powered by modern Shopify Online Store 2.0 architecture."
+    },
+    {
+      "type": "text",
+      "id": "menu1_heading",
+      "label": "Menu 1 Heading",
+      "default": "Navigation"
+    },
+    {
+      "type": "link_list",
+      "id": "menu1",
+      "label": "Menu 1"
+    },
+    {
+      "type": "text",
+      "id": "menu2_heading",
+      "label": "Menu 2 Heading",
+      "default": "Policies"
+    },
+    {
+      "type": "link_list",
+      "id": "menu2",
+      "label": "Menu 2"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "label": "Newsletter Heading",
+      "default": "Stay In Touch"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_sub",
+      "label": "Newsletter Subtitle",
+      "default": "Sign up for exclusive releases and private drops."
+    }
+  ]
+}
+{% endschema %}

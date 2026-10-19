@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bronoir® — Grounding Barefoot Shoes | 1:1 Live Replica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #282828;
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* Announcement Bar */
+    .announcement-bar {
+      background: #08435e;
+      color: #ffffff;
+      padding: 10px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .announcement-arrow {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      opacity: 0.85;
+    }
+
+    /* Header */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #dfdfdf;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 12px 24px;
+    }
+    .header-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-nav ul {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+      align-items: center;
+    }
+    .header-nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #282828;
+      transition: color 0.2s ease;
+    }
+    .header-nav a:hover { color: #08435e; }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Hero Slideshow */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      line-height: 0;
+      overflow: hidden;
+    }
+    .hero-btn-wrap {
+      position: absolute;
+      bottom: 35px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      z-index: 10;
+    }
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 48px;
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: #ffffff;
+      color: #000000;
+      border-radius: 9999px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      transition: all 0.2s ease;
+    }
+    .hero-btn:hover {
+      background: #44c2fd;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 35px rgba(68, 194, 253, 0.45);
+    }
+
+    /* Category Cards */
+    .category-section {
+      background: #eef8fa;
+      padding: 48px 0;
+    }
+    .category-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+    .category-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 18px 12px 14px;
+      border: 1px solid rgba(8, 67, 94, 0.08);
+      box-shadow: 0 4px 15px rgba(8, 67, 94, 0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(8, 67, 94, 0.12);
+    }
+    .category-card-img-wrap {
+      width: 100%;
+      aspect-ratio: 1;
+      margin-bottom: 12px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .category-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #282828;
+    }
+
+    /* Ticker */
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-container {
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 16px 0;
+      border-top: 1px solid #f1f5f9;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .marquee-track {
+      display: inline-flex;
+      animation: marquee-scroll 25s linear infinite;
+      gap: 48px;
+    }
+
+    /* Shoes 4 Icons */
+    .shoes-icon-grid {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 56px 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+
+    /* Before After Box */
+    .before-after-wrap {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 20px 56px;
+    }
+    .before-after-card {
+      background: linear-gradient(116.53deg, rgba(8, 67, 94, 1) 12.4%, rgba(114, 195, 232, 1) 93.6%);
+      border-radius: 24px;
+      padding: 56px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 40px;
+      align-items: center;
+      color: #ffffff;
+    }
+
+    /* Bestsellers */
+    .bestsellers-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .product-item-card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border: 1px solid #f1f5f9;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .product-item-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 35px rgba(8, 67, 94, 0.12);
+    }
+    .product-save-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 5;
+      background: #44c2fd;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .product-card-media {
+      width: 100%;
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: #f8fafc;
+      position: relative;
+    }
+    .product-media-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+    .primary-img { position: absolute; top: 0; left: 0; opacity: 1; z-index: 1; }
+    .secondary-img { position: absolute; top: 0; left: 0; opacity: 0; z-index: 2; }
+    .product-item-card:hover .secondary-img { opacity: 1; transform: scale(1.04); }
+    .product-item-card:hover .primary-img { opacity: 0; transform: scale(1.04); }
+    
+    .quick-view-wrap {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      z-index: 6;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .product-item-card:hover .quick-view-wrap { opacity: 1; transform: translateY(0); }
+    .quick-view-btn {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(8, 67, 94, 0.2);
+      color: #08435e;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 9px 0;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .product-card-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .product-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+    .product-rating .stars { color: #f59e0b; font-size: 13px; }
+    .product-rating .rating-num { font-size: 11px; font-weight: 700; color: #64748b; }
+    .product-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin: 0 0 10px 0;
+      color: #1e293b;
+      min-height: 40px;
+    }
+    .product-prices {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 12px;
+      margin-top: auto;
+    }
+    .price-sale { font-size: 17px; font-weight: 800; color: #08435e; }
+    .price-compare { font-size: 13px; color: #94a3b8; text-decoration: line-through; }
+    .product-swatches { display: flex; gap: 6px; margin-bottom: 14px; }
+    .swatch-dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; cursor: pointer; }
+    .product-cta-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 11px 16px;
+      background: #08435e;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: 9999px;
+      transition: all 0.2s ease;
+    }
+    .product-cta-btn:hover { background: #44c2fd; color: #000; }
+
+    @media (max-width: 1100px) {
+      .header-nav { display: none; }
+      .category-grid { grid-template-columns: repeat(3, 1fr); }
+      .shoes-icon-grid { grid-template-columns: repeat(2, 1fr); }
+      .before-after-card { grid-template-columns: 1fr; padding: 36px 24px; }
+      .bestsellers-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" data-src="sections/announcement-bar.liquid">
+    <button class="announcement-arrow">&lt;</button>
+    <span>TODAY’S SPECIAL OFFER — BUY 1, GET 2 FREE</span>
+    <button class="announcement-arrow">&gt;</button>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" data-src="sections/header.liquid">
+    <div class="header-container">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="/" data-block="header_logo">
+          <img src="https://trybronoir.com/cdn/shop/files/Bronoir_1200_x_300_px_4_310x.png?v=1761592105" alt="Bronoir" style="height: 38px; width: auto;">
+        </a>
+      </div>
+
+      <nav class="header-nav" data-block="header_nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#bestsellers">Senior Citizens Day Sale</a></li>
+          <li><a href="#bestsellers">Our Bestsellers</a></li>
+          <li><a href="#copper-shoes">Copper Shoes</a></li>
+          <li><a href="#barefoot-shoes">Barefoot Shoes</a></li>
+          <li><a href="#winter-shoes">Winter Shoes</a></li>
+          <li><a href="#accessories">Accessories</a></li>
+          <li><a href="#track">Track Your Order</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#search" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#282828" stroke-width="1.8">
+            <path d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17"></path>
+          </svg>
+        </a>
+        <a href="#account" aria-label="Account">
+          <svg width="18" height="17" viewBox="0 0 18 17" fill="none" stroke="#282828" stroke-width="1.8">
+            <circle cx="9" cy="5" r="4"></circle>
+            <path d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0"></path>
+          </svg>
+        </a>
+        <a href="#cart" style="position: relative;" aria-label="Cart">
+          <svg width="20" height="18" viewBox="0 0 20 18" fill="none" stroke="#282828" stroke-width="1.8">
+            <path d="M3 1h14l1 16H2L3 1z"></path>
+            <path d="M7 4v0a3 3 0 003 3v0a3 3 0 003-3v0"></path>
+          </svg>
+          <span style="position: absolute; top: -7px; right: -8px; background: #282828; color: #fff; font-size: 10px; font-weight: 800; width: 17px; height: 17px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Slideshow Banner -->
+  <section class="hero-section" data-src="sections/hero-banner.liquid">
+    <picture>
+      <source media="(max-width: 768px)" srcset="https://trybronoir.com/cdn/shop/files/bronoir_usp_banner_movil.png?v=1790095315&width=1000">
+      <img src="https://trybronoir.com/cdn/shop/files/bronoir_usp_banner.png?v=1790095247&width=2400" alt="Bronoir Banner" style="width: 100%; display: block;" loading="eager">
+    </picture>
+    <div class="hero-btn-wrap" data-block="hero_cta">
+      <a href="#bestsellers" class="hero-btn">CLAIM OFFER</a>
+    </div>
+  </section>
+
+  <!-- Category 5-Card Grid -->
+  <section class="category-section" data-src="sections/category-grid.liquid">
+    <div class="category-grid">
+      <a href="#bestsellers" class="category-card" data-block="cat_bestsellers">
+        <div class="category-card-img-wrap">
+          <img src="https://trybronoir.com/cdn/shop/files/Frame1000005214.png?v=1761673627&width=400" alt="Our Bestsellers">
+        </div>
+        <h3>Our Bestsellers</h3>
+      </a>
+      <a href="#bestsellers" class="category-card" data-block="cat_copper">
+        <div class="category-card-img-wrap">
+          <img src="https://trybronoir.com/cdn/shop/files/freiluftkind_linkblock_sneaker_v2_jpg_958fde39-1c1f-4ce0-bf8a-6bf04474f161.png?v=1761594767&width=400" alt="Copper Shoes">
+        </div>
+        <h3>Copper Shoes</h3>
+      </a>
+      <a href="#bestsellers" class="category-card" data-block="cat_barefoot">
+        <div class="category-card-img-wrap">
+          <img src="https://trybronoir.com/cdn/shop/files/freiluftkind_linkblock_sneaker_v2.jpg_1.png?v=1761594764&width=400" alt="Barefoot Shoes">
+        </div>
+        <h3>Barefoot Shoes</h3>
+      </a>
+      <a href="#bestsellers" class="category-card" data-block="cat_winter_boots">
+        <div class="category-card-img-wrap">
+          <img src="https://trybronoir.com/cdn/shop/files/3_a8860335-eb99-433a-9355-2dda6fef77b5.jpg?v=1761965026&width=400" alt="Winter Boots">
+        </div>
+        <h3>Winter Boots</h3>
+      </a>
+      <a href="#bestsellers" class="category-card" data-block="cat_winter_shoes">
+        <div class="category-card-img-wrap">
+          <img src="https://trybronoir.com/cdn/shop/files/Frame_1000004753.png?v=1761594210&width=400" alt="Winter Shoes">
+        </div>
+        <h3>Winter Shoes</h3>
+      </a>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-container" data-src="sections/shoes-icon-text.liquid">
+    <div class="marquee-track">
+      <span style="font-size: 26px; font-weight: 800; color: #44c2fd;">• Podiatrist Recommended</span>
+      <span style="font-size: 26px; font-weight: 800; color: #08435e;">• Natural &amp; Grounding</span>
+      <span style="font-size: 26px; font-weight: 800; color: #44c2fd;">• Wide Toe Box Anatomy</span>
+      <span style="font-size: 26px; font-weight: 800; color: #08435e;">• 100% Pure Copper Infusion</span>
+      <span style="font-size: 26px; font-weight: 800; color: #44c2fd;">• Podiatrist Recommended</span>
+      <span style="font-size: 26px; font-weight: 800; color: #08435e;">• Natural &amp; Grounding</span>
+    </div>
+  </div>
+
+  <!-- 4 Value Props Grid -->
+  <section class="shoes-icon-grid" data-src="sections/shoes-icon-text.liquid">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="height: 110px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+        <img src="https://trybronoir.com/cdn/shop/files/icon1_300x.png?v=1761595176" alt="Zero Drop" style="max-height: 100px;">
+      </div>
+      <h3 style="font-size: 19px; font-weight: 800; margin-bottom: 8px;">Zero Drop</h3>
+      <p style="font-size: 14px; color: #4b5563; line-height: 1.6;">Our shoes have a completely flat sole – that means no heel elevation or artificial lift. This supports a natural posture and helps relieve stress.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="height: 110px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+        <img src="https://trybronoir.com/cdn/shop/files/icon2_200x.png?v=1761595177" alt="Wide Toe Box" style="max-height: 100px;">
+      </div>
+      <h3 style="font-size: 19px; font-weight: 800; margin-bottom: 8px;">Wide Toe Box</h3>
+      <p style="font-size: 14px; color: #4b5563; line-height: 1.6;">Your toes need space – and that’s exactly what they get. Our wide toe box lets your feet expand naturally without being cramped.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="height: 110px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+        <img src="https://trybronoir.com/cdn/shop/files/icon3_200x.png?v=1761595179" alt="Ultra Thin Sole" style="max-height: 100px;">
+      </div>
+      <h3 style="font-size: 19px; font-weight: 800; margin-bottom: 8px;">Ultra Thin Sole</h3>
+      <p style="font-size: 14px; color: #4b5563; line-height: 1.6;">Less sole, more sensation: Feel the ground beneath your feet for a true barefoot experience, increased sensory awareness, and stronger muscles.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="height: 110px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+        <img src="https://trybronoir.com/cdn/shop/files/icon4_260x.png?v=1761595180" alt="Flexible Movement" style="max-height: 100px;">
+      </div>
+      <h3 style="font-size: 19px; font-weight: 800; margin-bottom: 8px;">Flexible Movement</h3>
+      <p style="font-size: 14px; color: #4b5563; line-height: 1.6;">The highly flexible design of our shoes gives your feet complete freedom of movement. Your gait stays natural, healthy, light, and free.</p>
+    </div>
+  </section>
+
+  <!-- Before & After Interactive Comparison Box -->
+  <section class="before-after-wrap" data-src="sections/before-after-slider.liquid">
+    <div class="before-after-card">
+      <div>
+        <h2 style="font-size: 34px; font-weight: 800; line-height: 1.2; margin-bottom: 14px;">4 Weeks with Bronoir Barefoot Shoes</h2>
+        <p style="font-size: 18px; font-weight: 700; margin-bottom: 14px;">Real results, faster than you think.</p>
+        <p style="font-size: 15px; line-height: 1.65; opacity: 0.9;">
+          Meet Karen. After years of struggling with swelling, skin irritation, and aching feet, she finally tried Bronoir Grounding Barefoot Shoes. This before-and-after shows what just 4 weeks of wearing our Bronoir’s twice a week can do. Her feet look healthier, more balanced, and visibly less swollen.
+        </p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <div id="local-feet-slider" style="position: relative; width: 100%; aspect-ratio: 16/10; border-radius: 16px; overflow: hidden; cursor: ew-resize; box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+          <!-- Before -->
+          <img src="https://trybronoir.com/cdn/shop/files/Frame_1578_1.png?v=1761594705&width=1200" alt="Before" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+          <span style="position: absolute; top: 16px; left: 20px; font-size: 16px; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.6); z-index: 5;">Before</span>
+
+          <!-- After (Overlay) -->
+          <div id="local-feet-overlay" style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden;">
+            <img id="local-after-img" src="https://trybronoir.com/cdn/shop/files/Frame_1577_1.png?v=1761594699&width=1200" alt="After" style="position: absolute; top: 0; left: 0; width: 560px; height: 100%; object-fit: cover;">
+            <span style="position: absolute; top: 16px; right: 20px; font-size: 16px; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.6); z-index: 5;">After</span>
+          </div>
+
+          <!-- Divider -->
+          <div id="local-feet-divider" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; background: #fff; transform: translateX(-50%); z-index: 10; display: flex; align-items: center; justify-content: center;">
+            <div style="width: 36px; height: 36px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #08435e; font-weight: 900; font-size: 13px; letter-spacing: -2px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+              |||
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 13px; opacity: 0.8; margin-top: 10px;">Drag the slider to see her visible transformation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Bestsellers (Exact 1:1 Replica) -->
+  <section id="bestsellers" data-src="sections/featured-collection.liquid" style="padding: 20px 0 64px;">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h2 style="font-size: 14px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Find your perfect shoe</h2>
+      <h3 style="font-size: 38px; font-weight: 900; color: #08435e;">Our Bestsellers</h3>
+    </div>
+
+    <div class="bestsellers-grid">
+      <!-- 1 -->
+      <div class="product-item-card" data-block="p_1">
+        <span class="product-save-badge">Save 1.052.000₫</span>
+        <div class="product-card-media">
+          <a href="#claim" class="product-media-link">
+            <img class="product-img primary-img" src="https://trybronoir.com/cdn/shop/files/DeinAbschnittstext_11_1080x.png?v=1761602494" alt="Skin Pro">
+            <img class="product-img secondary-img" src="https://trybronoir.com/cdn/shop/files/Ueberblick-13_64ac82c4-9290-4ac3-834e-a546159247d1_1001x.jpg?v=1761602501" alt="Skin Pro Angle">
+          </a>
+          <div class="quick-view-wrap"><button class="quick-view-btn">Quick view</button></div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-num">(4.9)</span></div>
+          <h4 class="product-title"><a href="#claim">Bronoir™ Skin Pro with Copper - Grounding Allround Barefoot Shoes</a></h4>
+          <div class="product-prices">
+            <span class="price-sale">2.102.000₫</span>
+            <span class="price-compare">3.154.000₫</span>
+          </div>
+          <div class="product-swatches">
+            <span class="swatch-dot" style="background: #1e293b;"></span>
+            <span class="swatch-dot" style="background: #fff; border: 1px solid #cbd5e1;"></span>
+            <span class="swatch-dot" style="background: #ec4899;"></span>
+            <span class="swatch-dot" style="background: #94a3b8;"></span>
+            <span class="swatch-dot" style="background: #0369a1;"></span>
+          </div>
+          <a href="#claim" class="product-cta-btn">SELECT OPTIONS &amp; SAVE ➔</a>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="product-item-card" data-block="p_2">
+        <span class="product-save-badge">Save 1.315.000₫</span>
+        <div class="product-card-media">
+          <a href="#claim" class="product-media-link">
+            <img class="product-img primary-img" src="https://trybronoir.com/cdn/shop/files/main_imageSa8643830040d46f19c743a84c795910cn_800x.jpg?v=1764746902" alt="CosyCloud Boot">
+            <img class="product-img secondary-img" src="https://trybronoir.com/cdn/shop/files/main_imageS5035d4763edc490ab71c090f9358273dD_800x.jpg?v=1764746902" alt="CosyCloud Boot Angle">
+          </a>
+          <div class="quick-view-wrap"><button class="quick-view-btn">Quick view</button></div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-num">(4.9)</span></div>
+          <h4 class="product-title"><a href="#claim">Bronoir CosyCloud Boot - Warm &amp; Comfy Winter Barefoot Boot</a></h4>
+          <div class="product-prices">
+            <span class="price-sale">1.971.000₫</span>
+            <span class="price-compare">3.286.000₫</span>
+          </div>
+          <div class="product-swatches">
+            <span class="swatch-dot" style="background: #78350f;"></span>
+            <span class="swatch-dot" style="background: #0f172a;"></span>
+            <span class="swatch-dot" style="background: #64748b;"></span>
+            <span class="swatch-dot" style="background: #d6d3d1;"></span>
+          </div>
+          <a href="#claim" class="product-cta-btn">SELECT OPTIONS &amp; SAVE ➔</a>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="product-item-card" data-block="p_3">
+        <span class="product-save-badge">Save 1.315.000₫</span>
+        <div class="product-card-media">
+          <a href="#claim" class="product-media-link">
+            <img class="product-img primary-img" src="https://trybronoir.com/cdn/shop/files/2_9dd806bd-89a0-46a8-85e2-073b17201138_1080x.jpg?v=1761602551" alt="Hikers">
+            <img class="product-img secondary-img" src="https://trybronoir.com/cdn/shop/files/3_eeb3adf3-2377-4daa-844b-db7a1a2c4662_1080x.jpg?v=1761602551" alt="Hikers Angle">
+          </a>
+          <div class="quick-view-wrap"><button class="quick-view-btn">Quick view</button></div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-num">(4.9)</span></div>
+          <h4 class="product-title"><a href="#claim">Bronoir™ Hikers - Orthopedic Outdoor Barefoot Shoes (BOGO)</a></h4>
+          <div class="product-prices">
+            <span class="price-sale">2.102.000₫</span>
+            <span class="price-compare">3.417.000₫</span>
+          </div>
+          <div class="product-swatches">
+            <span class="swatch-dot" style="background: #1e293b;"></span>
+            <span class="swatch-dot" style="background: #d97706;"></span>
+            <span class="swatch-dot" style="background: #047857;"></span>
+          </div>
+          <a href="#claim" class="product-cta-btn">SELECT OPTIONS &amp; SAVE ➔</a>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="product-item-card" data-block="p_4">
+        <span class="product-save-badge">Save 1.841.000₫</span>
+        <div class="product-card-media">
+          <a href="#claim" class="product-media-link">
+            <img class="product-img primary-img" src="https://trybronoir.com/cdn/shop/files/Hauptbild-6_2f9f16c1-f43d-42ba-8838-067d08dd7102.jpg?v=1761602493" alt="Trail Masters">
+            <img class="product-img secondary-img" src="https://trybronoir.com/cdn/shop/files/2_9dd806bd-89a0-46a8-85e2-073b17201138_1080x.jpg?v=1761602551" alt="Trail Masters Angle">
+          </a>
+          <div class="quick-view-wrap"><button class="quick-view-btn">Quick view</button></div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-num">(4.9)</span></div>
+          <h4 class="product-title"><a href="#claim">Bronoir™ Trail Masters - All-Terrain Grip Barefoot Boots</a></h4>
+          <div class="product-prices">
+            <span class="price-sale">2.497.000₫</span>
+            <span class="price-compare">4.338.000₫</span>
+          </div>
+          <div class="product-swatches">
+            <span class="swatch-dot" style="background: #0f172a;"></span>
+            <span class="swatch-dot" style="background: #b45309;"></span>
+          </div>
+          <a href="#claim" class="product-cta-btn">SELECT OPTIONS &amp; SAVE ➔</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Expert Endorsement Card -->
+  <section class="expert-section" data-src="sections/expert-card.liquid" style="padding: 20px 0 60px;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 24px;">
+      <div style="background: rgb(238, 248, 250); border-radius: 24px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; align-items: center; box-shadow: 0 10px 30px rgba(8, 67, 94, 0.06);">
+        <div style="height: 100%; min-height: 440px;">
+          <img src="https://trybronoir.com/cdn/shop/files/DeinAbschnittstext_3.png?v=1761602392&width=1500" alt="Dr. James Rowland" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="padding: 56px 48px;">
+          <span style="font-size: 13px; font-weight: 800; color: #44c2fd; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 12px;">Medical Insight &amp; Ergonomics</span>
+          <h3 style="font-size: 34px; font-weight: 800; color: #08435e; line-height: 1.25; margin-bottom: 20px;">Recommended by Foot Health Experts</h3>
+          <p style="font-size: 16px; line-height: 1.7; color: #334155; margin-bottom: 24px;">
+            Bronoir Grounding Shoes are trusted by professionals who specialize in foot health and mobility. One such expert is <strong>Dr. James Rowland</strong>, a retired orthopedic specialist with over 40 years of clinical experience helping patients regain comfort and stability.
+          </p>
+          <p style="font-size: 15px; line-height: 1.7; color: #475569; margin-bottom: 28px;">
+            Dr. Rowland emphasizes the importance of natural alignment, wide toe splay, and sensory feedback, all key features built into every pair of Bronoir shoes. Designed with medical insight and crafted for daily life, Bronoir helps you walk the way nature intended, pain-free, balanced, and grounded.
+          </p>
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: #08435e; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800;">✓</div>
+            <div>
+              <div style="font-size: 16px; font-weight: 800; color: #08435e;">Dr. James Rowland</div>
+              <div style="font-size: 13px; color: #64748b;">Orthopedic Specialist (40+ Years Clinical Exp.)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Copper Secret Video Section -->
+  <section class="copper-section" data-src="sections/copper-secret.liquid" style="padding: 64px 0; background: rgba(64, 180, 235, 0.08);">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 24px;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+        <div>
+          <span style="font-size: 14px; font-weight: 800; color: #44c2fd; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 10px;">GROUNDING EARTHING TECHNOLOGY</span>
+          <h2 style="font-size: 38px; font-weight: 900; color: #032e43; line-height: 1.25; margin-bottom: 20px;">The secret element that recharges your body and mind</h2>
+          <p style="font-size: 16px; line-height: 1.7; color: #334155; margin-bottom: 24px;">
+            Modern footwear insulates our bodies from the Earth's natural negative electric charge, accumulating stress, chronic inflammation, and fatigue.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px;">
+            <div style="display: flex; gap: 16px; align-items: flex-start; background: #ffffff; padding: 16px 20px; border-radius: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+              <div style="font-size: 24px;">⚡</div>
+              <div>
+                <strong style="font-size: 16px; color: #08435e; display: block; margin-bottom: 4px;">100% Pure Copper Infused Sole</strong>
+                <p style="font-size: 14px; color: #64748b; margin: 0;">Direct grounding contact point allows free electron transfer into your body with every stride.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 16px; align-items: flex-start; background: #ffffff; padding: 16px 20px; border-radius: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+              <div style="font-size: 24px;">🌿</div>
+              <div>
+                <strong style="font-size: 16px; color: #08435e; display: block; margin-bottom: 4px;">Reduces Swelling &amp; Pain</strong>
+                <p style="font-size: 14px; color: #64748b; margin: 0;">Relieves joint soreness, improves restorative sleep, and speeds up daily recovery.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#bestsellers" style="display: inline-flex; align-items: center; padding: 16px 36px; background: #08435e; color: #ffffff; font-size: 15px; font-weight: 800; text-transform: uppercase; border-radius: 9999px; box-shadow: 0 10px 25px rgba(8, 67, 94, 0.25);">GET 50% OFF TODAY! ➔</a>
+        </div>
+
+        <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 16px 40px rgba(0,0,0,0.15); aspect-ratio: 16/10; background: #08435e;">
+          <video style="width: 100%; height: 100%; object-fit: cover;" autoplay loop muted playsinline poster="https://trybronoir.com/cdn/shop/files/preview_images/faaab3359de74533a88c2363be50dce4.thumbnail.0000000000_600x.jpg?v=1762759930">
+            <source src="https://trybronoir.com/cdn/shop/videos/c/vp/faaab3359de74533a88c2363be50dce4/faaab3359de74533a88c2363be50dce4.HD-1080p-7.2Mbps-62197190.mp4?v=0" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Video Review (They are talking about) -->
+  <div class="shopify-section shopify-section--videoreview" id="shopify-section-template--27860728578148__video_review_V6XFw7" data-src="sections/template--27860728578148__video_review_V6XFw7.liquid" style="padding: 24px 0 44px; background: transparent;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 20px;">
+      <div style="background-color: #54c4f0; background-image: linear-gradient(135deg, #5ec6e8 0%, #54c4f0 100%); border-radius: 28px; padding: 42px 40px; box-shadow: 0 12px 36px rgba(84, 196, 240, 0.22);">
+        
+        <!-- Header -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap;">
+          <h2 style="font-size: 38px; font-weight: 800; color: #ffffff; margin: 0; letter-spacing: -0.5px; line-height: 1.1;">They are talking about</h2>
+          <div style="display: inline-flex; align-items: center;">
+            <img src="https://trybronoir.com/cdn/shop/files/Heading_1_Link_Bronoir_1200_x_300_px_4_310x_png.png?v=1761583451&amp;width=213" alt="Bronoir®" width="213" height="38" loading="lazy" style="height: 38px; width: auto; object-fit: contain;">
+          </div>
+        </div>
+
+        <!-- 5 Video Review Grid -->
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px;">
+          
+          <!-- Video 1: Grey hair woman holding insole -->
+          <div style="background: #000; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); position: relative;">
+            <div class="video-wrapperrrr" style="position: relative; width: 100%; padding-top: 152%; cursor: pointer; background: #000;">
+              <video class="video-element" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 18px;" loading="lazy" loop playsinline poster="https://trybronoir.com/cdn/shop/files/preview_images/4bc088b2d7604ac4a7f38fffb2badb3f.thumbnail.0000000000.jpg?v=1761677422&amp;width=600" preload="metadata">
+                <source src="https://trybronoir.com/cdn/shop/videos/c/vp/4bc088b2d7604ac4a7f38fffb2badb3f/4bc088b2d7604ac4a7f38fffb2badb3f.HD-1080p-7.2Mbps-61090627.mp4?v=0" type="video/mp4">
+              </video>
+              <div class="play-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 5;">
+                <svg fill="none" height="68" viewBox="0 0 97 97" width="68">
+                  <g opacity="0.88">
+                    <circle cx="48.6467" cy="48.5588" fill="#44C2FD" r="48.137"></circle>
+                    <path d="M74.2559 48.5592L35.8467 70.7348L35.8467 26.3837L74.2559 48.5592Z" fill="white"></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 2: Man on bed lifting foot -->
+          <div style="background: #000; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); position: relative;">
+            <div class="video-wrapperrrr" style="position: relative; width: 100%; padding-top: 152%; cursor: pointer; background: #000;">
+              <video class="video-element" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 18px;" loading="lazy" loop playsinline poster="https://trybronoir.com/cdn/shop/files/preview_images/f2ba229a99da411fa5b9e0d626759d7e.thumbnail.0000000000.jpg?v=1762761596&amp;width=600" preload="metadata">
+                <source src="https://trybronoir.com/cdn/shop/videos/c/vp/f2ba229a99da411fa5b9e0d626759d7e/f2ba229a99da411fa5b9e0d626759d7e.HD-1080p-7.2Mbps-62198815.mp4?v=0" type="video/mp4">
+              </video>
+              <div class="play-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 5;">
+                <svg fill="none" height="68" viewBox="0 0 97 97" width="68">
+                  <g opacity="0.88">
+                    <circle cx="48.6467" cy="48.5588" fill="#44C2FD" r="48.137"></circle>
+                    <path d="M74.2559 48.5592L35.8467 70.7348L35.8467 26.3837L74.2559 48.5592Z" fill="white"></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 3: Man in dark t-shirt -->
+          <div style="background: #000; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); position: relative;">
+            <div class="video-wrapperrrr" style="position: relative; width: 100%; padding-top: 152%; cursor: pointer; background: #000;">
+              <video class="video-element" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 18px;" loading="lazy" loop playsinline poster="https://trybronoir.com/cdn/shop/files/preview_images/d5cb40357996446081fc4d34e22fae25.thumbnail.0000000000.jpg?v=1762760696&amp;width=600" preload="metadata">
+                <source src="https://trybronoir.com/cdn/shop/videos/c/vp/d5cb40357996446081fc4d34e22fae25/d5cb40357996446081fc4d34e22fae25.HD-1080p-7.2Mbps-62197875.mp4?v=0" type="video/mp4">
+              </video>
+              <div class="play-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 5;">
+                <svg fill="none" height="68" viewBox="0 0 97 97" width="68">
+                  <g opacity="0.88">
+                    <circle cx="48.6467" cy="48.5588" fill="#44C2FD" r="48.137"></circle>
+                    <path d="M74.2559 48.5592L35.8467 70.7348L35.8467 26.3837L74.2559 48.5592Z" fill="white"></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 4: Woman in pink leggings putting on pink shoe -->
+          <div style="background: #000; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); position: relative;">
+            <div class="video-wrapperrrr" style="position: relative; width: 100%; padding-top: 152%; cursor: pointer; background: #000;">
+              <video class="video-element" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 18px;" loading="lazy" loop playsinline poster="https://trybronoir.com/cdn/shop/files/preview_images/2b60cfa5f012466fa53d9c5933aad2af.thumbnail.0000000000.jpg?v=1761677640&amp;width=600" preload="metadata">
+                <source src="https://trybronoir.com/cdn/shop/videos/c/vp/2b60cfa5f012466fa53d9c5933aad2af/2b60cfa5f012466fa53d9c5933aad2af.HD-1080p-7.2Mbps-61090623.mp4?v=0" type="video/mp4">
+              </video>
+              <div class="play-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 5;">
+                <svg fill="none" height="68" viewBox="0 0 97 97" width="68">
+                  <g opacity="0.88">
+                    <circle cx="48.6467" cy="48.5588" fill="#44C2FD" r="48.137"></circle>
+                    <path d="M74.2559 48.5592L35.8467 70.7348L35.8467 26.3837L74.2559 48.5592Z" fill="white"></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 5: Woman in green sweater with glasses -->
+          <div style="background: #000; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); position: relative;">
+            <div class="video-wrapperrrr" style="position: relative; width: 100%; padding-top: 152%; cursor: pointer; background: #000;">
+              <video class="video-element" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 18px;" loading="lazy" loop playsinline poster="https://trybronoir.com/cdn/shop/files/preview_images/e839e4ed15a54bca91b13f8dda34a36e.thumbnail.0000000000.jpg?v=1762761358&amp;width=600" preload="metadata">
+                <source src="https://trybronoir.com/cdn/shop/videos/c/vp/e839e4ed15a54bca91b13f8dda34a36e/e839e4ed15a54bca91b13f8dda34a36e.HD-1080p-7.2Mbps-62198566.mp4?v=0" type="video/mp4">
+              </video>
+              <div class="play-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 5;">
+                <svg fill="none" height="68" viewBox="0 0 97 97" width="68">
+                  <g opacity="0.88">
+                    <circle cx="48.6467" cy="48.5588" fill="#44C2FD" r="48.137"></circle>
+                    <path d="M74.2559 48.5592L35.8467 70.7348L35.8467 26.3837L74.2559 48.5592Z" fill="white"></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA Button -->
+        <div style="text-align: center; margin-top: 28px;">
+          <a href="#" style="display: inline-flex; align-items: center; justify-content: center; padding: 13px 38px; background: #ffffff; color: #032e43; border-radius: 9999px; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 0.8px; text-decoration: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.25s ease;">SEE ALL REVIEWS</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 10: Trust Icons Banner -->
+  <div class="shopify-section shopify-section--text-with-icons" id="shopify-section-template--27860728578148__text_with_icons_8JtTK7" data-src="sections/template--27860728578148__text_with_icons_8JtTK7.liquid" style="background: #eef8fa; padding: 24px 0; border-top: 1px solid #d8edf1; border-bottom: 1px solid #d8edf1;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+      <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <img src="https://trybronoir.com/cdn/shop/files/streamline-flex-color_warranty-badge-highlight_100x.png?v=1761600898" alt="12-Month Warranty" width="36" height="36" style="width: 36px; height: 36px; object-fit: contain;">
+          <p style="margin: 0; font-size: 15px; font-weight: 700; color: #032e43;">12-Month Warranty</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <img src="https://trybronoir.com/cdn/shop/files/lucide_footprints_100x.png?v=1761597084" alt="Over 350,000 Happy Feet" width="36" height="36" style="width: 36px; height: 36px; object-fit: contain;">
+          <p style="margin: 0; font-size: 15px; font-weight: 700; color: #032e43;">Over 350,000 Happy Feet</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <img src="https://trybronoir.com/cdn/shop/files/tabler_truck-delivery_100x.png?v=1761600910" alt="Free Shipping Worldwide" width="36" height="36" style="width: 36px; height: 36px; object-fit: contain;">
+          <p style="margin: 0; font-size: 15px; font-weight: 700; color: #032e43;">Free Shipping Worldwide</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 11: Newsletter & FAQ -->
+  <div class="shopify-section" id="shopify-section-template--27860728578148__custom_newsletter_faq_3NQika" data-src="sections/template--27860728578148__custom_newsletter_faq_3NQika.liquid" style="padding: 50px 0 60px; background: #ffffff;">
+    <div style="max-width: 1260px; margin: 0 auto; padding: 0 20px;">
+      <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; align-items: flex-start;">
+        
+        <!-- Newsletter Box -->
+        <div style="background: #eef8fa; padding: 40px 32px; border-radius: 16px; border: 1px solid #d4eff5;">
+          <h2 style="font-size: 26px; font-weight: 800; color: #032e43; margin: 0 0 10px; line-height: 1.3;">Sign up in our newsletter</h2>
+          <p style="color: #475569; font-size: 15px; margin: 0 0 24px; line-height: 1.5;">Enter your email to get all exciting news and special offers!</p>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <input type="email" placeholder="Your e-mail" style="width: 100%; padding: 14px 18px; border: 1px solid #cbd5e1; border-radius: 9999px; font-size: 14px; outline: none; background: #ffffff; box-sizing: border-box;">
+            <button style="width: 100%; padding: 14px 24px; background: #032e43; color: #ffffff; border: none; border-radius: 9999px; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer;">Subscribe</button>
+          </div>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          
+          <details style="border-bottom: 1px solid #e2e8f0; padding-bottom: 14px;" open>
+            <summary style="font-size: 16px; font-weight: 700; color: #032e43; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>What makes BRONOIR shoes different from other barefoot shoes?</span>
+              <img src="https://cdn.shopify.com/s/files/1/0766/4946/4142/files/down_arrow.png?v=1749447543" width="20" height="20" alt="toggle">
+            </summary>
+            <p style="color: #475569; font-size: 14.5px; line-height: 1.6; margin: 10px 0 0;">
+              BRONOIR combines barefoot ergonomics with grounding technology using real copper. This allows you to not only move naturally and improve posture but also reconnect with the Earth’s energy, helping reduce inflammation, stress, and fatigue. Plus, every pair is designed with premium materials for both comfort and style.
+            </p>
+          </details>
+
+          <details style="border-bottom: 1px solid #e2e8f0; padding-bottom: 14px;">
+            <summary style="font-size: 16px; font-weight: 700; color: #032e43; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>How does the grounding (Earthing) function work?</span>
+              <img src="https://cdn.shopify.com/s/files/1/0766/4946/4142/files/down_arrow.png?v=1749447543" width="20" height="20" alt="toggle">
+            </summary>
+            <p style="color: #475569; font-size: 14.5px; line-height: 1.6; margin: 10px 0 0;">
+              Each BRONOIR shoe features a copper plug built into the sole that maintains direct contact with the ground. Copper is a natural conductor, allowing electrons from the Earth to flow into the body. This helps neutralize free radicals and supports overall well-being, especially when walking on natural surfaces like grass, soil, or sand.
+            </p>
+          </details>
+
+          <details style="border-bottom: 1px solid #e2e8f0; padding-bottom: 14px;">
+            <summary style="font-size: 16px; font-weight: 700; color: #032e43; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>Are BRONOIR shoes suitable for everyday wear?</span>
+              <img src="https://cdn.shopify.com/s/files/1/0766/4946/4142/files/down_arrow.png?v=1749447543" width="20" height="20" alt="toggle">
+            </summary>
+            <p style="color: #475569; font-size: 14.5px; line-height: 1.6; margin: 10px 0 0;">
+              Absolutely! BRONOIR shoes are designed for daily use—whether you're walking, working, traveling, or simply relaxing. The minimalist sole offers a barefoot experience while providing just enough protection, and the stylish design means you can wear them almost anywhere.
+            </p>
+          </details>
+
+          <details style="border-bottom: 1px solid #e2e8f0; padding-bottom: 14px;">
+            <summary style="font-size: 16px; font-weight: 700; color: #032e43; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>How should I choose the right size?</span>
+              <img src="https://cdn.shopify.com/s/files/1/0766/4946/4142/files/down_arrow.png?v=1749447543" width="20" height="20" alt="toggle">
+            </summary>
+            <p style="color: #475569; font-size: 14.5px; line-height: 1.6; margin: 10px 0 0;">
+              We recommend selecting your regular size for a barefoot fit. If you're between sizes or prefer a slightly roomier feel, consider sizing up. Our sizing guide on the product page can help, and our customer service team is happy to advise based on your foot measurements.
+            </p>
+          </details>
+
+          <details style="border-bottom: 1px solid #e2e8f0; padding-bottom: 14px;">
+            <summary style="font-size: 16px; font-weight: 700; color: #032e43; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>Can I wear BRONOIR shoes in wet conditions?</span>
+              <img src="https://cdn.shopify.com/s/files/1/0766/4946/4142/files/down_arrow.png?v=1749447543" width="20" height="20" alt="toggle">
+            </summary>
+            <p style="color: #475569; font-size: 14.5px; line-height: 1.6; margin: 10px 0 0;">
+              While BRONOIR shoes are made with high-quality materials, we recommend avoiding heavy rain or very wet conditions to maintain the integrity of the grounding copper and the sole. A little moisture won’t hurt, but they’re best suited for dry, natural surfaces to get the full grounding benefit.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background: #052d3f; color: #ffffff; padding: 56px 24px; text-align: center;" data-src="sections/footer.liquid">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <img src="https://trybronoir.com/cdn/shop/files/Bronoir_1200_x_300_px_4_310x.png?v=1761592105" alt="Bronoir" style="height: 34px; filter: brightness(0) invert(1); margin: 0 auto 24px;">
+      <div style="display: flex; justify-content: center; gap: 28px; margin-bottom: 24px; flex-wrap: wrap; font-size: 14px; opacity: 0.85;">
+        <a href="#bestsellers">Our Bestsellers</a>
+        <a href="#copper">Grounding Shoes</a>
+        <a href="#winter">Winter Boots</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p style="font-size: 13px; color: rgba(255,255,255,0.6);">&copy; 2026 Bronoir®. Grounding Barefoot Footwear. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Before After Slider Logic
+    (function() {
+      const container = document.getElementById('local-feet-slider');
+      const overlay = document.getElementById('local-feet-overlay');
+      const divider = document.getElementById('local-feet-divider');
+      const afterImg = document.getElementById('local-after-img');
+      if (!container || !overlay || !divider) return;
+      let isDragging = false;
+      function updateSlider(clientX) {
+        const rect = container.getBoundingClientRect();
+        let pos = (clientX - rect.left) / rect.width;
+        if (pos < 0.05) pos = 0.05;
+        if (pos > 0.95) pos = 0.95;
+        const pct = (pos * 100).toFixed(1) + '%';
+        overlay.style.width = pct;
+        divider.style.left = pct;
+        if (afterImg) afterImg.style.width = rect.width + 'px';
+      }
+      container.addEventListener('mousedown', (e) => { isDragging = true; updateSlider(e.clientX); });
+      window.addEventListener('mouseup', () => { isDragging = false; });
+      window.addEventListener('mousemove', (e) => { if (isDragging) updateSlider(e.clientX); });
+      container.addEventListener('touchstart', (e) => { isDragging = true; updateSlider(e.touches[0].clientX); });
+      window.addEventListener('touchend', () => { isDragging = false; });
+      window.addEventListener('touchmove', (e) => { if (isDragging) updateSlider(e.touches[0].clientX); });
+      setTimeout(() => {
+        const rect = container.getBoundingClientRect();
+        if (afterImg) afterImg.style.width = rect.width + 'px';
+      }, 100);
+    })();
+
+    // Video Reviews Playback Logic (1:1 identical to trybronoir custom.js)
+    (function() {
+      function initVideoReviews() {
+        const videoWrappers = document.querySelectorAll('.video-wrapperrrr');
+        videoWrappers.forEach(wrapper => {
+          wrapper.addEventListener('click', (e) => {
+            const clickedVideo = wrapper.querySelector('video');
+            const clickedPlayButton = wrapper.querySelector('.play-button');
+            if (!clickedVideo) return;
+
+            // Pause all other videos
+            videoWrappers.forEach(otherWrapper => {
+              const otherVideo = otherWrapper.querySelector('video');
+              const otherPlayButton = otherWrapper.querySelector('.play-button');
+              if (otherVideo && otherVideo !== clickedVideo && !otherVideo.paused && !otherVideo.ended) {
+                otherVideo.pause();
+                otherVideo.currentTime = 0;
+                if (otherPlayButton) otherPlayButton.style.display = 'block';
+              }
+            });
+
+            if (clickedVideo.paused) {
+              clickedVideo.play().then(() => {
+                if (clickedPlayButton) clickedPlayButton.style.display = 'none';
+              }).catch(error => {
+                console.warn('Video playback with sound was blocked, playing muted then unmuting:', error);
+                clickedVideo.muted = true;
+                clickedVideo.play().then(() => {
+                  if (clickedPlayButton) clickedPlayButton.style.display = 'none';
+                  clickedVideo.muted = false;
+                });
+              });
+            } else {
+              clickedVideo.pause();
+              if (clickedPlayButton) clickedPlayButton.style.display = 'block';
+            }
+          });
+
+          const vid = wrapper.querySelector('video');
+          if (vid) {
+            vid.addEventListener('ended', () => {
+              const btn = wrapper.querySelector('.play-button');
+              if (btn) btn.style.display = 'block';
+              vid.currentTime = 0;
+            });
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initVideoReviews);
+      } else {
+        initVideoReviews();
+      }
+    })();
+  </script>
+
+</body>
+</html>

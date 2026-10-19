@@ -1,0 +1,26 @@
+{
+  "name": "Header Group",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "show_announcement": true,
+        "text": "Free shipping on orders over $75 | 30-Day Money Back Guarantee",
+        "bg_color": "#0f172a",
+        "text_color": "#ffffff"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_width": 130,
+        "menu": "main-menu"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

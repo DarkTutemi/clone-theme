@@ -1,0 +1,188 @@
+<section class="shopify-section section category-cards-section" data-src="sections/category-grid.liquid" style="background-color: rgb(238, 248, 250); padding: 48px 0;">
+  <div class="container">
+    <div class="category-cards-wrap">
+      
+      <!-- Card 1: Our Bestsellers -->
+      <a class="category-cards-block" href="{{ section.settings.link_1 | default: '#bestsellers' }}" data-block="cat_bestsellers">
+        <div class="category-image-wrap">
+          <img src="https://trybronoir.com/cdn/shop/files/Frame1000005214.png?v=1761673627&width=400"
+               alt="Our Bestsellers"
+               class="category-image"
+               loading="lazy"
+               width="400"
+               height="400">
+        </div>
+        <h2 class="category-card-heading">Our Bestsellers</h2>
+      </a>
+
+      <!-- Card 2: Copper Shoes -->
+      <a class="category-cards-block" href="{{ section.settings.link_2 | default: '#bestsellers' }}" data-block="cat_copper">
+        <div class="category-image-wrap">
+          <img src="https://trybronoir.com/cdn/shop/files/freiluftkind_linkblock_sneaker_v2_jpg_958fde39-1c1f-4ce0-bf8a-6bf04474f161.png?v=1761594767&width=400"
+               alt="Copper Shoes"
+               class="category-image"
+               loading="lazy"
+               width="400"
+               height="400">
+        </div>
+        <h2 class="category-card-heading">Copper Shoes</h2>
+      </a>
+
+      <!-- Card 3: Barefoot Shoes -->
+      <a class="category-cards-block" href="{{ section.settings.link_3 | default: '#bestsellers' }}" data-block="cat_barefoot">
+        <div class="category-image-wrap">
+          <img src="https://trybronoir.com/cdn/shop/files/freiluftkind_linkblock_sneaker_v2.jpg_1.png?v=1761594764&width=400"
+               alt="Barefoot Shoes"
+               class="category-image"
+               loading="lazy"
+               width="400"
+               height="400">
+        </div>
+        <h2 class="category-card-heading">Barefoot Shoes</h2>
+      </a>
+
+      <!-- Card 4: Winter Boots -->
+      <a class="category-cards-block" href="{{ section.settings.link_4 | default: '#bestsellers' }}" data-block="cat_winter_boots">
+        <div class="category-image-wrap">
+          <img src="https://trybronoir.com/cdn/shop/files/3_a8860335-eb99-433a-9355-2dda6fef77b5.jpg?v=1761965026&width=400"
+               alt="Winter Boots"
+               class="category-image"
+               loading="lazy"
+               width="400"
+               height="400">
+        </div>
+        <h2 class="category-card-heading">Winter Boots</h2>
+      </a>
+
+      <!-- Card 5: Winter Shoes -->
+      <a class="category-cards-block" href="{{ section.settings.link_5 | default: '#bestsellers' }}" data-block="cat_winter_shoes">
+        <div class="category-image-wrap">
+          <img src="https://trybronoir.com/cdn/shop/files/Frame_1000004753.png?v=1761594210&width=400"
+               alt="Winter Shoes"
+               class="category-image"
+               loading="lazy"
+               width="400"
+               height="400">
+        </div>
+        <h2 class="category-card-heading">Winter Shoes</h2>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .category-cards-wrap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    align-items: stretch;
+  }
+  .category-cards-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px 12px 14px;
+    border: 1px solid rgba(8, 67, 94, 0.08);
+    box-shadow: 0 4px 15px rgba(8, 67, 94, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .category-cards-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(8, 67, 94, 0.12);
+    border-color: #44c2fd;
+  }
+  .category-image-wrap {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f8fafc;
+  }
+  .category-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+  .category-cards-block:hover .category-image {
+    transform: scale(1.05);
+  }
+  .category-card-heading {
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(40, 40, 40);
+    margin: 0;
+    line-height: 1.3;
+    transition: color 0.2s ease;
+  }
+  .category-cards-block:hover .category-card-heading {
+    color: #08435e;
+  }
+
+  @media (max-width: 900px) {
+    .category-cards-wrap {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+  }
+  @media (max-width: 600px) {
+    .category-cards-wrap {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 10px;
+      -webkit-overflow-scrolling: touch;
+      gap: 10px;
+    }
+    .category-cards-block {
+      flex: 0 0 160px;
+      scroll-snap-align: start;
+      padding: 12px 10px;
+    }
+    .category-card-heading {
+      font-size: 13px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Category Cards",
+  "settings": [
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Bestsellers Link"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Copper Shoes Link"
+    },
+    {
+      "type": "url",
+      "id": "link_3",
+      "label": "Barefoot Shoes Link"
+    },
+    {
+      "type": "url",
+      "id": "link_4",
+      "label": "Winter Boots Link"
+    },
+    {
+      "type": "url",
+      "id": "link_5",
+      "label": "Winter Shoes Link"
+    }
+  ]
+}
+{% endschema %}

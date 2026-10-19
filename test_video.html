@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<div class='video-wrapperrrr' style='width:300px; height:500px; position:relative;'>
+  <video playsinline controls style='width:100%; height:100%;'>
+    <source src='https://trybronoir.com/cdn/shop/videos/c/vp/4bc088b2d7604ac4a7f38fffb2badb3f/4bc088b2d7604ac4a7f38fffb2badb3f.HD-1080p-7.2Mbps-61090627.mp4?v=0' type='video/mp4'>
+  </video>
+  <button class='play-btn' style='position:absolute; top:50%; left:50%;'>Play</button>
+</div>
+<script>
+const wrap = document.querySelector('.video-wrapperrrr');
+const vid = wrap.querySelector('video');
+const btn = wrap.querySelector('.play-btn');
+wrap.onclick = () => {
+  if (vid.paused) {
+    vid.play().then(() => { btn.style.display = 'none'; }).catch(e => console.log('Err:', e));
+  } else {
+    vid.pause();
+    btn.style.display = 'block';
+  }
+};
+</script>
+</body>
+</html>

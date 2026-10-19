@@ -1,0 +1,19 @@
+{
+  "name": "Footer Group",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "about_text": "Premium store experience powered by modern Shopify Online Store 2.0 architecture.",
+        "menu1_heading": "Navigation",
+        "menu2_heading": "Policies",
+        "newsletter_heading": "Stay In Touch",
+        "newsletter_sub": "Sign up for exclusive releases and private drops."
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

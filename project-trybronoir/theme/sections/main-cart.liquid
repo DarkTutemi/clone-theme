@@ -1,0 +1,82 @@
+<div class="main-cart-section" style="padding: 4rem 0;">
+  <div class="page-width">
+    <h1 style="margin-bottom: 2rem;">{{ 'cart.general.title' | t | default: 'Your Shopping Cart' }}</h1>
+
+    {%- if cart.item_count > 0 -%}
+      <form action="{{ routes.cart_url }}" method="post" id="cart">
+        <div style="border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; margin-bottom: 2rem;">
+          <table style="width: 100%; border-collapse: collapse; text-align: left;">
+            <thead style="background: var(--color-surface); border-bottom: 1px solid var(--color-border);">
+              <tr>
+                <th style="padding: 1rem 1.5rem; font-size: 0.85rem; text-transform: uppercase;">Product</th>
+                <th style="padding: 1rem 1.5rem; font-size: 0.85rem; text-transform: uppercase;">Price</th>
+                <th style="padding: 1rem 1.5rem; font-size: 0.85rem; text-transform: uppercase;">Quantity</th>
+                <th style="padding: 1rem 1.5rem; font-size: 0.85rem; text-transform: uppercase; text-align: right;">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for item in cart.items -%}
+                <tr style="border-bottom: 1px solid var(--color-border);">
+                  <td style="padding: 1.5rem; display: flex; gap: 1.25rem; align-items: center;">
+                    {%- if item.image -%}
+                      <img src="{{ item.image | image_url: width: 160 }}" alt="{{ item.title }}" width="80" height="80" style="object-fit: cover; border-radius: var(--radius-sm);">
+                    {%- endif -%}
+                    <div>
+                      <h4 style="font-size: 1rem; margin-bottom: 0.25rem;"><a href="{{ item.url }}">{{ item.product.title }}</a></h4>
+                      {%- unless item.product.has_only_default_variant -%}
+                        <p style="font-size: 0.85rem; color: var(--color-text-muted);">{{ item.variant.title }}</p>
+                      {%- endunless -%}
+                      <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0" style="font-size: 0.8rem; color: var(--color-sale); text-decoration: underline; margin-top: 0.5rem; display: inline-block;">Remove</a>
+                    </div>
+                  </td>
+                  <td style="padding: 1.5rem; font-weight: 600;">{{ item.price | money }}</td>
+                  <td style="padding: 1.5rem;">
+                    <input type="number" name="updates[]" value="{{ item.quantity }}" min="0" style="width: 60px; padding: 0.4rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); text-align: center;">
+                  </td>
+                  <td style="padding: 1.5rem; font-weight: 700; text-align: right;">{{ item.final_line_price | money }}</td>
+                </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem;">
+          <button type="submit" name="update" class="btn btn-secondary">
+            Update Cart
+          </button>
+
+          <div style="width: min(400px, 100%); background: var(--color-surface); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 800;">
+              <span>Subtotal</span>
+              <span>{{ cart.total_price | money }}</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+              Taxes and shipping calculated at checkout.
+            </p>
+            <button type="submit" name="checkout" class="btn btn-primary btn-full" style="padding: 1rem;">
+              {{ 'cart.general.checkout' | t | default: 'Check Out' }}
+            </button>
+          </div>
+        </div>
+      </form>
+    {%- else -%}
+      <div style="text-align: center; padding: 5rem 1rem;">
+        <p style="font-size: 1.2rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+          {{ 'cart.general.empty' | t | default: 'Your cart is currently empty.' }}
+        </p>
+        <a href="{{ routes.all_products_collection_url }}" class="btn btn-primary">
+          Explore Products
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Cart",
+  "tag": "section",
+  "class": "section-main-cart",
+  "settings": []
+}
+{% endschema %}

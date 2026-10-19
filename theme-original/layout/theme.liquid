@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+  <title>
+    {{ page_title }}
+    {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{%- endif -%}
+    {%- if current_page != 1 %} &ndash; Page {{ current_page }}{%- endif -%}
+    {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{%- endunless -%}
+  </title>
+
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+
+  <!-- Theme Design System Assets -->
+  {{ 'base.css' | asset_url | stylesheet_tag }}
+
+  <!-- Shopify Header Injections -->
+  {{ content_for_header }}
+
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    window.routes = {
+      cart_url: '{{ routes.cart_url }}',
+      cart_add_url: '{{ routes.cart_add_url }}',
+      cart_change_url: '{{ routes.cart_change_url }}',
+      cart_update_url: '{{ routes.cart_update_url }}',
+      predictive_search_url: '{{ routes.predictive_search_url }}'
+    };
+    window.shopCurrency = '{{ cart.currency.iso_code | default: shop.currency }}';
+  </script>
+</head>
+
+<body class="template-{{ template.name }}">
+  <a class="skip-to-content-link" href="#MainContent" style="position:absolute; top:-999px; left:-999px; z-index:9999; padding:1rem; background:#000; color:#fff;">
+    Skip to content
+  </a>
+
+  {% sections 'header-group' %}
+
+  <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    {{ content_for_layout }}
+  </main>
+
+  {% sections 'footer-group' %}
+
+  {% render 'cart-drawer' %}
+
+  {{ 'global.js' | asset_url | script_tag }}
+</body>
+</html>

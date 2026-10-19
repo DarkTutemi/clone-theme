@@ -1,0 +1,91 @@
+<div class="featured-collection-section" style="padding: 5rem 0;">
+  <div class="page-width">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom: 2.5rem; flex-wrap:wrap; gap:1rem;">
+      <div>
+        {%- if section.settings.subheading != blank -%}
+          <p style="font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-accent); margin-bottom:0.5rem;">
+            {{ section.settings.subheading }}
+          </p>
+        {%- endif -%}
+        <h2>{{ section.settings.title }}</h2>
+      </div>
+
+      {%- if section.settings.collection != blank and section.settings.show_view_all -%}
+        <a href="{{ section.settings.collection.url }}" class="btn btn-secondary" style="padding: 0.6rem 1.25rem; font-size: 0.9rem;">
+          View All Products {% render 'icon', name: 'arrow-right' %}
+        </a>
+      {%- endif -%}
+    </div>
+
+    <div class="grid grid-cols-4">
+      {%- assign target_collection = collections[section.settings.collection] -%}
+      {%- if target_collection != blank and target_collection.products_count > 0 -%}
+        {%- for product in target_collection.products limit: section.settings.products_to_show -%}
+          {% render 'product-card', product: product %}
+        {%- endfor -%}
+      {%- else -%}
+        {%- for i in (1..section.settings.products_to_show) -%}
+          <div class="product-card">
+            <div class="product-card__image-wrapper" style="display:flex; align-items:center; justify-content:center; background:#f8fafc; color:#94a3b8;">
+              Sample Product {{ i }}
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__vendor">Original Brand</span>
+              <h3 class="product-card__title">Curated Minimalist Item {{ i }}</h3>
+              <div class="product-card__price">
+                <span class="price--regular">$49.00</span>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "tag": "section",
+  "class": "section-featured-collection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Trending Essentials"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Featured Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4,
+      "label": "Maximum products to show"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "default": true,
+      "label": "Show 'View All' button"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection"
+    }
+  ]
+}
+{% endschema %}

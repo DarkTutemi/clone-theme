@@ -1,0 +1,26 @@
+{
+  "general": {
+    "share": "Share",
+    "close": "Close",
+    "search": "Search our store",
+    "continue_shopping": "Continue shopping"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to Cart",
+      "sold_out": "Sold Out",
+      "on_sale": "Sale",
+      "unavailable": "Unavailable",
+      "quantity": "Quantity",
+      "vendor": "Brand"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Your Cart",
+      "checkout": "Check Out",
+      "empty": "Your cart is currently empty.",
+      "subtotal": "Subtotal"
+    }
+  }
+}

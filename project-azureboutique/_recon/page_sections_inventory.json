@@ -1,0 +1,256 @@
+{
+  "home": [
+    {
+      "id": "shopify-section-template--27107511730485__cfca4268-6358-426c-98ab-d292aeef11e5",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "section"
+      ],
+      "headings": [
+        "transform your hair today."
+      ]
+    },
+    {
+      "id": "shopify-section-template--27107511730485__featured_collection_aqEdAz",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "section"
+      ],
+      "headings": [
+        "Batana Products",
+        "Batana Growth Conditioner",
+        "Batana Growth Conditioner",
+        "Batana Growth Shampoo"
+      ]
+    },
+    {
+      "id": "shopify-section-template--27107511730485__slideshow_LJAXwx",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "section"
+      ],
+      "headings": [
+        "TAKE OUR HAIR QUIZ"
+      ]
+    }
+  ],
+  "product": [
+    {
+      "id": "shopify-section-template--27145287008565__gp_section_619046956442059349",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "gps-619046956442059349",
+        "gps",
+        "gpsil"
+      ],
+      "headings": [
+        "Batana Natural Hair Growth Oil"
+      ]
+    },
+    {
+      "id": "shopify-section-template--27145287008565__gp_section_619046956441862741",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "gps-619046956441862741",
+        "gps",
+        "gpsil"
+      ],
+      "headings": [
+        "200k+",
+        "850,000+",
+        "58k+",
+        "What can 3-8 weeks of use do for your edges?"
+      ]
+    },
+    {
+      "id": "shopify-section-template--27145287008565__gp_section_619046956442124885",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "gps-619046956442124885",
+        "gps",
+        "gpsil"
+      ],
+      "headings": [
+        "Thousands of blackqueens choose our oil"
+      ]
+    },
+    {
+      "id": "shopify-section-template--27145287008565__gp_section_619046956442190421",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "gps-619046956442190421",
+        "gps",
+        "gpsil"
+      ],
+      "headings": [
+        "One Oil. Every Major Hair Concern, Solved."
+      ]
+    },
+    {
+      "id": "shopify-section-template--27145287008565__gp_section_619046956442518101",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "gps-619046956442518101",
+        "gps",
+        "gpsil"
+      ],
+      "headings": [
+        "OursHealsFrom Within",
+        "Cheap oils leave your hair suffocated.",
+        "Batana Oil transforms from within."
+      ]
+    },
+    {
+      "id": "shopify-section-template--27145287008565__gp_section_619046956441928277",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "gps-619046956441928277",
+        "gps",
+        "gpsil"
+      ],
+      "headings": [
+        "Rainforest-grown, small-batch, and verified pure",
+        "Where it begins.",
+        "Pure from the Start.",
+        "Potency That Delivers"
+      ]
+    },
+    {
+      "id": "shopify-section-template--27145287008565__gp_section_619046956441797205",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "gps-619046956441797205",
+        "gps",
+        "gpsil"
+      ],
+      "headings": [
+        "Backed byTesting,Not Just Promises."
+      ]
+    },
+    {
+      "id": "shopify-section-template--27145287008565__gp_section_619046956442452565",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "gps-619046956442452565",
+        "gps",
+        "gpsil"
+      ],
+      "headings": [
+        "100% Single ingredient oil",
+        "Vitamin E Complex",
+        "Omega 3-6-9",
+        "Vitamin A Complex"
+      ]
+    },
+    {
+      "id": "shopify-section-template--27145287008565__gp_section_619046956442255957",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "gps-619046956442255957",
+        "gps",
+        "gpsil"
+      ],
+      "headings": [
+        "Results to expect over time"
+      ]
+    },
+    {
+      "id": "shopify-section-template--27145287008565__gp_section_619046956441993813",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "gps-619046956441993813",
+        "gps",
+        "gpsil"
+      ],
+      "headings": [
+        "The Gold Standard In Hair Oil"
+      ]
+    },
+    {
+      "id": "shopify-section-template--27145287008565__gp_section_619046956442321493",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "gps-619046956442321493",
+        "gps",
+        "gpsil"
+      ],
+      "headings": [
+        "Built By Black Women. For Black Women."
+      ]
+    },
+    {
+      "id": "shopify-section-template--27145287008565__gp_section_619046956442387029",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "gps-619046956442387029",
+        "gps",
+        "gpsil"
+      ],
+      "headings": [
+        "FAQ"
+      ]
+    },
+    {
+      "id": "shopify-section-template--27145287008565__custom_liquid_rFizi3",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "section"
+      ],
+      "headings": []
+    }
+  ],
+  "collection": [
+    {
+      "id": "shopify-section-template--27107511337269__main-collection-banner",
+      "tag": "div",
+      "class": [
+        "shopify-section",
+        "section"
+      ],
+      "headings": [
+        "Collection:Batana"
+      ]
+    },
+    {
+      "id": "shopify-section-template--27107511337269__main-collection-product-grid",
+      "tag": "div",
+      "class": [
+        "shopify-section",
+        "section"
+      ],
+      "headings": [
+        "Filter:",
+        "Sort by:",
+        "7 products",
+        "Filter and sort"
+      ]
+    },
+    {
+      "id": "shopify-section-template--27107511337269__newsletter",
+      "tag": "section",
+      "class": [
+        "shopify-section",
+        "section"
+      ],
+      "headings": [
+        "Subscribe to our emails"
+      ]
+    }
+  ]
+}

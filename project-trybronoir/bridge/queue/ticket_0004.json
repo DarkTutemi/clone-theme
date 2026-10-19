@@ -1,0 +1,13 @@
+{
+  "id": "ticket_0004",
+  "prompt": "Tái tạo khối 5 category cards giống website trybronoir.com (Our Bestsellers, Copper Shoes, Barefoot Shoes, Winter Boots, Winter Shoes)",
+  "page_url": "https://trybronoir.com/",
+  "target": {
+    "source_file": "sections/category-grid.liquid",
+    "selector": "#shopify-section-template--27860728578148__custom_category_card_WE6FhK",
+    "text_content": "Our Bestsellers, Copper Shoes, Barefoot Shoes, Winter Boots, Winter Shoes"
+  },
+  "status": "applied",
+  "created_at": "2026-10-19T11:50:48Z",
+  "applied_at": "2026-10-19T11:50:48Z"
+}

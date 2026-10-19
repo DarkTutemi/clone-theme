@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "hero_banner": {
+      "type": "hero-banner",
+      "settings": {
+        "heading": "transform your hair today.",
+        "subheading": "thousands of customers are improving their hair naturally with 100% wild-harvested Honduran Batana Oil.",
+        "button_label": "Try It Now",
+        "button_link": "/collections/batana"
+      }
+    },
+    "social_proof": {
+      "type": "social-proof-bar",
+      "settings": {}
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Batana Products",
+        "subtitle": "Wild-harvested from Honduras. Nutrient-dense formulas designed to restore thin edges, hydrate scalp, and spark natural growth.",
+        "products_to_show": 4,
+        "show_view_all": true
+      }
+    },
+    "quiz_banner": {
+      "type": "routine-quiz-banner",
+      "settings": {
+        "title": "TAKE OUR HAIR QUIZ",
+        "text": "Not sure which Batana formula is right for your hair porosity and edges? Answer 4 quick questions and get your tailored restoration routine.",
+        "button_label": "Start Quiz Now →"
+      }
+    },
+    "comparison": {
+      "type": "product-comparison",
+      "settings": {}
+    },
+    "faq": {
+      "type": "product-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero_banner",
+    "social_proof",
+    "featured_collection",
+    "quiz_banner",
+    "comparison",
+    "faq"
+  ]
+}

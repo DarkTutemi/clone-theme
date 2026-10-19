@@ -1,0 +1,82 @@
+{%- assign hero_bg = section.settings.image | default: "https://www.azureboutique.co/cdn/shop/files/A.png?v=1744103875&width=3840" -%}
+<section 
+  class="hero-banner" 
+  data-src="sections/hero-banner.liquid"
+  style="background: linear-gradient(to right, rgba(17, 24, 19, 0.88) 0%, rgba(17, 24, 19, 0.65) 50%, rgba(17, 24, 19, 0.3) 100%), url('{{ hero_bg }}') center center / cover no-repeat; color: #fdfbf7; padding: clamp(5rem, 10vw, 8.5rem) 0; position: relative; overflow: hidden;"
+>
+  <!-- Background Pattern Overlay -->
+  <div style="position: absolute; inset: 0; background-radial: circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 60%); pointer-events: none;"></div>
+
+  <div class="page-width" style="position: relative; z-index: 2;">
+    <div style="max-width: 650px; display: flex; flex-direction: column; gap: 1.25rem;">
+      <!-- Social Proof Badge -->
+      <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.12); backdrop-filter: blur(8px); padding: 0.4rem 0.9rem; border-radius: 40px; font-size: 0.85rem; font-weight: 500; width: fit-content;">
+        <span>⭐⭐⭐⭐⭐</span>
+        <span>4.9/5 from 58,000+ Happy Customers</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 style="color: #ffffff; line-height: 1.15; font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 700; text-transform: lowercase;">
+        {{ section.settings.heading | default: "transform your hair today." }}
+      </h1>
+
+      <!-- Subtitle -->
+      <p style="font-size: clamp(1.05rem, 2vw, 1.25rem); color: rgba(253, 251, 247, 0.9); line-height: 1.6;">
+        {{ section.settings.subheading | default: "thousands of customers are improving their hair naturally with 100% cold-pressed, wild-harvested Honduran Batana Oil." }}
+      </p>
+
+      <!-- CTA Buttons -->
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.75rem;">
+        <a href="{{ section.settings.button_link | default: '/collections/batana' }}" class="btn" style="background: #ffffff; color: var(--color-primary); font-weight: 700; padding: 1.1rem 2.5rem; font-size: 1.05rem; border-radius: var(--radius-sm); box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+          {{ section.settings.button_label | default: "Try It Now" }}
+        </a>
+        <a href="/pages/hair-routine-quiz" class="btn btn-outline" style="padding: 1.1rem 2rem; font-size: 1.05rem; border-radius: var(--radius-sm);">
+          Take Hair Quiz
+        </a>
+      </div>
+
+      <!-- Micro Guarantees -->
+      <div style="display: flex; gap: 1.5rem; margin-top: 1rem; font-size: 0.85rem; color: rgba(255,255,255,0.8);">
+        <span>✓ 30-Day Money Back</span>
+        <span>✓ 100% Pure & Organic</span>
+        <span>✓ Fast US Shipping</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "transform your hair today."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "thousands of customers are improving their hair naturally with 100% cold-pressed, wild-harvested Honduran Batana Oil."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Try It Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}

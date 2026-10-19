@@ -1,0 +1,14 @@
+{
+  "current": {
+    "color_bg": "#ffffff",
+    "color_surface": "#f3f3f3",
+    "color_soft_bg": "#e9ece9",
+    "color_text": "#121212",
+    "color_text_muted": "#555555",
+    "color_primary": "#44624a",
+    "color_primary_hover": "#38523d",
+    "color_accent": "#dd1d1d",
+    "page_width": 1400,
+    "dev_bridge": true
+  }
+}

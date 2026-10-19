@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure Boutique Rebuild — Local Offline Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #44624a;
+      --color-primary-dark: #354e3a;
+      --color-accent: #d4a373;
+      --color-bg: #fefae0;
+      --color-text: #283618;
+      --color-muted: #606c38;
+      --font-body: 'Poppins', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text);
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* Announcement Bar */
+    .announcement-bar {
+      background-color: var(--color-primary);
+      color: #ffffff;
+      text-align: center;
+      padding: 9px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    /* Header */
+    .site-header {
+      border-bottom: 1px solid #e5e7eb;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--color-primary);
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: #374151;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--color-primary);
+    }
+    .header-icons {
+      display: flex;
+      gap: 18px;
+      font-size: 18px;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      position: relative;
+      background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url('https://azureboutique.co/cdn/shop/files/HERO_BANNER.png?v=1710526000') center/cover no-repeat;
+      color: #ffffff;
+      padding: 120px 24px;
+      text-align: center;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-content {
+      max-width: 780px;
+    }
+    .hero-subtitle {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 12px;
+      color: #fefae0;
+    }
+    .hero-title {
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero-desc {
+      font-size: 17px;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--color-primary);
+      color: #ffffff;
+      padding: 14px 34px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .hero-cta:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Social Proof Bar */
+    .social-proof {
+      background: #f9fafb;
+      padding: 24px 16px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .proof-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+    .proof-item strong {
+      display: block;
+      font-size: 15px;
+      color: var(--color-primary);
+    }
+    .proof-item span {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    /* Featured Collection */
+    .collection-section {
+      max-width: 1200px;
+      margin: 70px auto;
+      padding: 0 24px;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+    }
+    .section-header p {
+      color: #6b7280;
+      font-size: 15px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 28px;
+    }
+    .product-card {
+      border: 1px solid #f3f4f6;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transform: translateY(-4px);
+    }
+    .product-image-wrap {
+      aspect-ratio: 1;
+      background: #f8fafc;
+      overflow: hidden;
+      position: relative;
+    }
+    .product-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .product-card:hover .product-image-wrap img {
+      transform: scale(1.04);
+    }
+    .product-details {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .product-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 8px;
+    }
+    .product-rating {
+      color: #f59e0b;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .product-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 14px;
+    }
+    .btn-add-to-cart {
+      margin-top: auto;
+      background: var(--color-primary);
+      color: #ffffff;
+      padding: 10px 16px;
+      text-align: center;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-add-to-cart:hover {
+      background: var(--color-primary-dark);
+    }
+
+    /* Comparison Section */
+    .comparison-section {
+      background: #fdfaf5;
+      padding: 70px 24px;
+      border-top: 1px solid #f0ece1;
+      border-bottom: 1px solid #f0ece1;
+    }
+    .comparison-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 14px 20px;
+      text-align: left;
+      border-bottom: 1px solid #f3f4f6;
+      font-size: 14px;
+    }
+    .comparison-table th {
+      background: #f8fafc;
+      font-weight: 600;
+      color: #374151;
+    }
+    .comparison-table th.highlight-col, .comparison-table td.highlight-col {
+      background: #f0fdf4;
+      color: #166534;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 60px 24px 30px;
+      font-size: 14px;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-col a:hover {
+      color: #ffffff;
+    }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid #374151;
+      text-align: center;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Bar Section -->
+  <div class="announcement-bar" data-src="sections/announcement-bar.liquid">
+    🎉 MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC CHO ĐƠN TỪ 500K • 100% ORGANIC BATANA OIL
+  </div>
+
+  <!-- Header Section -->
+  <header class="site-header" data-src="sections/header.liquid">
+    <div class="header-container">
+      <a href="/" class="logo" data-block="header_logo">AZURE BOUTIQUE</a>
+      <ul class="nav-links" data-block="header_menu">
+        <li><a href="#shop">Cửa Hàng</a></li>
+        <li><a href="#ingredients">Thành Phần Batana</a></li>
+        <li><a href="#routine">Liệu Trình</a></li>
+        <li><a href="#reviews">Đánh Giá (1,200+)</a></li>
+        <li><a href="#faq">Câu Hỏi Thường Gặp</a></li>
+      </ul>
+      <div class="header-icons" data-block="header_icons">
+        <span>🔍</span>
+        <span>👤</span>
+        <span>🛒</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner Section -->
+  <section class="hero-banner" data-src="sections/hero-banner.liquid">
+    <div class="hero-content">
+      <div class="hero-subtitle" data-block="hero_subtitle">DƯỠNG CHẤT PHỤC HỒI TỪ HONDURAS</div>
+      <h1 class="hero-title" data-block="hero_title">Dầu Batana Nguyên Chất 100% Tự Nhiên</h1>
+      <p class="hero-desc" data-block="hero_desc">
+        Bí quyết phục hồi nang tóc dày mượt, kích thích mọc tóc và ngăn ngừa gãy rụng đã được người bản địa Tawira gìn giữ qua hàng thế kỷ.
+      </p>
+      <a href="#shop" class="hero-cta" data-block="hero_cta">Khám Phá Bộ Sưu Tập Ngay</a>
+    </div>
+  </section>
+
+  <!-- Social Proof Bar Section -->
+  <section class="social-proof" data-src="sections/social-proof-bar.liquid">
+    <div class="proof-grid">
+      <div class="proof-item" data-block="proof_item_1">
+        <strong>🌿 100% Nguyên Chất &amp; Hữu Cơ</strong>
+        <span>Chiết xuất hạt cọ tự nhiên</span>
+      </div>
+      <div class="proof-item" data-block="proof_item_2">
+        <strong>⭐ 4.9/5 Sao Đánh Giá</strong>
+        <span>Hơn 1,200 khách hàng hài lòng</span>
+      </div>
+      <div class="proof-item" data-block="proof_item_3">
+        <strong>🚚 Giao Nhanh Miễn Phí</strong>
+        <span>Đổi trả 30 ngày nếu không hợp</span>
+      </div>
+      <div class="proof-item" data-block="proof_item_4">
+        <strong>🔬 Chứng Nhận Kiểm Nghiệm</strong>
+        <span>Không Sulfate, Paraben &amp; Silicone</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Collection Section -->
+  <section id="shop" class="collection-section" data-src="sections/featured-collection.liquid">
+    <div class="section-header">
+      <h2 data-block="collection_title">Sản Phẩm Batana Bán Chạy Nhất</h2>
+      <p data-block="collection_desc">Được cô đặc theo công thức ép lạnh truyền thống, giữ trọn vẹn dưỡng chất Omega-9 &amp; Vitamin E</p>
+    </div>
+
+    <div class="product-grid" data-src="snippets/product-card.liquid">
+      <!-- Product 1 -->
+      <div class="product-card" data-block="product_item_1">
+        <div class="product-image-wrap">
+          <img src="https://azureboutique.co/cdn/shop/files/100_Raw_Batana_Oil_For_Hair_Growth.png?v=1710526000" alt="100% Raw Batana Oil">
+        </div>
+        <div class="product-details">
+          <div class="product-title">100% Raw Batana Oil For Hair Growth (120ml)</div>
+          <div class="product-rating">★★★★★ (4.9/5 - 428 reviews)</div>
+          <div class="product-price">790,000₫</div>
+          <button class="btn-add-to-cart">Thêm Vào Giỏ Hàng</button>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card" data-block="product_item_2">
+        <div class="product-image-wrap">
+          <img src="https://azureboutique.co/cdn/shop/files/Batana_Hair_Butter_Mask.png?v=1710526000" alt="Batana Hair Butter Mask">
+        </div>
+        <div class="product-details">
+          <div class="product-title">Batana Hair Butter Deep Conditioning Mask</div>
+          <div class="product-rating">★★★★★ (5.0/5 - 312 reviews)</div>
+          <div class="product-price">850,000₫</div>
+          <button class="btn-add-to-cart">Thêm Vào Giỏ Hàng</button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card" data-block="product_item_3">
+        <div class="product-image-wrap">
+          <img src="https://azureboutique.co/cdn/shop/files/Batana_Scalp_Strengthening_Serum.png?v=1710526000" alt="Batana Scalp Serum">
+        </div>
+        <div class="product-details">
+          <div class="product-title">Batana Scalp Strengthening Serum with Rosemary</div>
+          <div class="product-rating">★★★★☆ (4.8/5 - 195 reviews)</div>
+          <div class="product-price">690,000₫</div>
+          <button class="btn-add-to-cart">Thêm Vào Giỏ Hàng</button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card" data-block="product_item_4">
+        <div class="product-image-wrap">
+          <img src="https://azureboutique.co/cdn/shop/files/Batana_Nourishing_Shampoo_Bar.png?v=1710526000" alt="Batana Shampoo Bar">
+        </div>
+        <div class="product-details">
+          <div class="product-title">Batana Nourishing Shampoo &amp; Scalp Bar</div>
+          <div class="product-rating">★★★★★ (4.9/5 - 280 reviews)</div>
+          <div class="product-price">420,000₫</div>
+          <button class="btn-add-to-cart">Thêm Vào Giỏ Hàng</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="comparison-section" data-src="sections/product-comparison.liquid">
+    <div class="comparison-container">
+      <div class="section-header">
+        <h2 data-block="comp_title">Tại Sao Nên Chọn Azure Batana?</h2>
+        <p data-block="comp_desc">So sánh trực tiếp với các dòng dầu dưỡng tóc thông thường trên thị trường</p>
+      </div>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Tiêu chí</th>
+            <th class="highlight-col">Azure Boutique Batana</th>
+            <th>Dầu Dưỡng Công Nghiệp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nguồn gốc xuất xứ</td>
+            <td class="highlight-col">100% Cọ hoang dã La Moskitia (Honduras)</td>
+            <td>Dầu khoáng Mineral Oil pha chế</td>
+          </tr>
+          <tr>
+            <td>Hàm lượng Axit Béo &amp; Omega-9</td>
+            <td class="highlight-col">Cực cao (>70%), thẩm thấu sâu nang tóc</td>
+            <td>Rất thấp, chỉ tạo lớp bóng ảo trên bề mặt</td>
+          </tr>
+          <tr>
+            <td>Hóa chất bảo quản &amp; Silicone</td>
+            <td class="highlight-col">0% Paraben, Sulfate, Silicone</td>
+            <td>Chứa Dimethicone gây bít tắc chân tóc</td>
+          </tr>
+          <tr>
+            <td>Thời gian phục hồi nhận thấy</td>
+            <td class="highlight-col">Sau 2-3 tuần sử dụng liên tục</td>
+            <td>Không có hiệu quả phục hồi sinh học</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="collection-section" data-src="sections/product-faq.liquid">
+    <div class="section-header">
+      <h2 data-block="faq_title">Câu Hỏi Thường Gặp</h2>
+      <p data-block="faq_desc">Giải đáp tất cả thắc mắc về quy trình ủ dưỡng tóc với Dầu Batana</p>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px;">
+      <details style="background: #f9fafb; padding: 16px; border-radius: 6px; cursor: pointer;">
+        <summary style="font-weight: 600; color: #111827;">Dầu Batana có mùi như thế nào?</summary>
+        <p style="margin-top: 10px; color: #4b5563; font-size: 14px;">Dầu Batana tự nhiên có mùi thơm ấm nhẹ, thoang thoảng hương cà phê rang và cacao mộc do quy trình nướng hạt truyền thống của thổ dân Honduras.</p>
+      </details>
+      <details style="background: #f9fafb; padding: 16px; border-radius: 6px; cursor: pointer;">
+        <summary style="font-weight: 600; color: #111827;">Nên dùng dầu Batana bao nhiêu lần mỗi tuần?</summary>
+        <p style="margin-top: 10px; color: #4b5563; font-size: 14px;">Khuyến nghị ủ da đầu và thân tóc từ 2–3 lần/tuần, mỗi lần 30-45 phút trước khi gội sạch với dầu gội dịu nhẹ.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="site-footer" data-src="sections/footer.liquid">
+    <div class="footer-container">
+      <div class="footer-col" data-block="footer_col_1">
+        <h4>Về Azure Boutique</h4>
+        <p style="color: #9ca3af; font-size: 13px; line-height: 1.7;">
+          Thương hiệu chuyên biệt cung cấp dòng dầu Batana nguyên bản nhập khẩu trực tiếp từ Honduras. Mang lại mái tóc dày bồng bềnh và chắc khỏe từ gốc.
+        </p>
+      </div>
+      <div class="footer-col" data-block="footer_col_2">
+        <h4>Liên Kết Nhanh</h4>
+        <ul>
+          <li><a href="#shop">Tất Cả Sản Phẩm</a></li>
+          <li><a href="#ingredients">Nguồn Gốc Cọ Tawira</a></li>
+          <li><a href="#reviews">Đánh Giá Thực Tế</a></li>
+          <li><a href="#faq">Chính Sách Hoàn Tiền</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-block="footer_col_3">
+        <h4>Hỗ Trợ Khách Hàng</h4>
+        <ul>
+          <li>Email: support@azureboutique.co</li>
+          <li>Hotline: 1900 xxxx</li>
+          <li>Giờ làm việc: 8:00 - 20:00 (Thứ 2 - Thứ 7)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Azure Boutique Rebuild. All rights reserved. Powered by Shopify OS 2.0.
+    </div>
+  </footer>
+
+</body>
+</html>

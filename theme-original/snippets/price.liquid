@@ -1,0 +1,22 @@
+{% comment %}
+  Renders formatted product price.
+  Usage:
+  {% render 'price', product: product %}
+{% endcomment %}
+{%- liquid
+  assign target = product.selected_or_first_available_variant
+  assign price = target.price | default: 1999
+  assign compare_at_price = target.compare_at_price
+  assign available = target.available | default: false
+  assign on_sale = false
+  if compare_at_price > price
+    assign on_sale = true
+  endif
+-%}
+
+<div class="price-container {% if on_sale %}price--on-sale{% endif %}">
+  {%- if on_sale -%}
+    <span class="price--compare">{{ compare_at_price | money }}</span>
+  {%- endif -%}
+  <span class="price--regular">{{ price | money }}</span>
+</div>

@@ -1,0 +1,72 @@
+<header class="header-wrapper">
+  <div class="page-width">
+    <div class="header">
+      <div class="header__left">
+        <a href="{{ routes.root_url }}" class="header__logo">
+          {%- if section.settings.logo != blank -%}
+            <img src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}" alt="{{ shop.name }}" width="{{ section.settings.logo_width }}" loading="eager">
+          {%- else -%}
+            <span>{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+      </div>
+
+      <nav class="header__nav-wrapper">
+        <ul class="header__nav">
+          {%- for link in linklists[section.settings.menu].links -%}
+            <li>
+              <a href="{{ link.url }}" class="header__link">{{ link.title }}</a>
+            </li>
+          {%- else -%}
+            <li><a href="{{ routes.root_url }}" class="header__link">Home</a></li>
+            <li><a href="{{ routes.all_products_collection_url }}" class="header__link">Catalog</a></li>
+            <li><a href="{{ routes.search_url }}" class="header__link">Search</a></li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="{{ routes.search_url }}" class="header__icon-btn" aria-label="Search">
+          {% render 'icon', name: 'search' %}
+        </a>
+
+        <button type="button" class="header__icon-btn" data-cart-drawer-trigger aria-label="Cart">
+          {% render 'icon', name: 'cart' %}
+          <span class="cart-count-badge" data-cart-count {% if cart.item_count == 0 %}style="display:none;"{% endif %}>
+            {{ cart.item_count }}
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "class": "section-header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Custom Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 250,
+      "step": 10,
+      "default": 130,
+      "unit": "px",
+      "label": "Custom logo width"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Navigation Menu"
+    }
+  ]
+}
+{% endschema %}

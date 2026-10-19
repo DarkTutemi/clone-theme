@@ -1,0 +1,65 @@
+[
+  {
+    "source_url": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/WhatsAppImage2025-09-11at11.52.31.jpg?v=1757671910",
+    "asset": "_references/images/batana-natural-hair-growth-oil_1.jpg",
+    "type": "product_image_placeholder",
+    "product_handle": "batana-natural-hair-growth-oil",
+    "license_status": "quarantined_reference_only",
+    "crawled_at": "2026-10-19T07:26:00Z",
+    "note": "Placeholder asset for local reconstruction layout only. Replace with owner-licensed media prior to production."
+  },
+  {
+    "source_url": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/5_1.png?v=1764302367",
+    "asset": "_references/images/batana-natural-hair-growth-oil_2.png",
+    "type": "product_image_placeholder",
+    "product_handle": "batana-natural-hair-growth-oil",
+    "license_status": "quarantined_reference_only",
+    "crawled_at": "2026-10-19T07:26:00Z",
+    "note": "Placeholder asset for local reconstruction layout only. Replace with owner-licensed media prior to production."
+  },
+  {
+    "source_url": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/1752125897416-177d6e90-2472-48ab-8349-4642d3d0a40b_1.jpg?v=1752125917",
+    "asset": "_references/images/scalp-serum-hair_1.jpg",
+    "type": "product_image_placeholder",
+    "product_handle": "scalp-serum-hair",
+    "license_status": "quarantined_reference_only",
+    "crawled_at": "2026-10-19T07:26:00Z",
+    "note": "Placeholder asset for local reconstruction layout only. Replace with owner-licensed media prior to production."
+  },
+  {
+    "source_url": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/1752187971306-06e77d6b-d3d5-4917-95fc-8d2ed0aa084d_1.jpg?v=1754548641",
+    "asset": "_references/images/scalp-serum-hair_2.jpg",
+    "type": "product_image_placeholder",
+    "product_handle": "scalp-serum-hair",
+    "license_status": "quarantined_reference_only",
+    "crawled_at": "2026-10-19T07:26:00Z",
+    "note": "Placeholder asset for local reconstruction layout only. Replace with owner-licensed media prior to production."
+  },
+  {
+    "source_url": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/MinimalistNeutralFreeGuideLeadMagnetTabletMockupInstagramPost_1_14caf53a-49b3-4838-a1ea-c2fd868beeaa.png?v=1757101556",
+    "asset": "_references/images/az_1.png",
+    "type": "product_image_placeholder",
+    "product_handle": "az",
+    "license_status": "quarantined_reference_only",
+    "crawled_at": "2026-10-19T07:26:00Z",
+    "note": "Placeholder asset for local reconstruction layout only. Replace with owner-licensed media prior to production."
+  },
+  {
+    "source_url": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/MinimalistNeutralFreeGuideLeadMagnetTabletMockupInstagramPost_1_14caf53a-49b3-4838-a1ea-c2fd868beeaa.png?v=1757101556",
+    "asset": "_references/images/free-20-gift-card_1.png",
+    "type": "product_image_placeholder",
+    "product_handle": "free-20-gift-card",
+    "license_status": "quarantined_reference_only",
+    "crawled_at": "2026-10-19T07:26:00Z",
+    "note": "Placeholder asset for local reconstruction layout only. Replace with owner-licensed media prior to production."
+  },
+  {
+    "source_url": "https://cdn.shopify.com/s/files/1/0843/7438/9045/files/MinimalistNeutralFreeGuideLeadMagnetTabletMockupInstagramPost.png?v=1757101214",
+    "asset": "_references/images/hair-growth-guide_1.png",
+    "type": "product_image_placeholder",
+    "product_handle": "hair-growth-guide",
+    "license_status": "quarantined_reference_only",
+    "crawled_at": "2026-10-19T07:26:00Z",
+    "note": "Placeholder asset for local reconstruction layout only. Replace with owner-licensed media prior to production."
+  }
+]

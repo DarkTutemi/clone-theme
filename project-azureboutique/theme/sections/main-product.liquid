@@ -1,0 +1,194 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+
+<section class="main-product-section" data-src="sections/main-product.liquid" style="padding: clamp(2rem, 4vw, 4rem) 0; background: #ffffff;">
+  <div class="page-width">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start;" class="product-layout-grid">
+      
+      <!-- Left Column: Media Gallery -->
+      <div class="product-gallery" style="position: sticky; top: 90px;">
+        <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); background: var(--color-surface); aspect-ratio: 1/1;">
+          {%- if product.featured_media -%}
+            <img 
+              src="{{ product.featured_media | image_url: width: 900 }}" 
+              alt="{{ product.title | escape }}"
+              id="MainProductImage"
+              style="width: 100%; height: 100%; object-fit: cover;"
+            >
+          {%- else -%}
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--color-text-muted);">
+              Pure Batana Oil
+            </div>
+          {%- endif -%}
+        </div>
+
+        {%- if product.media.size > 1 -%}
+          <div style="display: flex; gap: 0.75rem; margin-top: 1rem; overflow-x: auto; padding-bottom: 0.5rem;">
+            {%- for media in product.media -%}
+              <button 
+                type="button" 
+                onclick="document.getElementById('MainProductImage').src='{{ media | image_url: width: 900 }}'"
+                style="width: 75px; height: 75px; border-radius: var(--radius-sm); overflow: hidden; border: 2px solid {% if forloop.first %}var(--color-primary){% else %}var(--color-border){% endif %}; flex-shrink: 0;"
+              >
+                <img src="{{ media | image_url: width: 150 }}" alt="thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+              </button>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <!-- Right Column: Product Conversion Info & Form -->
+      <div class="product-details">
+        <!-- Social Proof Rating -->
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+          <span style="color: #f59e0b; font-size: 1.1rem;">⭐⭐⭐⭐⭐</span>
+          <span style="font-weight: 700; font-size: 0.95rem;">4.9</span>
+          <span style="color: var(--color-text-muted); font-size: 0.85rem;">(58,240 Verified Reviews)</span>
+        </div>
+
+        <!-- Product Title -->
+        <h1 style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--color-text); margin-bottom: 0.5rem; line-height: 1.2;">
+          {{ product.title | default: "Batana Natural Hair Growth Oil" }}
+        </h1>
+        <p style="color: var(--color-primary); font-weight: 600; font-size: 0.95rem; margin-bottom: 1rem;">
+          🌿 100% Pure, Wild-Harvested Honduran Miracle Oil
+        </p>
+
+        <!-- Dynamic Price Display -->
+        <div style="display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 1.5rem;">
+          <span id="SelectedBundlePrice" style="font-size: 2rem; font-weight: 700; color: var(--color-primary);">
+            {{ current_variant.price | money | default: "$44.00" }}
+          </span>
+          <span id="SelectedBundleCompare" style="font-size: 1.2rem; color: var(--color-text-muted); text-decoration: line-through;">
+            {{ current_variant.compare_at_price | money | default: "$55.00" }}
+          </span>
+          <span class="badge badge-sale">Save 20%</span>
+        </div>
+
+        <!-- High-Converting Bundle Tiers (Clean-Room Native Implementation) -->
+        <div style="margin-bottom: 1.5rem;">
+          <div style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text); margin-bottom: 0.75rem;">
+            Select Bundle & Save:
+          </div>
+
+          <div class="bundle-selector">
+            <!-- Tier 1 -->
+            <label class="bundle-card is-selected" onclick="selectTier(1, 44.00, 55.00, this)">
+              <div style="display: flex; align-items: center;">
+                <input type="radio" name="bundle_choice" value="1" checked class="bundle-card__radio">
+                <div class="bundle-card__info">
+                  <div class="bundle-card__title">1x Bottle (100ml)</div>
+                  <div class="bundle-card__subtitle">Starter Supply (30 Days)</div>
+                </div>
+              </div>
+              <div class="bundle-card__price-wrap">
+                <div class="bundle-card__price">$44.00</div>
+              </div>
+            </label>
+
+            <!-- Tier 2 (Most Popular) -->
+            <label class="bundle-card" onclick="selectTier(2, 68.00, 110.00, this)">
+              <span class="bundle-card__badge">MOST POPULAR • SAVE 38%</span>
+              <div style="display: flex; align-items: center;">
+                <input type="radio" name="bundle_choice" value="2" class="bundle-card__radio">
+                <div class="bundle-card__info">
+                  <div class="bundle-card__title">2x Bottles (200ml)</div>
+                  <div class="bundle-card__subtitle">Full Restoration + Free Hair Guide</div>
+                </div>
+              </div>
+              <div class="bundle-card__price-wrap">
+                <div class="bundle-card__price">$68.00</div>
+                <div style="font-size: 0.75rem; color: #16a34a; font-weight: 600;">Free Shipping</div>
+              </div>
+            </label>
+
+            <!-- Tier 3 (Best Value) -->
+            <label class="bundle-card" onclick="selectTier(3, 88.00, 165.00, this)">
+              <span class="bundle-card__badge" style="background: #b45309;">BEST VALUE • SAVE 47%</span>
+              <div style="display: flex; align-items: center;">
+                <input type="radio" name="bundle_choice" value="3" class="bundle-card__radio">
+                <div class="bundle-card__info">
+                  <div class="bundle-card__title">3x Bottles (300ml)</div>
+                  <div class="bundle-card__subtitle">+ Free Wooden Scalp Massager</div>
+                </div>
+              </div>
+              <div class="bundle-card__price-wrap">
+                <div class="bundle-card__price">$88.00</div>
+                <div style="font-size: 0.75rem; color: #16a34a; font-weight: 600;">Free Priority Shipping</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Add to Cart Form -->
+        {% form 'product', product, id: 'MainProductForm' %}
+          <input type="hidden" name="id" value="{{ current_variant.id }}">
+          <input type="hidden" name="quantity" id="ProductQuantityInput" value="1">
+
+          <button 
+            type="submit" 
+            class="btn btn-primary" 
+            style="width: 100%; padding: 1.2rem; font-size: 1.15rem; font-weight: 700; letter-spacing: 0.02em; border-radius: var(--radius-sm); margin-bottom: 0.75rem;"
+          >
+            Add to Cart & Get Free Gifts
+          </button>
+        {% endform %}
+
+        <!-- Guarantees & Trust Badges -->
+        <div class="trust-badges">
+          <div class="trust-badge-item">
+            <span class="trust-badge-item__icon">🛡️</span>
+            <span class="trust-badge-item__text">30-Day Guarantee</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-badge-item__icon">🌿</span>
+            <span class="trust-badge-item__text">100% Pure Organic</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-badge-item__icon">⚡</span>
+            <span class="trust-badge-item__text">Fast US Shipping</span>
+          </div>
+        </div>
+
+        <!-- Product Description Accordion -->
+        <div style="margin-top: 2rem; border-top: 1px solid var(--color-border); padding-top: 1.5rem;">
+          <div style="font-size: 1rem; line-height: 1.7; color: var(--color-text);">
+            {{ product.description | default: "<ul><li><strong>100% Pure Batana Oil:</strong> Single, authentic ingredient harvested straight from Honduran rainforests.</li><li><strong>Deep Hydration:</strong> Nourishes dry, fragile edges and wakes up dormant hair follicles.</li><li><strong>Chemical-Free:</strong> No mineral oils, no silicones, no synthetic fragrance.</li></ul>" }}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function selectTier(qty, price, compareAt, el) {
+    document.querySelectorAll('.bundle-card').forEach(c => c.classList.remove('is-selected'));
+    el.classList.add('is-selected');
+    const radio = el.querySelector('input[type="radio"]');
+    if (radio) radio.checked = true;
+
+    document.getElementById('SelectedBundlePrice').textContent = '$' + price.toFixed(2);
+    document.getElementById('SelectedBundleCompare').textContent = '$' + compareAt.toFixed(2);
+    document.getElementById('ProductQuantityInput').value = qty;
+  }
+</script>
+
+<style>
+  @media screen and (max-width: 749px) {
+    .product-layout-grid {
+      grid-template-columns: 1fr !important;
+      gap: 2rem !important;
+    }
+    .product-gallery {
+      position: static !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Main Product",
+  "settings": []
+}
+{% endschema %}

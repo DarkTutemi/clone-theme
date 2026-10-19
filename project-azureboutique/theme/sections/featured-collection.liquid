@@ -1,0 +1,97 @@
+<section class="featured-collection" data-src="sections/featured-collection.liquid" style="padding: 4.5rem 0; background: #ffffff;">
+  <div class="page-width">
+    <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem;">
+      <span class="badge badge-brand" style="margin-bottom: 0.5rem;">Pure Botanical Haircare</span>
+      <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-top: 0.25rem;">
+        {{ section.settings.title | default: "Batana Products" }}
+      </h2>
+      <p style="color: var(--color-text-muted); font-size: 1.05rem; margin-top: 0.5rem;">
+        {{ section.settings.subtitle | default: "Wild-harvested from Honduras. Nutrient-dense formulas designed to restore thin edges, hydrate scalp, and spark natural growth." }}
+      </p>
+    </div>
+
+    {%- assign collection = collections[section.settings.collection] -%}
+    <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem;">
+    {%- assign prods = collection.products -%}
+    {%- if prods == blank or prods.size == 0 -%}
+      {%- assign prods = collections.all.products -%}
+    {%- endif -%}
+
+    {%- if prods != blank and prods.size > 0 -%}
+      {%- for product in prods limit: section.settings.products_to_show -%}
+        {% render 'product-card', product: product %}
+      {%- endfor -%}
+    {%- else -%}
+      {%- for i in (1..4) -%}
+        <div class="product-card">
+          <div class="product-card__image-wrap" style="background:#f3f3f3; display:flex; align-items:center; justify-content:center; color:#9ca3af;">
+            <span>Batana Product #{{ i }}</span>
+          </div>
+          <div class="product-card__content">
+            <div style="font-size: 0.8rem; color: #f59e0b;">⭐⭐⭐⭐⭐ (4.9)</div>
+            <h3 class="product-card__title">Batana Hair Growth Oil #{{ i }}</h3>
+            <div class="product-card__price">
+              <span class="price--sale">$44.00</span>
+              <span class="price--compare">$55.00</span>
+            </div>
+            <button class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Add to Cart</button>
+          </div>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+    </div>
+
+    {%- if section.settings.show_view_all -%}
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="/collections/batana" class="btn btn-secondary" style="padding: 1rem 2.5rem; font-weight: 600;">
+          View All Batana Formulas →
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Batana Products"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Wild-harvested from Honduras. Nutrient-dense formulas designed to restore thin edges, hydrate scalp, and spark natural growth."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4,
+      "label": "Products to Show"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Show 'View All' Button",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection"
+    }
+  ]
+}
+{% endschema %}

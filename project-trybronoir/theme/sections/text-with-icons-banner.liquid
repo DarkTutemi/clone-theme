@@ -1,0 +1,86 @@
+<div class="shopify-section shopify-section--text-with-icons" id="shopify-section-{{ section.id }}">
+<style>
+  #shopify-section-{{ section.id }} {
+    --heading-color: 3, 46, 67;
+    --text-color: 3, 46, 67;
+    --section-background: 238, 248, 250;
+  }
+  .trust-icons-strip {
+    background: #eef8fa;
+    padding: 24px 0;
+    border-top: 1px solid #d8edf1;
+    border-bottom: 1px solid #d8edf1;
+  }
+  .trust-icons-strip .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .trust-icons-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .trust-icon-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .trust-icon-item img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+  }
+  .trust-icon-item p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #032e43;
+  }
+  @media (max-width: 768px) {
+    .trust-icons-grid {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 20px;
+      gap: 16px;
+    }
+  }
+</style>
+
+<div class="trust-icons-strip">
+  <div class="container">
+    <div class="trust-icons-grid">
+      
+      <div class="trust-icon-item">
+        <img src="https://trybronoir.com/cdn/shop/files/streamline-flex-color_warranty-badge-highlight_100x.png?v=1761600898" alt="12-Month Warranty" width="36" height="36" loading="lazy" />
+        <p>12-Month Warranty</p>
+      </div>
+
+      <div class="trust-icon-item">
+        <img src="https://trybronoir.com/cdn/shop/files/lucide_footprints_100x.png?v=1761597084" alt="Over 350,000 Happy Feet" width="36" height="36" loading="lazy" />
+        <p>Over 350,000 Happy Feet</p>
+      </div>
+
+      <div class="trust-icon-item">
+        <img src="https://trybronoir.com/cdn/shop/files/tabler_truck-delivery_100x.png?v=1761600910" alt="Free Shipping Worldwide" width="36" height="36" loading="lazy" />
+        <p>Free Shipping Worldwide</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Trust Icons Strip",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Trust Icons Strip"
+    }
+  ]
+}
+{% endschema %}

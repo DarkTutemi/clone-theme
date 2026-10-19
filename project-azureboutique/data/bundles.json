@@ -1,0 +1,47 @@
+[
+  {
+    "id": "bundle_1_bottle",
+    "title": "1x Batana Hair Growth Oil (100ml)",
+    "subtitle": "Starter Supply (30 Days)",
+    "quantity": 1,
+    "price": 44.0,
+    "compare_at_price": 55.0,
+    "discount_percent": 20,
+    "badge": "Popular",
+    "benefits": [
+      "100% Pure Honduran Batana Oil",
+      "Free 30-Day Money Back Guarantee"
+    ]
+  },
+  {
+    "id": "bundle_2_bottles",
+    "title": "2x Batana Hair Growth Oil (200ml)",
+    "subtitle": "Most Popular (60 Days)",
+    "quantity": 2,
+    "price": 68.0,
+    "compare_at_price": 110.0,
+    "discount_percent": 38,
+    "badge": "Save $42",
+    "is_featured": true,
+    "benefits": [
+      "Free Digital Hair Growth Guide",
+      "Faster Visible Edges Recovery",
+      "Free Shipping"
+    ]
+  },
+  {
+    "id": "bundle_3_bottles",
+    "title": "3x Batana Hair Growth Oil (300ml)",
+    "subtitle": "Complete Transformation (90 Days)",
+    "quantity": 3,
+    "price": 88.0,
+    "compare_at_price": 165.0,
+    "discount_percent": 47,
+    "badge": "Best Value (Save $77)",
+    "benefits": [
+      "Free Wooden Scalp Massager",
+      "Free Digital Hair Growth Guide",
+      "Priority US & Global Shipping"
+    ]
+  }
+]

@@ -1,0 +1,76 @@
+<section class="shopify-section image-text-card-effect-section" data-src="sections/expert-card.liquid" style="padding: 60px 0; background: #ffffff;">
+  <div class="container" style="max-width: 1360px; margin: 0 auto; padding: 0 24px;">
+    
+    <div class="expert-card-wrap" style="
+      background: rgb(238, 248, 250);
+      border-radius: 24px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 0;
+      box-shadow: 0 10px 30px rgba(8, 67, 94, 0.06);
+    ">
+      
+      <!-- Doctor Photo -->
+      <div class="expert-photo-wrap" style="width: 100%; height: 100%; min-height: 420px; overflow: hidden;">
+        <img src="https://trybronoir.com/cdn/shop/files/DeinAbschnittstext_3.png?v=1761602392&width=1500"
+             alt="Dr. James Rowland - Foot Health Expert"
+             style="width: 100%; height: 100%; object-fit: cover; display: block;"
+             loading="lazy">
+      </div>
+
+      <!-- Expert Recommendation Text -->
+      <div class="expert-text-wrap" style="padding: 56px 48px;">
+        <span style="display: inline-block; font-size: 13px; font-weight: 800; color: #44c2fd; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;">
+          Medical Insight &amp; Ergonomics
+        </span>
+        <h3 style="font-size: 34px; font-weight: 800; color: #08435e; line-height: 1.25; margin: 0 0 20px 0;">
+          Recommended by Foot Health Experts
+        </h3>
+        <p style="font-size: 16px; line-height: 1.7; color: #334155; margin: 0 0 24px 0;">
+          Bronoir Grounding Shoes are trusted by professionals who specialize in foot health and mobility. One such expert is <strong>Dr. James Rowland</strong>, a retired orthopedic specialist with over 40 years of clinical experience helping patients regain comfort and stability.
+        </p>
+        <p style="font-size: 15px; line-height: 1.7; color: #475569; margin: 0 0 28px 0;">
+          Dr. Rowland emphasizes the importance of natural alignment, wide toe splay, and sensory feedback, all key features built into every pair of Bronoir shoes. Designed with medical insight and crafted for daily life, Bronoir helps you walk the way nature intended, pain-free, balanced, and grounded.
+        </p>
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: #08435e; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px;">
+            ✓
+          </div>
+          <div>
+            <div style="font-size: 16px; font-weight: 800; color: #08435e;">Dr. James Rowland</div>
+            <div style="font-size: 13px; color: #64748b;">Orthopedic Specialist (40+ Years Clinical Exp.)</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  @media (max-width: 900px) {
+    .expert-card-wrap {
+      grid-template-columns: 1fr !important;
+    }
+    .expert-photo-wrap {
+      min-height: 320px !important;
+      max-height: 400px !important;
+    }
+    .expert-text-wrap {
+      padding: 36px 24px !important;
+    }
+    .expert-text-wrap h3 {
+      font-size: 26px !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Expert Endorsement Card",
+  "settings": []
+}
+{% endschema %}

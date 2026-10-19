@@ -1,0 +1,67 @@
+{
+  "sections": {
+    "hero_banner": {
+      "type": "hero-banner",
+      "settings": {
+        "button_text": "CLAIM OFFER",
+        "link": "#bestsellers"
+      }
+    },
+    "category_grid": {
+      "type": "category-grid",
+      "settings": {}
+    },
+    "shoes_icon_text": {
+      "type": "shoes-icon-text",
+      "settings": {}
+    },
+    "before_after_slider": {
+      "type": "before-after-slider",
+      "settings": {}
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "subtitle": "Find your perfect shoe",
+        "title": "Our Bestsellers"
+      }
+    },
+    "expert_card": {
+      "type": "expert-card",
+      "settings": {}
+    },
+    "copper_secret": {
+      "type": "copper-secret",
+      "settings": {}
+    },
+    "template--27860728578148__video_review_V6XFw7": {
+      "type": "video-review",
+      "settings": {}
+    },
+    "template--27860728578148__text_with_icons_8JtTK7": {
+      "type": "text-with-icons-banner",
+      "settings": {}
+    },
+    "template--27860728578148__custom_newsletter_faq_3NQika": {
+      "type": "newsletter-faq",
+      "settings": {}
+    },
+    "template--27860728578148__text_with_icons_wMXk8L": {
+      "type": "text-with-icons-banner",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero_banner",
+    "category_grid",
+    "shoes_icon_text",
+    "before_after_slider",
+    "featured_collection",
+    "expert_card",
+    "copper_secret",
+    "template--27860728578148__video_review_V6XFw7",
+    "template--27860728578148__text_with_icons_8JtTK7",
+    "template--27860728578148__custom_newsletter_faq_3NQika",
+    "template--27860728578148__text_with_icons_wMXk8L"
+  ]
+}

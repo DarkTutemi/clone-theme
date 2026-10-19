@@ -1,0 +1,32 @@
+{
+  "url": "https://www.azureboutique.co/",
+  "base_url": "https://www.azureboutique.co",
+  "is_shopify": true,
+  "platform": "Shopify",
+  "store_name": "Azure",
+  "theme": {
+    "name": "shrine-pro-1-7-0-updated",
+    "id": 187947974965,
+    "schema_version": "Online Store 2.0 (OS 2.0)",
+    "role": "main"
+  },
+  "currency": "USD",
+  "locale": "en",
+  "detected_apps": [
+    "GemPages",
+    "Klaviyo",
+    "Bundles App"
+  ],
+  "detected_pixels": [
+    "Clarity"
+  ],
+  "page_builder": "GemPages",
+  "has_public_products_json": true,
+  "has_public_collections_json": true,
+  "meta": {
+    "title": "Azure",
+    "description": "Azure"
+  },
+  "social_links": {},
+  "sample_product": "Batana Hair Growth Oil"
+}

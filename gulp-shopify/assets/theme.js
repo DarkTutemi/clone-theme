@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{var e;(e=()=>{var e=.01*window.innerHeight;document.documentElement.style.setProperty("--vh",e+"px")})(),window.addEventListener("resize",e,!1)});

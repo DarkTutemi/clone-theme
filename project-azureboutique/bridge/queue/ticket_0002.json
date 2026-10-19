@@ -1,0 +1,12 @@
+{
+  "prompt": "Sửa lỗi hình hero banner",
+  "page_url": "https://g1spma-ku.myshopify.com/?preview_theme_id=191340118383",
+  "target": {
+    "source_file": "sections/hero-banner.liquid",
+    "selector": "section > div > div:nth-of-type(2) > img",
+    "text_content": "lỗi hình"
+  },
+  "id": "ticket_0002",
+  "status": "applied",
+  "created_at": "2026-10-19T11:38:52Z"
+}

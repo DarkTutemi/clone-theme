@@ -1,0 +1,376 @@
+<div class="product-item-card" data-src="snippets/product-card.liquid">
+  {% assign target_pdp = product_url | default: product.url | default: '/products/bronoir-skin-pro-with-copper-grounding-allround-barefoot-shoes' %}
+  
+  <!-- Highlight Save Badge -->
+  {% if badge_text %}
+    <span class="product-save-badge">{{ badge_text }}</span>
+  {% elsif product.compare_at_price > product.price %}
+    {% assign diff = product.compare_at_price | minus: product.price %}
+    {% if diff > 1000 %}
+      <span class="product-save-badge">Save {{ diff | money }}</span>
+    {% else %}
+      <span class="product-save-badge">Save {{ diff | times: 1000 | money }}</span>
+    {% endif %}
+  {% else %}
+    <span class="product-save-badge">Save 1.052.000₫</span>
+  {% endif %}
+
+  <!-- Media with Secondary Hover Image -->
+  <div class="product-card-media">
+    <a href="{{ target_pdp }}" class="product-media-link">
+      {% assign img1 = product.images[0].src | default: image_url | default: 'https://trybronoir.com/cdn/shop/files/DeinAbschnittstext_11_1080x.png?v=1761602494' %}
+      {% assign img2 = product.images[1].src | default: secondary_image_url | default: 'https://trybronoir.com/cdn/shop/files/Ueberblick-13_64ac82c4-9290-4ac3-834e-a546159247d1_1001x.jpg?v=1761602501' %}
+      
+      <img class="product-img primary-img" src="{{ img1 }}" alt="{{ product.title | default: title | escape }}" loading="lazy">
+      <img class="product-img secondary-img" src="{{ img2 }}" alt="{{ product.title | default: title | escape }}" loading="lazy">
+    </a>
+    
+    <!-- Quick View Overlay Button -->
+    <div class="quick-view-wrap">
+      <button type="button" class="quick-view-btn" onclick="window.location.href='{{ target_pdp }}'">
+        Quick view
+      </button>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="product-card-body">
+    <!-- Star Rating -->
+    <div class="product-rating">
+      <span class="stars">★★★★★</span>
+      <span class="rating-num">(4.9)</span>
+    </div>
+
+    <!-- Title -->
+    <h4 class="product-title">
+      <a href="{{ target_pdp }}">
+        {{ product.title | default: title | default: 'Bronoir™ Skin Pro with Copper - Grounding Allround Barefoot Shoes' }}
+      </a>
+    </h4>
+
+    <!-- Prices (Always formatted in authentic Bronoir pricing) -->
+    <div class="product-prices">
+      <span class="price-sale">
+        {% if product.price and product.price > 100000 %}
+          {{ product.price | money }}
+        {% elsif price %}
+          {{ price }}
+        {% else %}
+          2.102.000₫
+        {% endif %}
+      </span>
+      <span class="price-compare">
+        {% if product.compare_at_price and product.compare_at_price > 100000 %}
+          {{ product.compare_at_price | money }}
+        {% elsif compare_price %}
+          {{ compare_price }}
+        {% else %}
+          3.154.000₫
+        {% endif %}
+      </span>
+    </div>
+
+    <!-- Color Swatches with Active Image Switching -->
+    {% assign prod_title = product.title | default: title %}
+    <div class="product-swatches" aria-label="Color Swatches">
+      {% if prod_title contains 'CosyCloud' or prod_title contains 'Boot' %}
+        <span class="swatch-dot is-active" style="background-color: #78350f;" title="Chestnut Brown" data-color="Chestnut Brown" data-image="https://trybronoir.com/cdn/shop/files/main_imageSa8643830040d46f19c743a84c795910cn_800x.jpg?v=1764746902"></span>
+        <span class="swatch-dot" style="background-color: #0f172a;" title="Midnight Black" data-color="Midnight Black" data-image="https://trybronoir.com/cdn/shop/files/main_imageS55201be9a5c94ed2bfcf7703419d4dd2F_800x.jpg?v=1764746902"></span>
+        <span class="swatch-dot" style="background-color: #64748b;" title="Graphite Grey" data-color="Graphite Grey" data-image="https://trybronoir.com/cdn/shop/files/main_imageS9815bfd209b04b6386b6faa0be4f53b55_800x.jpg?v=1764746902"></span>
+        <span class="swatch-dot" style="background-color: #cbd5e1;" title="Frost Grey" data-color="Frost Grey" data-image="https://trybronoir.com/cdn/shop/files/main_imageS5035d4763edc490ab71c090f9358273dD_800x.jpg?v=1764746902"></span>
+        <span class="swatch-dot" style="background-color: #d6d3d1;" title="Sandstone Beige" data-color="Sandstone Beige" data-image="https://trybronoir.com/cdn/shop/files/main_imageSe083a0afa5114c2c925ae8f3a419f27dP_800x.jpg?v=1764746902"></span>
+      {% elsif prod_title contains 'Hiker' %}
+        <span class="swatch-dot is-active" style="background-color: #94a3b8;" title="Grey" data-color="Grey" data-image="https://trybronoir.com/cdn/shop/files/2_9dd806bd-89a0-46a8-85e2-073b17201138_1080x.jpg?v=1761602551"></span>
+        <span class="swatch-dot" style="background-color: #1e293b;" title="Black" data-color="Black" data-image="https://trybronoir.com/cdn/shop/files/1_a5111c04-1985-4729-8297-097a28fb07d1_1080x.jpg?v=1761602551"></span>
+        <span class="swatch-dot" style="background-color: #dc2626;" title="Black / Red" data-color="Black / Red" data-image="https://trybronoir.com/cdn/shop/files/3_eeb3adf3-2377-4daa-844b-db7a1a2c4662_1080x.jpg?v=1761602551"></span>
+        <span class="swatch-dot" style="background-color: #0284c7;" title="Blue" data-color="Blue" data-image="https://trybronoir.com/cdn/shop/files/4_7772c9bf-dab2-47fb-83e1-2c777171ffb1_1080x.jpg?v=1761602551"></span>
+      {% elsif prod_title contains 'Trail' or prod_title contains 'Flex' %}
+        <span class="swatch-dot is-active" style="background-color: #0f172a;" title="Black" data-color="Black" data-image="https://trybronoir.com/cdn/shop/files/products_46_1000x_736a9b94-959c-45aa-a7f0-cc026ecd1ad6_1000x.webp?v=1761602395"></span>
+        <span class="swatch-dot" style="background-color: #16a34a;" title="Green" data-color="Green" data-image="https://trybronoir.com/cdn/shop/files/products_44_1000x_b46efd46-3f70-414c-b766-2892b5fc47b8_1000x.webp?v=1771283311"></span>
+        <span class="swatch-dot" style="background-color: #64748b;" title="Grey" data-color="Grey" data-image="https://trybronoir.com/cdn/shop/files/products_45_1000x_42be7ef1-d11d-4c4c-a98a-33c80a62a0c9_1000x.webp?v=1761602394"></span>
+        <span class="swatch-dot" style="background-color: #0284c7;" title="Blue" data-color="Blue" data-image="https://trybronoir.com/cdn/shop/files/products_47_1000x_136e913e-fe86-4426-ac2e-308a7c08ed03_1000x.webp?v=1761602395"></span>
+      {% elsif prod_title contains 'Arctic' %}
+        <span class="swatch-dot is-active" style="background-color: #d6d3d1;" title="Beige" data-color="Beige" data-image="https://cdn.shopify.com/s/files/1/0743/5360/6756/files/WinterBarfussschuhe_1.png?v=1761602415"></span>
+        <span class="swatch-dot" style="background-color: #1e293b;" title="Black" data-color="Black" data-image="https://cdn.shopify.com/s/files/1/0743/5360/6756/files/75.png?v=1761602414"></span>
+        <span class="swatch-dot" style="background-color: #64748b;" title="Grey" data-color="Grey" data-image="https://cdn.shopify.com/s/files/1/0743/5360/6756/files/77.png?v=1761602414"></span>
+        <span class="swatch-dot" style="background-color: #1d4ed8;" title="Blue" data-color="Blue" data-image="https://cdn.shopify.com/s/files/1/0743/5360/6756/files/76.png?v=1761602414"></span>
+        <span class="swatch-dot" style="background-color: #f472b6;" title="Pink" data-color="Pink" data-image="https://cdn.shopify.com/s/files/1/0743/5360/6756/files/78.png?v=1761602414"></span>
+      {% else %}
+        <!-- Default: Skin Pro Colors -->
+        <span class="swatch-dot is-active" style="background-color: #1e293b;" title="Black" data-color="Black" data-image="https://trybronoir.com/cdn/shop/files/DeinAbschnittstext_11_1080x.png?v=1761602494"></span>
+        <span class="swatch-dot" style="background-color: #ffffff; border: 1px solid #cbd5e1;" title="White" data-color="White" data-image="https://trybronoir.com/cdn/shop/files/DeinAbschnittstext_9_1080x.png?v=1761602495"></span>
+        <span class="swatch-dot" style="background-color: #ec4899;" title="Pink" data-color="Pink" data-image="https://trybronoir.com/cdn/shop/files/DeinAbschnittstext_10_1080x.png?v=1761602510"></span>
+        <span class="swatch-dot" style="background-color: #94a3b8;" title="Grey" data-color="Grey" data-image="https://trybronoir.com/cdn/shop/files/DeinAbschnittstext_12_1080x.png?v=1761602494"></span>
+        <span class="swatch-dot" style="background-color: #0369a1;" title="Blackblue" data-color="Blackblue" data-image="https://trybronoir.com/cdn/shop/files/DeinAbschnittstext_13_1080x.png?v=1761602510"></span>
+      {% endif %}
+    </div>
+
+    <!-- Mobile Button -->
+    <a href="{{ target_pdp }}" class="product-cta-btn">
+      SELECT OPTIONS &amp; SAVE ➔
+    </a>
+  </div>
+</div>
+
+<style>
+  .product-item-card {
+    background: rgba(196, 196, 196, 0.11);
+    padding: 14px 14px 28px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: none;
+    box-shadow: none;
+    transition: transform 0.25s ease;
+  }
+  .product-item-card:hover {
+    transform: translateY(-2px);
+  }
+  .product-save-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 5;
+    background: #44c2fd;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    box-shadow: 0 2px 8px rgba(68, 194, 253, 0.35);
+  }
+  .product-card-media {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f8fafc;
+    position: relative;
+  }
+  .product-media-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .primary-img {
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 1;
+    z-index: 1;
+  }
+  .secondary-img {
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+  /* Secondary hover is tied specifically to the image wrapper, NEVER the outer card */
+  .product-card-media:hover .secondary-img {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  .product-card-media:hover .primary-img {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  .quick-view-wrap {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    z-index: 6;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .product-card-media:hover .quick-view-wrap {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .quick-view-btn {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(8, 67, 94, 0.2);
+    color: #08435e;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+  }
+  .quick-view-btn:hover {
+    background: #08435e;
+    color: #ffffff;
+    border-color: #08435e;
+  }
+  .product-card-body {
+    padding: 14px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+  }
+  .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+  .product-rating .stars {
+    color: #f59e0b;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  .product-rating .rating-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+  }
+  .product-title {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 8px 0;
+    color: rgb(26, 26, 26);
+    min-height: 38px;
+  }
+  .product-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .product-title a:hover {
+    color: #08435e;
+  }
+  .product-prices {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 12px;
+    margin-top: auto;
+  }
+  .price-sale {
+    font-size: 15px;
+    font-weight: 800;
+    color: #fd4444; /* Authentic Red */
+  }
+  .price-compare {
+    font-size: 13px;
+    color: #888888;
+    text-decoration: line-through;
+    font-weight: 500;
+  }
+  .product-swatches {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .swatch-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.18);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .swatch-dot:hover {
+    transform: scale(1.18);
+  }
+  .swatch-dot.is-active {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #08435e;
+    transform: scale(1.12);
+  }
+  .product-cta-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 11px 16px;
+    background: #08435e;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .product-cta-btn:hover {
+    background: #44c2fd;
+    color: #000000;
+  }
+</style>
+
+<script>
+  (function() {
+    function applySwatch(dot) {
+      if (!dot) return;
+      const card = dot.closest('.product-item-card');
+      if (!card) return;
+
+      const newImgSrc = dot.getAttribute('data-image');
+      if (!newImgSrc) return;
+
+      // Update active swatch state
+      card.querySelectorAll('.swatch-dot').forEach(function(s) {
+        s.classList.remove('is-active');
+      });
+      dot.classList.add('is-active');
+
+      // Update image immediately and guarantee visible state
+      const primaryImg = card.querySelector('.primary-img');
+      const secondaryImg = card.querySelector('.secondary-img');
+      if (primaryImg) {
+        primaryImg.src = newImgSrc;
+        primaryImg.srcset = '';
+        primaryImg.style.opacity = '1';
+        primaryImg.style.zIndex = '4';
+      }
+      if (secondaryImg) {
+        secondaryImg.style.opacity = '0';
+      }
+    }
+
+    if (!window.__swatchListenerAttached) {
+      window.__swatchListenerAttached = true;
+
+      // Immediate response on click
+      document.addEventListener('click', function(e) {
+        const dot = e.target.closest('.swatch-dot');
+        if (dot) {
+          applySwatch(dot);
+        }
+      });
+
+      // Immediate preview on hover
+      document.addEventListener('mouseover', function(e) {
+        const dot = e.target.closest('.swatch-dot');
+        if (dot) {
+          applySwatch(dot);
+        }
+      });
+    }
+  })();
+</script>

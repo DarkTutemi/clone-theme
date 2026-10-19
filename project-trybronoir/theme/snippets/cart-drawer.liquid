@@ -1,0 +1,56 @@
+{% comment %}
+  Renders the slide-out AJAX Cart Drawer.
+  Usage:
+  {% render 'cart-drawer' %}
+{% endcomment %}
+<div id="CartDrawerOverlay" class="cart-drawer-overlay"></div>
+
+<div id="CartDrawer" class="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+  <div class="cart-drawer__header">
+    <h3 style="font-size: 1.25rem; font-weight: 700;">{{ 'cart.general.title' | t | default: 'Your Cart' }}</h3>
+    <button type="button" data-cart-drawer-close aria-label="Close cart" style="padding: 0.5rem; display: flex;">
+      {% render 'icon', name: 'close' %}
+    </button>
+  </div>
+
+  <div id="CartDrawerItems" class="cart-drawer__items">
+    {%- if cart.item_count == 0 -%}
+      <div style="text-align: center; padding: 3rem 1rem; color: var(--color-text-muted);">
+        <p style="margin-bottom: 1.5rem;">{{ 'cart.general.empty' | t | default: 'Your cart is empty' }}</p>
+        <button type="button" data-cart-drawer-close class="btn btn-primary">
+          Continue Shopping
+        </button>
+      </div>
+    {%- else -%}
+      {%- for item in cart.items -%}
+        <div class="cart-drawer-item" data-line-key="{{ item.key }}" style="display:flex; gap:1rem; align-items:center; border-bottom:1px solid var(--color-border); padding-bottom:1rem;">
+          {%- if item.image -%}
+            <img src="{{ item.image | image_url: width: 140 }}" alt="{{ item.title }}" width="70" height="70" style="object-fit:cover; border-radius:var(--radius-sm);">
+          {%- endif -%}
+          <div style="flex-grow:1;">
+            <h4 style="font-size:0.95rem; font-weight:600;"><a href="{{ item.url }}">{{ item.product.title }}</a></h4>
+            {%- unless item.product.has_only_default_variant -%}
+              <p style="font-size:0.8rem; color:var(--color-text-muted);">{{ item.variant.title }}</p>
+            {%- endunless -%}
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.4rem;">
+              <span style="font-size:0.9rem; font-weight:700;">{{ item.final_line_price | money }}</span>
+              <span style="font-size:0.85rem; color:var(--color-text-muted);">Qty: {{ item.quantity }}</span>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+
+  <div class="cart-drawer__footer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+      <span style="font-size:1.05rem; font-weight:600;">Subtotal</span>
+      <span id="CartDrawerSubtotal" style="font-size:1.25rem; font-weight:800;">{{ cart.total_price | money }}</span>
+    </div>
+    <form action="{{ routes.cart_url }}" method="post">
+      <button type="submit" name="checkout" class="btn btn-primary btn-full" style="padding: 1rem;">
+        {{ 'cart.general.checkout' | t | default: 'Proceed to Checkout' }}
+      </button>
+    </form>
+  </div>
+</div>

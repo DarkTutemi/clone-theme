@@ -1,0 +1,54 @@
+{%- if section.settings.show_announcement -%}
+<div 
+  class="announcement-bar" 
+  data-src="sections/announcement-bar.liquid"
+  style="background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }}; padding: 0.65rem 1rem; text-align: center; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em;"
+>
+  <div class="page-width flex-center" style="display: flex; justify-content: center; align-items: center; gap: 0.75rem;">
+    <span>{{ section.settings.text | default: "✨ UP TO 65% OFF WITH FREE GIFTS | LIMITED TIME" }}</span>
+    {%- if section.settings.discount_code != blank -%}
+      <span style="background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 0.8rem;">
+        CODE: {{ section.settings.discount_code }}
+      </span>
+    {%- endif -%}
+  </div>
+</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Show Announcement Bar",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Announcement Text",
+      "default": "✨ UP TO 65% OFF WITH FREE GIFTS | LIMITED TIME"
+    },
+    {
+      "type": "text",
+      "id": "discount_code",
+      "label": "Discount Code (Optional)",
+      "default": "AZURE65"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#dd1d1d"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    }
+  ]
+}
+{% endschema %}

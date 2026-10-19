@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Scratch and temporary directories
+scratch/
+*/scratch/
+**/scratch/
+.tempmediaStorage/
+*.tmp
+
+# Local credentials & configs
+*.local.json
+shopify_store_config.local.json
+
+# Visual QA temporary test screenshots
+project-trybronoir/visual_qa/*.png
+project-azureboutique/visual_qa/*.png
+
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

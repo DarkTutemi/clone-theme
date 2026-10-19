@@ -1,0 +1,23 @@
+<div class="page-404-section" style="padding: 7rem 1rem; text-align: center;">
+  <div class="page-width">
+    <p style="font-size: 1rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">
+      Error 404
+    </p>
+    <h1 style="margin-bottom: 1.5rem;">Page Not Found</h1>
+    <p style="color: var(--color-text-muted); font-size: 1.15rem; max-width: 500px; margin: 0 auto 2.5rem;">
+      The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+    </p>
+    <a href="{{ routes.root_url }}" class="btn btn-primary">
+      Return to Homepage
+    </a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main 404",
+  "tag": "section",
+  "class": "section-404",
+  "settings": []
+}
+{% endschema %}

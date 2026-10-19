@@ -1,0 +1,40 @@
+{
+  "home": [
+    "https://www.azureboutique.co/"
+  ],
+  "collections": [
+    "https://www.azureboutique.co/collections/frontpage",
+    "https://www.azureboutique.co/collections/batana",
+    "https://www.azureboutique.co/collections/bundle-collection"
+  ],
+  "products": [
+    "https://www.azureboutique.co/products/shipping-protection",
+    "https://www.azureboutique.co/products/botana-natural-hair-growth-oil",
+    "https://www.azureboutique.co/products/batana-natural-hair-growth-shampoo",
+    "https://www.azureboutique.co/products/batana-natural-hair-growth-conditioner",
+    "https://www.azureboutique.co/products/batana-refined-oil",
+    "https://www.azureboutique.co/products/ultimate-natural-batana-growth-set",
+    "https://www.azureboutique.co/products/batana-natural-hair-growth-shampoo-conditioner-set",
+    "https://www.azureboutique.co/products/batana-scalp-serum",
+    "https://www.azureboutique.co/products/hair-growth-guide",
+    "https://www.azureboutique.co/products/free-20-gift-card",
+    "https://www.azureboutique.co/products/az",
+    "https://www.azureboutique.co/products/batana-natural-hair-growth-oil",
+    "https://www.azureboutique.co/products/scalp-serum-hair"
+  ],
+  "pages": [
+    "https://www.azureboutique.co/pages/contact",
+    "https://www.azureboutique.co/pages/our-story",
+    "https://www.azureboutique.co/pages/privacy-policy",
+    "https://www.azureboutique.co/pages/hair-routine-quiz",
+    "https://www.azureboutique.co/pages/terms-service",
+    "https://www.azureboutique.co/pages/faq",
+    "https://www.azureboutique.co/pages/ambassador"
+  ],
+  "blogs": [
+    "https://www.azureboutique.co/blogs/news"
+  ],
+  "other": [
+    "https://www.azureboutique.co/"
+  ]
+}

@@ -1,0 +1,39 @@
+<div class="main-collection-section" data-src="sections/main-collection.liquid" style="padding: 4rem 0;">
+  <div class="page-width">
+    <div style="margin-bottom: 3rem; text-align: center;">
+      <h1 style="margin-bottom: 0.75rem;">{{ collection.title }}</h1>
+      {%- if collection.description != blank -%}
+        <div style="max-width: 650px; margin: 0 auto; color: var(--color-text-muted); font-size: 1.05rem;">
+          {{ collection.description }}
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- paginate collection.products by 16 -%}
+      <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem;">
+        {%- for product in collection.products -%}
+          {% render 'product-card', product: product %}
+        {%- else -%}
+          <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--color-text-muted);">
+            <p>No products found in this collection.</p>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        <div style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 4rem;">
+          {{ paginate | default_pagination }}
+        </div>
+      {%- endif -%}
+    {%- endpaginate -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Collection",
+  "tag": "section",
+  "class": "section-main-collection",
+  "settings": []
+}
+{% endschema %}

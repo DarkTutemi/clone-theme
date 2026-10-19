@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Bridge Dashboard — Shopify AI Sync</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #111827;
+      --card-sub: #162032;
+      --border: #1f2937;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --success: #10b981;
+      --accent: #38bdf8;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .badge {
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+    .badge-success { background: #059669; }
+    .badge-pending { background: #d97706; }
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .hero-card {
+      background: linear-gradient(135deg, #111827 0%, #1e293b 100%);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .hero-card h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+    .hero-card p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .actions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .action-card {
+      background: var(--card-sub);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .action-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+    .action-card h3 {
+      font-size: 1.15rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .action-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-success { background: var(--success); color: #fff; }
+    .btn-success:hover { background: #059669; }
+    .btn-secondary { background: #374151; color: #fff; }
+    .btn-secondary:hover { background: #4b5563; }
+
+    /* Ticket Queue Section */
+    .queue-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+    }
+    .queue-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .queue-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .ticket-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .ticket-item {
+      background: #0f172a;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .ticket-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .ticket-prompt {
+      font-weight: 600;
+      color: #f8fafc;
+      font-size: 0.95rem;
+    }
+    .ticket-target {
+      font-size: 0.8rem;
+      font-family: ui-monospace, monospace;
+      color: #94a3b8;
+    }
+    .sync-status {
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      display: none;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="badge">DESIGN BRIDGE</span>
+      <strong style="font-size: 1.1rem;">Shopify Visual Inspector &amp; Auto-Sync</strong>
+    </div>
+    <div style="font-size: 0.85rem; color: var(--text-muted);">
+      Store: <code style="color: #38bdf8;">g1spma-ku.myshopify.com</code> (Theme: 191338185071)
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="hero-card">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <span class="badge badge-success" style="margin-bottom: 0.6rem; display: inline-block;">HỆ THỐNG HOẠT ĐỘNG SẴN SÀNG</span>
+          <h1>Trung Tâm Điều Khiển Chỉnh Sửa Giao Diện</h1>
+          <p>Click vào bất kỳ phần tử nào trên trang web để chỉ định AI Agent chỉnh sửa code Liquid/CSS, sau đó 1-click đồng bộ thẳng lên Shopify!</p>
+        </div>
+        <button id="btn-sync-all" class="btn btn-success" style="padding: 12px 20px; font-size: 0.95rem;">
+          ⚡ Đồng Bộ Theme Lên Shopify Ngay
+        </button>
+      </div>
+
+      <div id="sync-feedback" class="sync-status"></div>
+
+      <div class="actions-grid">
+        <!-- Local Preview -->
+        <div class="action-card">
+          <h3><span>🖥️</span> Preview Offline (Localhost)</h3>
+          <p>Mở trang web đã render đầy đủ các section, sản phẩm và banner cục bộ. Dùng Chrome Extension (Alt+I) để chỉ định sửa ngay tại đây.</p>
+          <a href="/preview" target="_blank" class="btn btn-primary">
+            Mở Preview Local (:4000/preview) ↗
+          </a>
+        </div>
+
+        <!-- Live Shopify Preview -->
+        <div class="action-card">
+          <h3><span>👁️</span> Shopify Theme Preview (Live)</h3>
+          <p>Xem trước trực tiếp trên store Shopify chính thức với theme ID 191338185071 (hoạt động song song với Extension).</p>
+          <a href="https://g1spma-ku.myshopify.com/?preview_theme_id=191338185071" target="_blank" class="btn btn-secondary">
+            Mở Shopify Live Preview ↗
+          </a>
+        </div>
+
+        <!-- Theme Editor -->
+        <div class="action-card">
+          <h3><span>🎨</span> Shopify Theme Editor</h3>
+          <p>Truy cập trình chỉnh sửa trực quan kéo thả trong trang quản trị Shopify Admin để thay đổi banner, schema tùy biến.</p>
+          <a href="https://admin.shopify.com/store/g1spma-ku/themes/191338185071/editor" target="_blank" class="btn btn-secondary">
+            Mở Theme Editor Admin ↗
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ticket Queue Section -->
+    <div class="queue-section">
+      <div class="queue-header">
+        <div class="queue-title">
+          <span>📋 Hàng Đợi Yêu Cầu Chỉnh Sửa (Visual Inspector Queue)</span>
+          <span id="queue-count" class="badge">0</span>
+        </div>
+        <button id="btn-refresh" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">
+          🔄 Làm mới
+        </button>
+      </div>
+
+      <div id="tickets-container" class="ticket-list">
+        <div style="color: #64748b; font-size: 0.9rem; text-align: center; padding: 24px;">
+          Đang tải danh sách yêu cầu...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function loadTickets() {
+      try {
+        const res = await fetch('/api/queue');
+        const tickets = await res.json();
+        const container = document.getElementById('tickets-container');
+        const countBadge = document.getElementById('queue-count');
+        countBadge.textContent = tickets.length;
+
+        if (tickets.length === 0) {
+          container.innerHTML = '<div style="color: #64748b; font-size: 0.9rem; text-align: center; padding: 24px;">Chưa có yêu cầu nào. Hãy cài đặt Extension, mở Preview và nhấn Alt+I để chọn phần tử muốn sửa!</div>';
+          return;
+        }
+
+        container.innerHTML = tickets.reverse().map(t => `
+          <div class="ticket-item">
+            <div class="ticket-info">
+              <div class="ticket-prompt">${t.prompt || '(Không có mô tả)'}</div>
+              <div class="ticket-target">
+                ${t.target?.source_file ? '📄 <strong>' + t.target.source_file + '</strong>' : ''} 
+                • Selector: <code>${t.target?.selector || 'DOM Element'}</code>
+                • Lúc: ${t.created_at || 'Mới đây'}
+              </div>
+            </div>
+            <div>
+              <span class="badge ${t.status === 'applied' ? 'badge-success' : 'badge-pending'}">
+                ${t.status === 'applied' ? '✅ ĐÃ ÁP DỤNG' : '⏳ CHỜ AGENT'}
+              </span>
+            </div>
+          </div>
+        `).join('');
+      } catch (err) {
+        console.error('Error fetching tickets:', err);
+      }
+    }
+
+    document.getElementById('btn-refresh').addEventListener('click', loadTickets);
+
+    // Sync to Shopify Button
+    const btnSync = document.getElementById('btn-sync-all');
+    const feedback = document.getElementById('sync-feedback');
+
+    btnSync.addEventListener('click', async () => {
+      btnSync.disabled = true;
+      btnSync.textContent = '⏳ Đang đồng bộ lên Shopify...';
+      feedback.style.display = 'block';
+      feedback.style.background = 'rgba(56, 189, 248, 0.15)';
+      feedback.style.color = '#7dd3fc';
+      feedback.textContent = 'Đang đóng gói và đẩy các file Liquid/CSS lên Theme ID: 191338185071...';
+
+      try {
+        const res = await fetch('/api/sync-shopify', { method: 'POST' });
+        const result = await res.json();
+        if (result.ok) {
+          feedback.style.background = 'rgba(16, 185, 129, 0.15)';
+          feedback.style.color = '#6ee7b7';
+          feedback.innerHTML = `✅ Đồng bộ thành công <strong>${result.uploaded_count}</strong> files lên Shopify! <a href="${result.preview_url}" target="_blank" style="color: #38bdf8; text-decoration: underline; margin-left: 10px;">Xem kết quả ngay ↗</a>`;
+        } else {
+          feedback.style.background = 'rgba(239, 68, 68, 0.15)';
+          feedback.style.color = '#fca5a5';
+          feedback.textContent = 'Lỗi đồng bộ: ' + result.error;
+        }
+      } catch (e) {
+        feedback.style.background = 'rgba(239, 68, 68, 0.15)';
+        feedback.style.color = '#fca5a5';
+        feedback.textContent = 'Không thể kết nối đến server đồng bộ.';
+      } finally {
+        btnSync.disabled = false;
+        btnSync.textContent = '⚡ Đồng Bộ Theme Lên Shopify Ngay';
+      }
+    });
+
+    loadTickets();
+    setInterval(loadTickets, 5000);
+  </script>
+</body>
+</html>

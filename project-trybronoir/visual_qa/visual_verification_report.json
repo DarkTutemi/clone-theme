@@ -1,0 +1,24 @@
+{
+  "target_url": "https://trybronoir.com/",
+  "clone_url": "https://g1spma-ku.myshopify.com/?preview_theme_id=191340118383",
+  "captures": {
+    "desktop": {
+      "target": "f:\\clone-theme\\project-trybronoir\\visual_qa\\target_desktop.png",
+      "clone": "f:\\clone-theme\\project-trybronoir\\visual_qa\\clone_desktop.png",
+      "target_size_bytes": 1173942,
+      "clone_size_bytes": 24141
+    },
+    "mobile": {
+      "target": "f:\\clone-theme\\project-trybronoir\\visual_qa\\target_mobile.png",
+      "clone": "f:\\clone-theme\\project-trybronoir\\visual_qa\\clone_mobile.png",
+      "target_size_bytes": 379686,
+      "clone_size_bytes": 16562
+    },
+    "desktop_tall": {
+      "target": "f:\\clone-theme\\project-trybronoir\\visual_qa\\target_desktop_tall.png",
+      "clone": "f:\\clone-theme\\project-trybronoir\\visual_qa\\clone_desktop_tall.png",
+      "target_size_bytes": 2285353,
+      "clone_size_bytes": 34394
+    }
+  }
+}

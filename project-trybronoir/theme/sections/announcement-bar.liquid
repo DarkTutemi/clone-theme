@@ -1,0 +1,39 @@
+<div class="announcement-bar-bronoir" data-src="sections/announcement-bar.liquid" style="background-color: #08435e; color: #ffffff; padding: 10px 16px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">
+  <div class="container" style="max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: center; position: relative;">
+    <button class="announcement-arrow announcement-arrow--prev" style="background: none; border: none; color: #ffffff; cursor: pointer; padding: 4px 12px; font-size: 14px; opacity: 0.85;" aria-label="Previous">
+      &lt;
+    </button>
+    <div class="announcement-message" style="text-align: center; margin: 0 16px; font-weight: 800;">
+      {{ section.settings.message | default: "TODAY’S SPECIAL OFFER — BUY 1, GET 2 FREE" }}
+    </div>
+    <button class="announcement-arrow announcement-arrow--next" style="background: none; border: none; color: #ffffff; cursor: pointer; padding: 4px 12px; font-size: 14px; opacity: 0.85;" aria-label="Next">
+      &gt;
+    </button>
+  </div>
+</div>
+
+<style>
+  .announcement-bar-bronoir .announcement-arrow:hover {
+    opacity: 1 !important;
+  }
+  @media (max-width: 768px) {
+    .announcement-bar-bronoir {
+      font-size: 11px !important;
+      padding: 8px 10px !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "message",
+      "label": "Announcement Text",
+      "default": "TODAY’S SPECIAL OFFER — BUY 1, GET 2 FREE"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {}
+    },
+    "social_proof": {
+      "type": "social-proof-bar",
+      "settings": {}
+    },
+    "comparison": {
+      "type": "product-comparison",
+      "settings": {}
+    },
+    "ingredients": {
+      "type": "product-ingredients",
+      "settings": {}
+    },
+    "timeline": {
+      "type": "product-timeline",
+      "settings": {}
+    },
+    "faq": {
+      "type": "product-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "social_proof",
+    "comparison",
+    "ingredients",
+    "timeline",
+    "faq"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "sections": {
+    "hero_banner": {
+      "type": "hero-banner",
+      "settings": {
+        "badge": "New Season Arrival",
+        "heading": "Elevate Your Lifestyle With Precision Design",
+        "text": "Discover handcrafted essentials engineered for peak performance and effortless luxury. Designed to stand the test of time.",
+        "btn1_label": "Shop Collection",
+        "btn2_label": "Explore Story"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "subheading": "Trending Essentials",
+        "title": "Featured Collection",
+        "products_to_show": 4,
+        "show_view_all": true
+      }
+    },
+    "image_with_text": {
+      "type": "image-with-text",
+      "settings": {
+        "badge": "Sustainable Quality",
+        "heading": "Designed to stand apart from the ordinary",
+        "text": "<p>Every component is engineered with meticulous attention to detail. We blend high-grade materials with modern ergonomics to deliver lasting durability and unmatched tactile elegance.</p>",
+        "button_label": "Read Our Philosophy"
+      }
+    }
+  },
+  "order": [
+    "hero_banner",
+    "featured_collection",
+    "image_with_text"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "general": {
+    "share": "Chia sẻ",
+    "close": "Đóng",
+    "search": "Tìm kiếm sản phẩm",
+    "continue_shopping": "Tiếp tục mua sắm"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Thêm vào giỏ",
+      "sold_out": "Hết hàng",
+      "on_sale": "Giảm giá",
+      "unavailable": "Tạm ngưng",
+      "quantity": "Số lượng",
+      "vendor": "Thương hiệu"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Giỏ Hàng Của Bạn",
+      "checkout": "Thanh Toán",
+      "empty": "Giỏ hàng của bạn đang trống.",
+      "subtotal": "Tổng tiền tạm tính"
+    }
+  }
+}

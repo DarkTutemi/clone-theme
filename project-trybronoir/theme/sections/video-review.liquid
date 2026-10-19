@@ -1,0 +1,536 @@
+<div class="shopify-section-videoreview-wrapper">
+<style>
+  .shopify-section-videoreview-wrapper {
+    padding: 24px 0 44px;
+    background: transparent;
+  }
+  .video-review-card-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .video-review-card-inner {
+    background-color: #54c4f0;
+    background-image: linear-gradient(135deg, #5ec6e8 0%, #54c4f0 100%);
+    border-radius: 28px;
+    padding: 42px 40px;
+    box-shadow: 0 12px 36px rgba(84, 196, 240, 0.22);
+  }
+  @media (max-width: 768px) {
+    .video-review-card-inner {
+      padding: 32px 16px;
+      border-radius: 20px;
+    }
+  }
+  .video-review-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .video-review-header h2 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  @media (max-width: 768px) {
+    .video-review-header h2 {
+      font-size: 26px;
+    }
+  }
+  .video-review-logo {
+    display: inline-flex;
+    align-items: center;
+  }
+  .video-review-logo img {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+  }
+  .video-review-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+  @media (max-width: 1024px) {
+    .video-review-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 640px) {
+    .video-review-grid {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 12px;
+      padding-bottom: 12px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .video-review-grid .video-slide-item {
+      flex: 0 0 78%;
+      scroll-snap-align: center;
+    }
+  }
+  .video-slide-item {
+    background: #000;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    position: relative;
+    border: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .video-slide-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  .video-wrapperrrr {
+    position: relative;
+    width: 100%;
+    padding-top: 152%; /* 9:14 ratio matching original */
+    cursor: pointer;
+    background: #000;
+    user-select: none;
+  }
+  .video-wrapperrrr video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+  }
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 5;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-wrapperrrr:hover .play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  .sound-unmute-badge {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 9999px;
+    display: none;
+    align-items: center;
+    gap: 6px;
+    z-index: 6;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s;
+  }
+  .sound-unmute-badge:hover {
+    background: rgba(0, 0, 0, 0.95);
+  }
+  .expand-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    z-index: 6;
+    opacity: 0;
+    transition: opacity 0.2s ease, background 0.2s ease;
+  }
+  .video-slide-item:hover .expand-modal-btn {
+    opacity: 1;
+  }
+  .expand-modal-btn:hover {
+    background: rgba(0, 0, 0, 0.85);
+  }
+  .video-review-cta {
+    text-align: center;
+    margin-top: 28px;
+  }
+  .video-review-cta a.see-all-reviews-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 38px;
+    background: #ffffff;
+    color: #032e43;
+    border-radius: 9999px;
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease;
+  }
+  .video-review-cta a.see-all-reviews-btn:hover {
+    background: #f8fafc;
+    color: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Fullscreen Lightbox Modal */
+  .video-review-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(12px);
+    z-index: 999999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-review-modal.active {
+    display: flex;
+  }
+  .video-modal-content {
+    position: relative;
+    max-width: 420px;
+    width: 90%;
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+  .video-modal-content video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .video-modal-close {
+    position: absolute;
+    top: -46px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: 300;
+    line-height: 1;
+    padding: 4px;
+  }
+</style>
+
+<section class="section faq-with-video">
+  <div class="video-review-card-container">
+    <div class="video-review-card-inner">
+      
+      <!-- Header -->
+      <div class="video-review-header">
+        <h2>They are talking about</h2>
+        <div class="video-review-logo">
+          <img src="https://trybronoir.com/cdn/shop/files/Heading_1_Link_Bronoir_1200_x_300_px_4_310x_png.png?v=1761583451&width=213" alt="Bronoir®" width="213" height="38" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- 5 Video Review Grid -->
+      <div class="video-review-grid">
+        
+        <!-- Video 1: Grey hair woman holding insole -->
+        <div class="video-slide-item">
+          <button type="button" class="expand-modal-btn" title="Xem toàn màn hình" aria-label="Xem toàn màn hình">⛶</button>
+          <div class="video-wrapperrrr">
+            <video class="video-element" playsinline loop preload="metadata" poster="https://trybronoir.com/cdn/shop/files/preview_images/4bc088b2d7604ac4a7f38fffb2badb3f.thumbnail.0000000000.jpg?v=1761677422&width=600" src="https://trybronoir.com/cdn/shop/videos/c/vp/4bc088b2d7604ac4a7f38fffb2badb3f/4bc088b2d7604ac4a7f38fffb2badb3f.HD-1080p-7.2Mbps-61090627.mp4?v=0">
+            </video>
+            <div class="play-button">
+              <svg fill="none" height="68" viewBox="0 0 97 97" width="68">
+                <g opacity="0.92">
+                  <circle cx="48.6467" cy="48.5588" fill="#44C2FD" r="48.137"></circle>
+                  <path d="M74.2559 48.5592L35.8467 70.7348L35.8467 26.3837L74.2559 48.5592Z" fill="white"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="sound-unmute-badge">🔊 Bật âm thanh</div>
+          </div>
+        </div>
+
+        <!-- Video 2: Man on bed lifting foot -->
+        <div class="video-slide-item">
+          <button type="button" class="expand-modal-btn" title="Xem toàn màn hình" aria-label="Xem toàn màn hình">⛶</button>
+          <div class="video-wrapperrrr">
+            <video class="video-element" playsinline loop preload="metadata" poster="https://trybronoir.com/cdn/shop/files/preview_images/f2ba229a99da411fa5b9e0d626759d7e.thumbnail.0000000000.jpg?v=1762761596&width=600" src="https://trybronoir.com/cdn/shop/videos/c/vp/f2ba229a99da411fa5b9e0d626759d7e/f2ba229a99da411fa5b9e0d626759d7e.HD-1080p-7.2Mbps-62198815.mp4?v=0">
+            </video>
+            <div class="play-button">
+              <svg fill="none" height="68" viewBox="0 0 97 97" width="68">
+                <g opacity="0.92">
+                  <circle cx="48.6467" cy="48.5588" fill="#44C2FD" r="48.137"></circle>
+                  <path d="M74.2559 48.5592L35.8467 70.7348L35.8467 26.3837L74.2559 48.5592Z" fill="white"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="sound-unmute-badge">🔊 Bật âm thanh</div>
+          </div>
+        </div>
+
+        <!-- Video 3: Man in dark t-shirt -->
+        <div class="video-slide-item">
+          <button type="button" class="expand-modal-btn" title="Xem toàn màn hình" aria-label="Xem toàn màn hình">⛶</button>
+          <div class="video-wrapperrrr">
+            <video class="video-element" playsinline loop preload="metadata" poster="https://trybronoir.com/cdn/shop/files/preview_images/d5cb40357996446081fc4d34e22fae25.thumbnail.0000000000.jpg?v=1762760696&width=600" src="https://trybronoir.com/cdn/shop/videos/c/vp/d5cb40357996446081fc4d34e22fae25/d5cb40357996446081fc4d34e22fae25.HD-1080p-7.2Mbps-62197875.mp4?v=0">
+            </video>
+            <div class="play-button">
+              <svg fill="none" height="68" viewBox="0 0 97 97" width="68">
+                <g opacity="0.92">
+                  <circle cx="48.6467" cy="48.5588" fill="#44C2FD" r="48.137"></circle>
+                  <path d="M74.2559 48.5592L35.8467 70.7348L35.8467 26.3837L74.2559 48.5592Z" fill="white"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="sound-unmute-badge">🔊 Bật âm thanh</div>
+          </div>
+        </div>
+
+        <!-- Video 4: Woman in pink leggings putting on pink shoe -->
+        <div class="video-slide-item">
+          <button type="button" class="expand-modal-btn" title="Xem toàn màn hình" aria-label="Xem toàn màn hình">⛶</button>
+          <div class="video-wrapperrrr">
+            <video class="video-element" playsinline loop preload="metadata" poster="https://trybronoir.com/cdn/shop/files/preview_images/2b60cfa5f012466fa53d9c5933aad2af.thumbnail.0000000000.jpg?v=1761677640&width=600" src="https://trybronoir.com/cdn/shop/videos/c/vp/2b60cfa5f012466fa53d9c5933aad2af/2b60cfa5f012466fa53d9c5933aad2af.HD-1080p-7.2Mbps-61090623.mp4?v=0">
+            </video>
+            <div class="play-button">
+              <svg fill="none" height="68" viewBox="0 0 97 97" width="68">
+                <g opacity="0.92">
+                  <circle cx="48.6467" cy="48.5588" fill="#44C2FD" r="48.137"></circle>
+                  <path d="M74.2559 48.5592L35.8467 70.7348L35.8467 26.3837L74.2559 48.5592Z" fill="white"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="sound-unmute-badge">🔊 Bật âm thanh</div>
+          </div>
+        </div>
+
+        <!-- Video 5: Woman in green sweater with glasses -->
+        <div class="video-slide-item">
+          <button type="button" class="expand-modal-btn" title="Xem toàn màn hình" aria-label="Xem toàn màn hình">⛶</button>
+          <div class="video-wrapperrrr">
+            <video class="video-element" playsinline loop preload="metadata" poster="https://trybronoir.com/cdn/shop/files/preview_images/e839e4ed15a54bca91b13f8dda34a36e.thumbnail.0000000000.jpg?v=1762761358&width=600" src="https://trybronoir.com/cdn/shop/videos/c/vp/e839e4ed15a54bca91b13f8dda34a36e/e839e4ed15a54bca91b13f8dda34a36e.HD-1080p-7.2Mbps-62198566.mp4?v=0">
+            </video>
+            <div class="play-button">
+              <svg fill="none" height="68" viewBox="0 0 97 97" width="68">
+                <g opacity="0.92">
+                  <circle cx="48.6467" cy="48.5588" fill="#44C2FD" r="48.137"></circle>
+                  <path d="M74.2559 48.5592L35.8467 70.7348L35.8467 26.3837L74.2559 48.5592Z" fill="white"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="sound-unmute-badge">🔊 Bật âm thanh</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA Button -->
+      <div class="video-review-cta">
+        <a class="see-all-reviews-btn" href="#bestsellers">SEE ALL REVIEWS</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="video-review-modal" class="video-review-modal">
+  <div class="video-modal-content">
+    <button type="button" class="video-modal-close" aria-label="Đóng">&times;</button>
+    <video id="modal-video-element" controls playsinline></video>
+  </div>
+</div>
+
+<script>
+  (function() {
+    function initVideoReviews() {
+      const allWrappers = document.querySelectorAll('.video-wrapperrrr');
+      const modal = document.getElementById('video-review-modal');
+      const modalVideo = document.getElementById('modal-video-element');
+      const modalClose = document.querySelector('.video-modal-close');
+
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('active');
+        if (modalVideo) {
+          modalVideo.pause();
+          modalVideo.removeAttribute('src');
+          modalVideo.load();
+        }
+      }
+
+      if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+      }
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) closeModal();
+        });
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+      });
+
+      // Expand buttons
+      document.querySelectorAll('.expand-modal-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const card = btn.closest('.video-slide-item');
+          const vid = card ? card.querySelector('video') : null;
+          if (vid && modal && modalVideo) {
+            // Pause all inlines
+            allWrappers.forEach(function(w) {
+              const v = w.querySelector('video');
+              const b = w.querySelector('.play-button');
+              if (v && !v.paused) {
+                v.pause();
+                v.controls = false;
+                if (b) b.style.display = 'flex';
+              }
+            });
+
+            modalVideo.src = vid.src || vid.querySelector('source')?.src;
+            modal.classList.add('active');
+            modalVideo.currentTime = vid.currentTime || 0;
+            modalVideo.muted = false;
+            modalVideo.play().catch(function() {
+              modalVideo.muted = true;
+              modalVideo.play();
+            });
+          }
+        });
+      });
+
+      allWrappers.forEach(function(wrapper) {
+        const vid = wrapper.querySelector('video');
+        const playBtn = wrapper.querySelector('.play-button');
+        const muteBadge = wrapper.querySelector('.sound-unmute-badge');
+        if (!vid) return;
+
+        // Ensure direct src attribute
+        if (!vid.src) {
+          const s = vid.querySelector('source');
+          if (s && s.src) vid.src = s.src;
+        }
+
+        if (muteBadge) {
+          muteBadge.addEventListener('click', function(e) {
+            e.stopPropagation();
+            vid.muted = false;
+            muteBadge.style.display = 'none';
+          });
+        }
+
+        wrapper.addEventListener('click', function(e) {
+          // If clicked directly on native controls, ignore
+          if (e.target === vid && vid.controls && !vid.paused) {
+            return;
+          }
+
+          // Pause other videos
+          allWrappers.forEach(function(otherWrapper) {
+            const otherVid = otherWrapper.querySelector('video');
+            const otherBtn = otherWrapper.querySelector('.play-button');
+            const otherBadge = otherWrapper.querySelector('.sound-unmute-badge');
+            if (otherVid && otherVid !== vid) {
+              otherVid.pause();
+              otherVid.controls = false;
+              if (otherBtn) otherBtn.style.display = 'flex';
+              if (otherBadge) otherBadge.style.display = 'none';
+            }
+          });
+
+          if (vid.paused) {
+            // Try unmuted first
+            const playPromise = vid.play();
+            if (playPromise !== undefined) {
+              playPromise.then(function() {
+                vid.controls = true;
+                if (playBtn) playBtn.style.display = 'none';
+                if (muteBadge) muteBadge.style.display = 'none';
+              }).catch(function(err) {
+                // If audio restricted by browser policy, play muted and show Unmute button
+                console.log('Audio autoplay restricted, falling back to muted:', err);
+                vid.muted = true;
+                vid.play().then(function() {
+                  vid.controls = true;
+                  if (playBtn) playBtn.style.display = 'none';
+                  if (muteBadge) muteBadge.style.display = 'flex';
+                }).catch(function(e2) {
+                  console.error('Video playback failed:', e2);
+                });
+              });
+            }
+          } else {
+            vid.pause();
+            vid.controls = false;
+            if (playBtn) playBtn.style.display = 'flex';
+            if (muteBadge) muteBadge.style.display = 'none';
+          }
+        });
+
+        vid.addEventListener('ended', function() {
+          vid.pause();
+          vid.currentTime = 0;
+          vid.controls = false;
+          if (playBtn) playBtn.style.display = 'flex';
+          if (muteBadge) muteBadge.style.display = 'none';
+        });
+
+        vid.addEventListener('pause', function() {
+          if (vid.currentTime > 0 && !vid.seeking) {
+            if (playBtn) playBtn.style.display = 'flex';
+          }
+        });
+
+        vid.addEventListener('play', function() {
+          if (playBtn) playBtn.style.display = 'none';
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initVideoReviews);
+    } else {
+      initVideoReviews();
+    }
+  })();
+</script>
+</div>
+
+{% schema %}
+{
+  "name": "Video Reviews",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Video Reviews"
+    }
+  ]
+}
+{% endschema %}

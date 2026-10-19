@@ -1,0 +1,13 @@
+{
+  "id": "ticket_0003",
+  "prompt": "Tái tạo khối hero banner 1:1 giống website trybronoir.com (full-width banner responsive + nút CLAIM OFFER)",
+  "page_url": "https://trybronoir.com/",
+  "target": {
+    "source_file": "sections/hero-banner.liquid",
+    "selector": "slide-show-item#block-template--27860728578148__custom_slideshow_KADgTC-image_HwbetF > div > div > img",
+    "text_content": "CLAIM OFFER"
+  },
+  "status": "applied",
+  "created_at": "2026-10-19T11:45:07Z",
+  "applied_at": "2026-10-19T11:45:20Z"
+}

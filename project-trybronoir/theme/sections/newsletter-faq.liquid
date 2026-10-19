@@ -1,0 +1,263 @@
+<div class="shopify-section" id="shopify-section-{{ section.id }}">
+<style>
+  #shopify-section-{{ section.id }} {
+    --heading-color: 25, 46, 67;
+    --text-color: 40, 40, 40;
+    --section-background: #ffffff;
+  }
+  .custom-newsletter-faq {
+    padding: 50px 0 60px;
+    background: #ffffff;
+  }
+  .custom-newsletter-faq .container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .newsletter-faq-container {
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 48px;
+    align-items: flex-start;
+  }
+  @media (max-width: 991px) {
+    .newsletter-faq-container {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+  }
+  .newsletter-block {
+    background: #eef8fa;
+    padding: 40px 32px;
+    border-radius: 16px;
+    border: 1px solid #d4eff5;
+  }
+  .newsletter-block h2.heading--small {
+    font-size: 26px;
+    font-weight: 800;
+    color: #032e43;
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+  .newsletter-block p {
+    color: #475569;
+    font-size: 15px;
+    margin: 0 0 24px;
+    line-height: 1.5;
+  }
+  .newsletter__form .input-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .newsletter__form .input__field {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9999px;
+    font-size: 14px;
+    outline: none;
+    background: #ffffff;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+  }
+  .newsletter__form .input__field:focus {
+    border-color: #032e43;
+  }
+  .newsletter__form button.button--primary {
+    width: 100%;
+    padding: 14px 24px;
+    background: #032e43;
+    color: #ffffff;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  .newsletter__form button.button--primary:hover {
+    background: #05496b;
+    transform: translateY(-1px);
+  }
+  .faq-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .faq__item {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 14px;
+  }
+  .collapsible-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #032e43;
+    cursor: pointer;
+    gap: 16px;
+  }
+  .collapsible-toggle:hover {
+    color: #0284c7;
+  }
+  .up-down-arrow img {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+  }
+  .collapsible-toggle[aria-expanded="true"] .up-down-arrow img {
+    transform: rotate(180deg);
+  }
+  .collapsible__content {
+    display: none;
+    padding: 8px 0 12px;
+    color: #475569;
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+  .collapsible-toggle[aria-expanded="true"] + .collapsible__content {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<div class="custom-newsletter-faq">
+  <div class="container vertical-breather">
+    <div class="newsletter-faq-container">
+      
+      <!-- Newsletter Block -->
+      <div class="newsletter-block">
+        <h2 class="heading heading--small">Sign up in our newsletter</h2>
+        <p>Enter your email to get all exciting news and special offers!</p>
+        <form class="form newsletter__form" method="post" action="/contact" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+          <div class="input-row">
+            <div class="input">
+              <input class="input__field" placeholder="Your e-mail" required type="email" />
+            </div>
+            <div class="input">
+              <button class="button button--primary" type="submit">Subscribe</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- FAQ Block -->
+      <div class="faq-block faq__wrapper" itemscope itemtype="https://schema.org/FAQPage">
+        
+        <!-- Question 1 -->
+        <div class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="collapsible-toggle text--strong" aria-expanded="false" itemprop="name">
+            <span>What makes BRONOIR shoes different from other barefoot shoes?</span>
+            <span class="up-down-arrow">
+              <img src="https://cdn.shopify.com/s/files/1/0766/4946/4142/files/down_arrow.png?v=1749447543" width="24" height="24" alt="toggle" />
+            </span>
+          </button>
+          <div class="collapsible__content text-container" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">BRONOIR combines barefoot ergonomics with grounding technology using real copper. This allows you to not only move naturally and improve posture but also reconnect with the Earth’s energy, helping reduce inflammation, stress, and fatigue. Plus, every pair is designed with premium materials for both comfort and style.</p>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="collapsible-toggle text--strong" aria-expanded="false" itemprop="name">
+            <span>How does the grounding (Earthing) function work?</span>
+            <span class="up-down-arrow">
+              <img src="https://cdn.shopify.com/s/files/1/0766/4946/4142/files/down_arrow.png?v=1749447543" width="24" height="24" alt="toggle" />
+            </span>
+          </button>
+          <div class="collapsible__content text-container" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">Each BRONOIR shoe features a copper plug built into the sole that maintains direct contact with the ground. Copper is a natural conductor, allowing electrons from the Earth to flow into the body. This helps neutralize free radicals and supports overall well-being, especially when walking on natural surfaces like grass, soil, or sand.</p>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="collapsible-toggle text--strong" aria-expanded="false" itemprop="name">
+            <span>Are BRONOIR shoes suitable for everyday wear?</span>
+            <span class="up-down-arrow">
+              <img src="https://cdn.shopify.com/s/files/1/0766/4946/4142/files/down_arrow.png?v=1749447543" width="24" height="24" alt="toggle" />
+            </span>
+          </button>
+          <div class="collapsible__content text-container" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">Absolutely! BRONOIR shoes are designed for daily use—whether you're walking, working, traveling, or simply relaxing. The minimalist sole offers a barefoot experience while providing just enough protection, and the stylish design means you can wear them almost anywhere.</p>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="collapsible-toggle text--strong" aria-expanded="false" itemprop="name">
+            <span>How should I choose the right size?</span>
+            <span class="up-down-arrow">
+              <img src="https://cdn.shopify.com/s/files/1/0766/4946/4142/files/down_arrow.png?v=1749447543" width="24" height="24" alt="toggle" />
+            </span>
+          </button>
+          <div class="collapsible__content text-container" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">We recommend selecting your regular size for a barefoot fit. If you're between sizes or prefer a slightly roomier feel, consider sizing up. Our sizing guide on the product page can help, and our customer service team is happy to advise based on your foot measurements.</p>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="collapsible-toggle text--strong" aria-expanded="false" itemprop="name">
+            <span>Can I wear BRONOIR shoes in wet conditions?</span>
+            <span class="up-down-arrow">
+              <img src="https://cdn.shopify.com/s/files/1/0766/4946/4142/files/down_arrow.png?v=1749447543" width="24" height="24" alt="toggle" />
+            </span>
+          </button>
+          <div class="collapsible__content text-container" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">While BRONOIR shoes are made with high-quality materials, we recommend avoiding heavy rain or very wet conditions to maintain the integrity of the grounding copper and the sole. A little moisture won’t hurt, but they’re best suited for dry, natural surfaces to get the full grounding benefit.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    function initFaqAccordion() {
+      const toggles = document.querySelectorAll('#shopify-section-{{ section.id }} .collapsible-toggle');
+      toggles.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', !isExpanded);
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFaqAccordion);
+    } else {
+      initFaqAccordion();
+    }
+  })();
+</script>
+</div>
+
+{% schema %}
+{
+  "name": "Newsletter & FAQ",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Newsletter & FAQ"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,70 @@
+{
+  "brand_name": "Azure Boutique",
+  "mission": "Clean, wild-harvested botanical remedies rooted in ancient Honduran tradition for natural hair vitality.",
+  "faqs": [
+    {
+      "question": "What does authentic Batana Oil smell like?",
+      "answer": "Raw, authentic Honduran Batana Oil has a rich, earthy, smoky coffee aroma. This distinct scent is natural proof that the oil is unrefined and extracted without chemical deodorizers or harsh industrial bleaching."
+    },
+    {
+      "question": "How quickly can I expect to see visible results?",
+      "answer": "Most customers notice softer hair and less scalp itchiness within 1 to 2 weeks. Noticeable reduction in hair shedding and baby hair growth around the edges typically begins between weeks 3 and 6 of consistent use (3-4 times per week)."
+    },
+    {
+      "question": "How do I apply Batana Oil for best results?",
+      "answer": "Warm a dime-to-quarter sized amount in the palms of your hands until it melts into a smooth oil. Massage thoroughly into your scalp and thinning areas for 3-5 minutes. Leave on for at least 30 minutes, or overnight with a satin bonnet, then wash out with gentle shampoo."
+    },
+    {
+      "question": "Is this safe for color-treated and natural hair?",
+      "answer": "Yes! Our Batana Oil is 100% pure single-ingredient oil, completely free from sulfates, parabens, silicones, and artificial dyes. It is suitable for all hair textures (1A to 4C) and color-treated hair."
+    },
+    {
+      "question": "What is your 30-Day Money-Back Guarantee policy?",
+      "answer": "We stand behind the potency of our Batana oil. If you don't love the improvement in your hair's softness and health after 30 days of use, simply email our customer support team for a full refund."
+    }
+  ],
+  "timeline": [
+    {
+      "period": "Weeks 1 - 2",
+      "title": "Scalp Awakening & Deep Hydration",
+      "description": "Nourishes dry scalp, relieves itching and tightness. Hair strands regain natural elasticity and gloss."
+    },
+    {
+      "period": "Weeks 3 - 4",
+      "title": "Shedding Halts & Follicles Strengthen",
+      "description": "Dramatic reduction of hair strands on brushes and showers. Follicle roots receive rich lipid nourishment."
+    },
+    {
+      "period": "Weeks 6 - 8",
+      "title": "New Growth & Visible Fullness",
+      "description": "Fresh baby hair sprouting along the hairline, edges, and crown. Overall hair volume feels thicker and more resilient."
+    }
+  ],
+  "comparison": {
+    "our_product": {
+      "title": "Azure Batana Oil",
+      "points": [
+        "100% Wild-harvested Honduran Batana",
+        "Cold-pressed, unrefined single ingredient",
+        "Rich in natural Oleic & Linoleic fatty acids",
+        "Penetrates deep into the cortex without clogging pores",
+        "30-Day Satisfaction Guarantee"
+      ]
+    },
+    "competitors": {
+      "title": "Generic / Cheap Hair Oils",
+      "points": [
+        "Cut with 80%+ cheap mineral or soybean oil",
+        "Heavily bleached and perfumed with synthetic fragrance",
+        "Covers hair in non-breathable silicone film",
+        "Suffocates follicles and causes buildup",
+        "No purity or lab-testing verification"
+      ]
+    }
+  },
+  "social_proof": {
+    "happy_customers": "200,000+",
+    "bottles_shipped": "850,000+",
+    "five_star_reviews": "58,000+"
+  }
+}
